@@ -14,4 +14,3 @@ else {
 }
 
 require("app/controller/" . $controller);
-echo("controller : <b>" . $controller . "</b> action : <b>" . $action . "</b>");
