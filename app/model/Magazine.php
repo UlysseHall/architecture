@@ -9,7 +9,7 @@ class Magazine
 	private $pdf;
 	private $region;
 	private $year;
-	private $second_region;
+	private $second_region = 0;
 
 	/**
 	 * Get all infos about magazine in array to update/insert
@@ -22,7 +22,7 @@ class Magazine
 		$all['pdf'] = $this->pdf;
 		$all['region'] = $this->region;
 		$all['year'] = $this->year;
-		if(isset($this->second_region)) {
+		if($this->second_region !== 0) {
 			$all['second_region'] = $this->second_region;
 		}
 

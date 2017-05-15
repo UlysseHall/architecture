@@ -403,6 +403,7 @@ class Builder
 			$sql = sprintf('%s OFFSET %s', $sql, $this->offset);
 		}
 
+		// die($sql);
 		return $sql;
 	}
 
