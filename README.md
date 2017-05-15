@@ -6,7 +6,7 @@
 	<li>Présentation du concept du magazine</li>
 	<li>Dernières parutions (plus à jour sur le site actuel)</li>
 	<li>Fil d’actualité lié à l’architecture + lien vers l’article sur le site</li>
-</ul><br>
+</ul>
 	
 <h3>Nos revues / Dernières parutions</h3>
 <ul>
@@ -17,7 +17,7 @@
 			<li>- Liste des partenaires ayant participés à la revue, donc liés à la région traitée dans la revue.</li>
 		</ol>
 	</li>
-</ul><br>
+</ul>
 		
 <h3>Commandes / Abonnement</h3>
 <ul>
