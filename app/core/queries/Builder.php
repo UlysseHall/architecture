@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Queries;
+namespace App\Core\Queries;
 
 use \PDO;
 use App\Core\Setup;
@@ -10,28 +10,28 @@ class Builder
 	/**
 	 * @var string generated with constructor
 	 */
-	private $table;
+	protected $table;
 	/**
 	 * All var used to create request
 	 */
-	private $req_type;
-	private $first_args = '';
-	private $args;
-	private $sql;
-	private $stmt;
-	private $tags = [];
-	private $order = false;
-	private $limit = false;
-	private $where = false;
-	private $offset = false;
-	private $fetchable = true;
-	private $fetchAll = true;
-	private $join = false;
-	private $join_type;
-	private $join_table;
-	private $on;
-	private $orOn = false;
-	private $_connexion;
+	protected $req_type;
+	protected $first_args = '';
+	protected $args;
+	protected $sql;
+	protected $stmt;
+	protected $tags = [];
+	protected $order = false;
+	protected $limit = false;
+	protected $where = false;
+	protected $offset = false;
+	protected $fetchable = true;
+	protected $fetchAll = true;
+	protected $join = false;
+	protected $join_type;
+	protected $join_table;
+	protected $on;
+	protected $orOn = false;
+	protected $_connexion;
 
 	/**
 	 * Set table where the query will be on
@@ -50,7 +50,7 @@ class Builder
 	/**
 	 * @return object fetchAll
 	 */
-	private function getAll()
+	protected function getAll()
 	{
 		$stmt = $this->exec();
 		if ($stmt->errorCode() === '00000') {
@@ -92,7 +92,7 @@ class Builder
 	 * Set and execute sql request
 	 * @return PDO statement
 	 */
-	private function exec()
+	protected function exec()
 	{
 		$this->sql = $this->setSql();
 		$pdo = $this->_connexion;
@@ -341,7 +341,7 @@ class Builder
 	 * Reset $this->param
 	 * @return void
 	 */
-	private function resetQuery()
+	protected function resetQuery()
 	{
 		unset($this->req_type);
 		$this->first_args = '';
@@ -365,7 +365,7 @@ class Builder
 	 * Make nice sql syntaxe to get ready to execute
      * @return string   $sql
 	 */
-	private function setSql()
+	protected function setSql()
 	{
 		if ($this->req_type === "UPDATE") {
 			$sql = sprintf('%s %s SET', $this->req_type, $this->table);
@@ -409,7 +409,7 @@ class Builder
 	/**
 	 * @param string 	$args 	first args line
 	 */
-	private function setArgs($args)
+	protected function setArgs($args)
 	{
 		$args = Check::checkArgs($args);
 		$first_args = '';
@@ -433,7 +433,7 @@ class Builder
 	/**
 	 * @param array $tags_value [$col_name => $value]
 	 */
-	private function setTags($tags_value)
+	protected function setTags($tags_value)
 	{
 		foreach ($tags_value as $tag => $value) {
 			$tags[sprintf(':%s', $tag)] = $value;
@@ -447,7 +447,7 @@ class Builder
 	 * @param 	array 	$tags_array 	:tags => value
 	 * @return 	string 	$tags_req
 	 */
-	private function setInsertTags($tags_array)
+	protected function setInsertTags($tags_array)
 	{
 		foreach ($tags_array as $tags => $value) {
 			$tags_req = sprintf('%s%s, ', $tags_req, $tags);
