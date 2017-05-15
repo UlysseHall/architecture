@@ -1,26 +1,39 @@
-Accueil
-	Présentation de la société
-	Présentation du concept du magazine
-	Dernières parutions (plus à jour sur le site actuel)
-	Fil d’actualité lié à l’architecture + lien vers l’article sur le site
+<h1>Plan du site</h1>
+
+<h3>Accueil</h3>
+<ul>
+	<li>PrÃ©sentation de la sociÃ©tÃ©</li>
+	<li>PrÃ©sentation du concept du magazine</li>
+	<li>DerniÃ¨res parutions (plus Ã  jour sur le site actuel)</li>
+	<li>Fil dâ€™actualitÃ© liÃ© Ã  lâ€™architecture + lien vers lâ€™article sur le site</li>
+</ul><br>
 	
-Nos revues / Dernières parutions
-	Les seizes dernières parutions avec titre + couverture.
-	Lorsque l’on clique sur un élément on arrive sur une page comprenant deux parties : 
-		- Un lien vers une partie de la revue en ligne (PDF sur Calaméo)
-		- Liste des partenaires ayant participés à la revue, donc liés à la région traitée dans la revue.
+<h3>Nos revues / DerniÃ¨res parutions</h3>
+<ul>
+	<li>Les seizes derniÃ¨res parutions avec titre + couverture.</li>
+	<li>Lorsque lâ€™on clique sur un Ã©lÃ©ment on arrive sur une page comprenant deux parties : 
+		<ol>
+			<li>- Un lien vers une partie de la revue en ligne (PDF sur CalamÃ©o)</li>
+			<li>- Liste des partenaires ayant participÃ©s Ã  la revue, donc liÃ©s Ã  la rÃ©gion traitÃ©e dans la revue.</li>
+		</ol>
+	</li>
+</ul><br>
 		
-Commandes / Abonnement
-	Formulaire de commande pour réserver un magazine.
-	Tableau indiquant les tarifs 
-	Miniature de la revue sélectionnée.
+<h3>Commandes / Abonnement</h3>
+<ul>
+	<li>Formulaire de commande pour rÃ©server un magazine.</li>
+	<li>Tableau indiquant les tarifs</li>
+	<li>Miniature de la revue sÃ©lectionnÃ©e.</li>
+</ul>
 
-Appel d'offre
-	Iframe d’un partenaire majoritaire de la société (à retrouver obligatoirement)
+<h3>Appel d'offre</h3>
+	<p>Iframe dâ€™un partenaire majoritaire de la sociÃ©tÃ© (Ã  retrouver obligatoirement)</p>
 
-Actualités
-	Tableau montrant les différents actualités du site.
+<h3>ActualitÃ©s</h3>
+	<p>Tableau montrant les diffÃ©rents actualitÃ©s du site.</p>
 
-Contact
-	Formulaire classique de contact
-	Information sur la société
+<h3>Contact</h3>
+<ul>
+	<li>Formulaire classique de contact</li>
+	<li>Information sur la sociÃ©tÃ©</li>
+</ul>
