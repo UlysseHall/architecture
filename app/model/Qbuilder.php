@@ -22,8 +22,8 @@ class Qbuilder extends Builder
 		}
 		$stmt = $this->exec();
 		if ($this->fetchable) {
-			$this->resetQuery();
 			if ($stmt->errorCode() == '00000') {
+				$this->resetQuery();
 
 		       	return $stmt->fetch(PDO::FETCH_CLASS, $class); 		
 		   	}
@@ -46,6 +46,7 @@ class Qbuilder extends Builder
 	protected function getAllClass($class)
 	{
 		$stmt = $this->exec();
+		$this->resetQuery();
 		if ($stmt->errorCode() === '00000') {
 
         	return $stmt->fetchAll(PDO::FETCH_CLASS, $class); 		

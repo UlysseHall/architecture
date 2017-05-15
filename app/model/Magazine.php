@@ -30,14 +30,9 @@ class Magazine
 	}
 
 	// SETTERS
-	public function setId($id)
-	{
-		$this->id = $id;
-	}
-
 	public function setNumber($number)
 	{
-		$this->number = $number;
+		$this->number = (int) $number;
 	}
 
 	public function setImg($img)
@@ -57,7 +52,7 @@ class Magazine
 
 	public function setYear($year)
 	{
-		$this->year = $year;
+		$this->year = (int) $year;
 	}
 
 	public function setSecond_region($second_region)
