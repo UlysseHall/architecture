@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <h1>Routes</h1>
 <ul>
 	<li><b>[ACTION] -> [CONTROLLER] -> <i>(infos)</i></b></li><br>
@@ -13,7 +11,6 @@
 	<li><b>Subscribe</b> -> Order -> <i>(page d'abonnement)</i></li>
 </ul>
 
->>>>>>> fa78116ba2be8cbc55e1bb1fcecb3aaa8d27e853
 <h1>Plan du site</h1>
 
 <h3>Accueil</h3>
