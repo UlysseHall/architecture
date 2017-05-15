@@ -24,17 +24,17 @@ class Route
                 case "tender":
                 case "listNews":
                 case "contact":
-                    $controller = "Main.php";
+                    $controller = "Main";
                     break;
                     
                 case "listJournals":
                 case "journalView":
-                    $controller = "Journal.php";
+                    $controller = "Journal";
                     break;
                     
                 case "order":
                 case "subscribe":
-                    $controller = "Order.php";
+                    $controller = "Order";
                     break;
             }
             

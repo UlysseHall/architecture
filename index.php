@@ -1,5 +1,9 @@
 <?php
 use App\Core\Route;
+use App\Controller\Journal;
+use App\Controller\Main;
+use App\Controller\Order;
+
 require_once "vendor/autoload.php";
 
 $routeManager = new Route();
@@ -10,8 +14,13 @@ if(isset($_GET["action"]) && !is_null($_GET["action"])) {
 }
 else {
     $action = "home";
-    $controller = "Main.php";
+    $controller = "Main";
 }
 
-require("app/controller/" . $controller);
-echo("controller : <b>" . $controller . "</b> action : <b>" . $action . "</b>");
+$controller = "App\Controller\\".$controller;
+$controller = new $controller();
+$action = $action . "Action";
+
+$content = $controller->$action();
+
+require("template/default.php");
