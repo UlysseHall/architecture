@@ -21,4 +21,6 @@ $controller = "App\Controller\\".$controller;
 $controller = new $controller();
 $action = $action . "Action";
 
-$pageContent = $controller->$action();
+$content = $controller->$action();
+
+require("template/default.php");
