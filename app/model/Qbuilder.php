@@ -2,8 +2,7 @@
 namespace App\Model;
 
 use \PDO;
-use App\Core\Builder;
-use App\Model\Magazine;
+use \App\Core\Queries\Builder;
 
 /**
 * 
@@ -26,7 +25,7 @@ class Qbuilder extends Builder
 			$this->resetQuery();
 			if ($stmt->errorCode() == '00000') {
 
-		       	return $stmt->fetch(PDO::FETCH_CLASS, $class); 		
+		       	return $stmt->fetch(PDO::FETCH_CLASS, ucfirst($class)); 		
 		   	}
 			die($stmt->errorInfo()[2]);
 		}
@@ -49,7 +48,7 @@ class Qbuilder extends Builder
 		$stmt = $this->exec();
 		if ($stmt->errorCode() === '00000') {
 
-        	return $stmt->fetchAll(PDO::FETCH_CLASS, $class); 		
+        	return $stmt->fetchAll(PDO::FETCH_CLASS, ucfirst($class)); 		
     	}
 		die($stmt->errorInfo()[2]);
 	}
