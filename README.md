@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+<h1>Routes</h1>
+<ul>
+	<li><b>[ACTION] -> [CONTROLLER] -> <i>(infos)</i></b></li><br>
+	<li><b>Home</b> -> Main -> <i>(page d'accueil)</i></li>
+	<li><b>Tender</b> -> Main -> <i>(appel d'offre)</i></li>
+	<li><b>ListNews</b> -> Main -> <i>(liste des actualités)</i></li>
+	<li><b>Contact</b> -> Main -> <i>(page contact)</i></li>
+	<li><b>ListJournals</b> -> Journal -> <i>(liste des magazines)</i></li>
+	<li><b>JournalView</b> -> Journal -> <i>(page d'une revue de magazine)</i></li>
+	<li><b>Order</b> -> Order -> <i>(page de commande)</i></li>
+	<li><b>Subscribe</b> -> Order -> <i>(page d'abonnement)</i></li>
+</ul>
+
+>>>>>>> fa78116ba2be8cbc55e1bb1fcecb3aaa8d27e853
 <h1>Plan du site</h1>
 
 <h3>Accueil</h3>
