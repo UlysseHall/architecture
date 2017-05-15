@@ -22,6 +22,9 @@ class Magazine
 		$all['pdf'] = $this->pdf;
 		$all['region'] = $this->region;
 		$all['year'] = $this->year;
+		if(isset($this->second_region)) {
+			$all['second_region'] = $this->second_region;
+		}
 
 		return $all;
 	}
@@ -55,6 +58,11 @@ class Magazine
 	public function setYear($year)
 	{
 		$this->year = $year;
+	}
+
+	public function setSecond_region($second_region)
+	{
+		$this->second_region = $second_region;
 	}
 
 	// GETTERS
