@@ -5,7 +5,7 @@ use App\Model\Connect;
 
 class Setup
 {
-	CONST DB_NAME = 'pipou';
+	CONST DB_NAME = 'architecture';
 	CONST DB_HOST = 'localhost';
 	CONST DB_USER = 'root';
 	CONST DB_PASS = 'root';
