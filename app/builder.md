@@ -14,8 +14,7 @@ BUILDER :
 
 commencer par ces lignes en php :
 
-	use App\Model\Queries\Builder;
-	use App\Core\Setup;
+	use App\Model\Qbuilder;
 	
 	require_once "vendor/autoload.php";
 
@@ -35,6 +34,9 @@ fonctionnement :
 	->get();
 		permet d'envoyer la requête créée
 		chaque suite de méthodes se finit par ->get() pour être exécutée
+
+	->getClass(class_name);
+		retourne un PDO::FETCH_CLASS
 
 	->select(colonnes (à la suite))
 		->alias(après une colonne pour récupérer son nom dans un alias)
