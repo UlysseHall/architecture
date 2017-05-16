@@ -20,7 +20,6 @@ else {
 $controller = "App\Controller\\".$controller;
 $controller = new $controller();
 $action = $action . "Action";
-
-$content = $controller->$action();
+$data = $controller->$action();
 
 require("template/default.php");
