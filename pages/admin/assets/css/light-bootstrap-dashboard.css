@@ -1,17 +1,4 @@
 /*!
-
- =========================================================
- * Light Bootstrap Dashboard - v1.3.1.0
- =========================================================
-
- * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
  */
 /*      light colors         */
 @keyframes spin {
@@ -368,7 +355,7 @@ body > .navbar-collapse {
   .sidebar[data-color="blue"]:after,
   body > .navbar-collapse[data-color="blue"]:after {
     background: #1F77D0;
-    background: -moz-linear-gradient(top, #1F77D0 0%, #533ce1 100%);
+    background: -moz-linear-gradient(top, #1F77D0 0%, #1F77D0 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1F77D0), color-stop(100%, #533ce1));
     background: -webkit-linear-gradient(top, #1F77D0 0%, #533ce1 100%);
     background: -o-linear-gradient(top, #1F77D0 0%, #533ce1 100%);

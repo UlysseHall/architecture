@@ -58,13 +58,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="ajouter.html">
                         <i class="pe-7s-note"></i>
                         <p>Ajouter</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="modifier.html">
                         <i class="pe-7s-note2"></i>
                         <p>Modifier</p>
                     </a>
@@ -134,23 +134,6 @@
                                <p>Mon compte</p>
                             </a>
                         </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <p>
-										Dropdown
-										<b class="caret"></b>
-									</p>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                              </ul>
-                        </li>
                         <li>
                             <a href="#">
                                 <p>Déconnexion</p>
@@ -168,7 +151,21 @@
 						<div class="card ">
 								<div class="header">
 										<h4 class="title">Magazines l'architecture de votre région</h4>
-										<p class="category">2017</p>
+										<script>var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+}
+
+if(mm<10) {
+    mm='0'+mm
+}
+
+today = mm+'/'+dd+'/'+yyyy;
+document.write(today);</script><p class="category"></p>
 								</div>
 								<div class="content">
 										<div class="table-full-width">
@@ -198,10 +195,10 @@
 																		</td>
 																		<td><a href="#">Revue N°284 - 2016 - Ile-de-France</a></td>
 																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
 																						<i class="fa fa-edit"></i>
 																				</button>
-																				<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
 																						<i class="fa fa-times"></i>
 																				</button>
 																		</td>
@@ -214,10 +211,10 @@
 																		</td>
 																			<td><a href="#">Revue N°283 - 2016 - Bretagne - Normandie</a></td>
 																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
 																						<i class="fa fa-edit"></i>
 																				</button>
-																				<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
 																						<i class="fa fa-times"></i>
 																				</button>
 																		</td>
@@ -228,12 +225,12 @@
 																						<input type="checkbox" value="" data-toggle="checkbox">
 																				</label>
 																		</td>
-																		<td><a href="#">Revue N°282 - 2016 Rhône-Alpes</a></td>
+																		<td><a href="#">Revue N°282 - 2016 - Rhône-Alpes</a></td>
 																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
 																						<i class="fa fa-edit"></i>
 																				</button>
-																				<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
 																						<i class="fa fa-times"></i>
 																				</button>
 																		</td>
@@ -246,10 +243,10 @@
 																		</td>
 																		<td><a href="#">Revue N°281 - 2016 - Guadeloupe</a></td>
 																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
 																						<i class="fa fa-edit"></i>
 																				</button>
-																				<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
 																						<i class="fa fa-times"></i>
 																				</button>
 																		</td>
@@ -307,8 +304,8 @@
         	demo.initChartist();
 
         	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Bienvenue su votre tableau de bord."
+            	icon: 'pe-7s-coffee',
+            	message: "C'est un grand honneur de vous avoir dans notre équipe. Bienvenue à bord !"
 
             },{
                 type: 'info',

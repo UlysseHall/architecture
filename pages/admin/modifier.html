@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Ajouter votre magazine - L'architecture de votre région</title>
+	<title>Modifier votre magazine - L'architecture de votre région</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -40,7 +40,7 @@
 
 		<div class="sidebar-wrapper">
 					<div class="logo">
-							<a href="" class="simple-text">
+							<a href="dashboard.html" class="simple-text">
 									Tableau de bord
 							</a>
 					</div>
@@ -53,13 +53,13 @@
 									</a>
 							</li>
 							<li>
-									<a href="user.html">
+									<a href="ajouter.html" >
 											<i class="pe-7s-note"></i>
 											<p>Ajouter</p>
 									</a>
 							</li>
 							<li>
-									<a href="table.html">
+									<a href="modifier.html">
 											<i class="pe-7s-note2"></i>
 											<p>Modifier</p>
 									</a>
@@ -92,14 +92,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Ajouter votre magazine</a>
+                    <a class="navbar-brand" href="#">Modifier votre magazine</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
-								<p class="hidden-lg hidden-md">Dashboard</p>
+								<p class="hidden-lg hidden-md">Tableau de bord</p>
                             </a>
                         </li>
 												<li class="dropdown">
@@ -125,34 +125,18 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
+											<ul class="nav navbar-nav navbar-right">
+													<li>
+														 <a href="">
+																 <p>Mon compte</p>
+															</a>
+													</li>
+													<li>
+															<a href="#">
+																	<p>Déconnexion</p>
+															</a>
+													</li>
                         <li>
-                           <a href="">
-                               <p>Account</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <p>
-										Dropdown
-										<b class="caret"></b>
-									</p>
-
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Log out</p>
-                            </a>
-                        </li>
 						<li class="separator hidden-lg hidden-md"></li>
                     </ul>
                 </div>
@@ -166,7 +150,22 @@
                     <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Ajouter votre magazine</h4>
+                                <h4 class="title">Modifier votre magazine</h4>
+																<script>var today = new Date();
+						var dd = today.getDate();
+						var mm = today.getMonth()+1; //January is 0!
+						var yyyy = today.getFullYear();
+
+						if(dd<10) {
+						    dd='0'+dd
+						}
+
+						if(mm<10) {
+						    mm='0'+mm
+						}
+
+						today = mm+'/'+dd+'/'+yyyy;
+						document.write(today);</script>
                             </div>
                             <div class="content">
                                 <form>
@@ -226,7 +225,7 @@
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Ajouter votre magazine</button>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Modifier votre magazine</button>
                                     <div class="clearfix"></div>
                                 </form>
                             </div>
