@@ -9,7 +9,7 @@ class Setup
 	CONST DB_HOST = 'localhost';
 	CONST DB_USER = 'root';
 	CONST DB_PASS = 'root';
-	CONST DB_PORT = '8888';
+	CONST DB_PORT = '3306';
 
 	/**
 	 * @var \PDO

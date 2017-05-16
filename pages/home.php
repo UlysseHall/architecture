@@ -11,10 +11,13 @@
 	<div class="containerMagasine">
 		<h2>NOUVEAUX MAGAZINES 2017<div class="underline"></div></h2>
 		<section>
-			<article><a href=""><img src="" alt=""><p class="alignTitle">titre</p></a></article>
-			<article><a href=""><img src="" alt=""><p class="alignTitle">titre</p></a></article>
-			<article><a href=""><img src="" alt=""><p class="alignTitle">titre</p></a></article>
-			<article><a href=""><img src="" alt=""><p class="alignTitle">titre</p></a></article>
+		<?php
+		foreach($data["cont"]["journals"] as $magasine){ ?>
+
+			<article><a href=""><img src='public/images/img-content/<?php echo $magasine->getImg(); ?>' alt=''><p class='alignTitle'><?php echo $magasine->getRegion(); ?></p></a></article>
+		<?php
+		}
+		?>
 		</section>
 		<button>
 			explorez

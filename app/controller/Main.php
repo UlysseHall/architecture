@@ -8,7 +8,7 @@ class Main
     {
         $builder = new Qbuilder("magazine");
         $lastJournals = $builder->select("img", "region")->order("year", "desc")->limit(4)->getClass("App\Model\Magazine");
-        
+
         return(["page" => "home.php", "cont" => ["journals" => $lastJournals]]);
     }
     
