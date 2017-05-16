@@ -106,59 +106,285 @@ input[type="checkbox"]{
 /* -----------------Home page---------------- */
 
 .acceuil{
+	margin-top: 50px;
 	width: 100%;
 	height: 70vh;
-	background-color: grey;
 	background-image: url(../images/img-content/immeuble_home_page.jpg);
 	background-size: 50% 100%;
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: 75%;
+	position: relative;
+	overflow: hidden;
+}
+
+.acceuil .container{
+	background-color: white;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	width: 30%;
+	margin-left: 12.5%;
+	margin-top: 15vh;
+}
+
+.acceuil .container article{
+	width: 90%;
+	margin-left: 5%;
 }
 
 .acceuil h1{
-	width: 30%;
+	font-size: 1.6em;
+	font-family: 'Hind', sans-serif;
+	font-weight: 500;
+	padding-top: 2vh;
+	display: inline-block;
+}
+
+.underline{
+	width: 40%;
+	height: 2px;
+	background-color: #32bacc;
+}
+
+.acceuil .container p{
+	padding-top: 3vh;
+	padding-bottom: 15vh;
+	font-size: 1.2em;
+}
+
+h2{
+	font-size: 1.6em;
+	font-family: 'Hind', sans-serif;
+	font-weight: 500;
+	padding-top: 2vh;
+	display: inline-block;
+}
+
+/* ---------------------section magasine home page---------------------*/
+
+.containerMagasine{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.containerMagasine h2{
+	display: flex;
+	align-self: flex-start;
+	flex-direction: column;
+	margin-bottom: 6vh;
+}
+
+.containerMagasine section{
+	width: 100%;
+	margin-top: 4vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+}
+
+.containerMagasine section article{
+	display: inline-block;
+}
+
+.containerMagasine section a img{
+	width: 200px;
+	height: 260px;
+	background-color: red;
+}
+
+.containerMagasine section article a{
+	text-decoration: none;
+	color: black;	
+}
+
+.alignTitle{
+	text-align: center;
+}
+
+button{
+	cursor: pointer;
+	clear: both;
+	border: none;
+	text-transform: uppercase;
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+	padding:10px 15px 10px 15px;
 	background-color: white;
+	margin-top: 10vh;
 	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
 	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
 	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
 }
 
+/* --------------------Actualité home page-------------- */
+
+.containerActu{
+	width: 90%;
+	margin-left: 5%;
+}
+
+.containerActu h2{
+	margin-top: 7vh;
+	margin-bottom: 6vh;
+}
+
+.containerActu section{
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 40px;
+}
+
+.containerActu section article{
+	width: 40%;
+	margin-left: 5%;
+	margin-top: 10vh;
+	float: left;
+	position: relative;
+}
+
+.containerActu section article:nth-child(n+3){
+	padding: 0px 10px 40px 0px;
+}
+
+.containerActu article img{
+	width: 100%;
+}
+
+.container section article div h2{
+	margin:2px;
+}
+
+.containerInfoActu{
+	background-color: white;
+	position: absolute;
+	padding: 10px;
+	bottom: -5%;
+	width: 80%;
+	left: 10%;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+.containerInfoActu .underline{
+	width: 10%;
+}
+
+.containerInfoActu p{
+	height: 55px;
+	margin-top: 10px;
+}
+
+/* -----------------Qui sommes nous ?--------------- */
+
+.containerWho{
+	clear: both;
+	overflow: hidden;
+	margin-top: 20vh;
+	background-color: #f8f8f8;
+}
+
+.containerWho img{
+	width: 40%;
+	float: left;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	margin-left: 7%;
+}
+
+.containerWho h2{
+	margin-left: 7%;
+	margin-top: 7vh;
+	margin-bottom: 5vh;
+}
+
+.containerWho p{
+	font-weight: 400;
+	font-size: 1.1em;
+	width: 30%;
+	float: left;
+	margin-left: 7%;
+}
 
 
+/* -----------Decriptif home page 1---------------- */
+
+.containerDescOne{
+	margin-top: 20vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.containerDescOne .containerTxtDesc{
+	float: left;
+	width: 40%;
+	background-color: #f8f8f8;
+	position: absolute;
+	top: 15%;
+	left: 8.7%;
+	padding: 10px 10px 15vh 10px;
+}
+
+.containerDescOne img{
+	float: right;
+	width: 40%;
+	margin-right: 10%;
+}
+
+.containerDescOne .containerTxtDesc h2{
+	margin-left: 5%;
+}
+
+.containerDescOne .containerTxtDesc p{
+	margin-top: 6vh;
+	width: 90%;
+	margin-left: 5%;
+}
 
 
+/* -----------Decriptif home page 2---------------- */
 
+.containerDescTwo{
+	margin-top: 20vh;
+	overflow: hidden;
+	position: relative;
+}
 
+.containerDescTwo .containerTxtDesc{
+	float: right;
+	width: 40%;
+	background-color: #f8f8f8;
+	position: absolute;
+	top: 10%;
+	right: 8.7%;
+	padding: 10px 10px 10vh 10px;
+}
 
+.containerDescTwo img{
+	float: left;
+	width: 40%;
+	margin-left: 10%;
+}
 
+.containerDescTwo .containerTxtDesc h2{
+	margin-left: 5%;
+}
 
+.containerDescTwo .underline{
+	width: 10%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.containerDescTwo .containerTxtDesc p{
+	margin-top: 6vh;
+	width: 90%;
+	margin-left: 5%;
+}
 
 
 
@@ -313,12 +539,14 @@ footer{
 	}
 
 	.navPhone{
-    display: block;
-  }
+    	display: block;
+    	position: fixed;
+    	z-index: 2;
+  	}
   
   .navPhone .mainNav li{
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
  .navPhone .mainNav li:nth-child(1){
@@ -330,9 +558,8 @@ footer{
 }
 
 .navPhone .mainNav li{
-  position: relative;
-  float: right;
-  top: 0px;
+  position: fixed;
+  top: 10px;
   right: 10px;
   height: 30px;
   width: 40px;
@@ -357,12 +584,12 @@ footer{
 
 .contentMenuPhone{
   z-index: 98;
-  width: 70%;
+  width: 400px;
   background-color: white;
   height: 100vh;
-  position: absolute;
-  top: 0;
-  left: -200%;
+  position: fixed;
+  top: -50px;
+  left: -400px;
   transition: 0.2s;
 }
 
@@ -399,11 +626,98 @@ footer{
 .choice {
   cursor: pointer;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
     position: absolute;
-    left: 50%;
+    left: 0px;
+}
+
+.acceuil{
+	background-size: 70% 100%;
+}
+
+.acceuil .container{
+	width: 40%;
+}
+
+.containerMagasine section{
+		width: 100%;
+		margin-top: 4vh;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.containerMagasine section article{
+		width: 50%;
+		text-align: center;
+	}
+	.containerActu section article{
+	width: 70%;
+	margin-left: 15%;
+	margin-top: 8vh;
+	float: none;
+}
+
+.containerWho{
+	width: 90%;
+	margin-left: 5%;
+}
+
+.containerWho p{
+	width: 80%;
+	float: none;
+	margin-left: 7%;
+	padding-bottom: 10vh;
+}
+
+.containerWho img{
+	display: none;
+}
+
+.containerWho h2{
+	width: 90%;
+	margin-top: 7vh;
+	margin-bottom: 5vh;
+}
+
+.containerWho .underline{
+	width: 10%;
+}
+
+.containerDescTwo {
+    overflow: visible;
+}
+
+.containerDescOne{
+	overflow: visible;
+}
+
+.containerDescOne img {
+    display: none;
+}
+
+.containerDescTwo img {
+	display: none;
+}
+
+.containerDescOne .containerTxtDesc {
+    float: none;
+    width: 90%;
+    background-color: #f8f8f8;
+    position: static;
+}
+
+.containerDescTwo .containerTxtDesc {
+    float: none;
+    width: 90%;
+    background-color: #f8f8f8;
+    position: static;
 }
 
 @media screen and (max-width:600px)  {
@@ -416,5 +730,41 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 
 	.containerFooter .containerRight{
 		margin-top: 5vh;
+	}
+	.containerMagasine section{
+		width: 100%;
+		margin-top: 4vh;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.containerMagasine section article{
+		width: 100%;
+		text-align: center;
+	}
+	.acceuil{
+		background-size: 100% 100%;
+	}
+
+	.acceuil .container{
+		width: 80%;
+		margin-left: 0%;
+		margin-top: 30vh;
+	}
+
+	.acceuil .container p{
+		padding-bottom: 5vh;
+	}
+	.containerActu section article {
+    	width: 95%;
+    	margin-left: 2.5%;
+    	margin-top: 10vh;
+	}
+	.containerInfoActu {
+    	background-color: white;
+    	position: absolute;
+    	padding-bottom: 25px;
+    	bottom: -10%;
 	}
 }
