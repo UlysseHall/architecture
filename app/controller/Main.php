@@ -6,10 +6,14 @@ class Main
 {
     public function homeAction()
     {
-        $builder = new Qbuilder("magazine");
-        $lastJournals = $builder->select("img", "region")->order("year", "desc")->limit(4)->getClass("App\Model\Magazine");
-
-        return(["page" => "home.php", "cont" => ["journals" => $lastJournals]]);
+        $builderMag = new Qbuilder("magazine");
+        $builderNews = new Qbuilder("news");
+        
+        $lastJournals = $builderMag->select("img", "region")->order("year", "desc")->limit(4)->getClass("App\Model\Magazine");
+        
+        $lastNews = $builderNews->select("architect", "title", "img")->order("date", "desc")->limit(4)->getClass("App\Model\News");
+        
+        return(["page" => "home.php", "cont" => ["journals" => $lastJournals, "news" => $lastNews]]);
     }
     
     public function tenderAction()

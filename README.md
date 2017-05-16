@@ -14,9 +14,9 @@
 <h1>Variables transmises aux pages</h1>
 <h3>home.php</h3>
 <ul>
-<li><b>Nom</b> : journals, <b>Info</b> : c'est un tableau contenant 4 objects, les 4 dernières revues. Ces objects ont 2 paramètres : region et img (img contient juste le nom du fichier, pas le chemin complet)<br><b>Exemple d'utilisation : </b>foreach( $data["cont"]["journals"] as $journal ) {
-    echo($journal->getRegion());
-}</li>
+    <li><b>Nom</b> : journals, <b>Info</b> : c'est un tableau contenant 4 objects, les 4 dernières revues. Ces objects ont 2 paramètres : region et img (img contient juste le nom du fichier, pas le chemin complet)<br><b>Exemple d'utilisation : </b>foreach( $data["cont"]["journals"] as $journal ) {
+    echo($journal->getRegion()); }</li>
+    <li><b>Nom</b> : news, <b>Infos</b> : c'est un tableau contenant 4 objects, les 4 dernières news. Ces objects ont 3 paramètres : title, architect, img</li>
 </ul>
 
 <h1>Routes</h1>

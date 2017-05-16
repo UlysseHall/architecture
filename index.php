@@ -17,7 +17,7 @@ else {
     $controller = "Main";
 }
 
-$controller = "App\Controller\\".$controller;
+$controller = "App\\Controller\\".$controller;
 $controller = new $controller();
 $action = $action . "Action";
 $data = $controller->$action();
