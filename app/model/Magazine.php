@@ -9,6 +9,7 @@ class Magazine
 	private $pdf;
 	private $region;
 	private $year;
+	private $second_region = 0;
 
 	/**
 	 * Get all infos about magazine in array to update/insert
@@ -21,39 +22,42 @@ class Magazine
 		$all['pdf'] = $this->pdf;
 		$all['region'] = $this->region;
 		$all['year'] = $this->year;
+		if($this->second_region !== 0) {
+			$all['second_region'] = $this->second_region;
+		}
 
 		return $all;
 	}
 
 	// SETTERS
-	public function setId()
+	public function setNumber($number)
 	{
-		return $this->id;
+		$this->number = (int) $number;
 	}
 
-	public function setNumber()
+	public function setImg($img)
 	{
-		return $this->number;
+		$this->img = $img;
 	}
 
-	public function setImg()
+	public function setPdf($pdf)
 	{
-		return $this->img;
+		$this->pdf = $pdf;
 	}
 
-	public function setPdf()
+	public function setRegion($region)
 	{
-		return $this->pdf;
+		$this->region = $region;
 	}
 
-	public function setRegion()
+	public function setYear($year)
 	{
-		return $this->region;
+		$this->year = (int) $year;
 	}
 
-	public function setYear()
+	public function setSecond_region($second_region)
 	{
-		return $this->year;
+		$this->second_region = $second_region;
 	}
 
 	// GETTERS
@@ -86,6 +90,11 @@ class Magazine
 	public function getYear()
 	{
 		return $this->year;
+	}
+
+	public function getSecond_region()
+	{
+		return $this->second_region;
 	}
 }
 

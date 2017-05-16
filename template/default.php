@@ -7,7 +7,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,500,600" rel="stylesheet">
 </head>
 <body>
-
     <input type="checkbox" id="check1" name=""/>
 	<nav class="navPhone">
 		<ul class="mainNav">
@@ -41,7 +40,7 @@
 		</ul>
 	</header>
 
-<?php echo($content); ?>
+<?= $content ?>
 
     <footer>
 		<div class="containerFooter">
@@ -96,6 +95,5 @@
 				</div>
 			</div>		
 		</footer>
-
 </body>
 </html>
