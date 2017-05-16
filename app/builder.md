@@ -14,7 +14,7 @@ BUILDER :
 
 commencer par ces lignes en php :
 
-	use App\Model\Qbuilder;
+	use App\Core\Queries\Builder;
 	
 	require_once "vendor/autoload.php";
 

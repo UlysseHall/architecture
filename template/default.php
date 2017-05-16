@@ -40,7 +40,8 @@
 		</ul>
 	</header>
 
-<?= $content ?>
+<?php require("pages/" . $data["page"]); ?>
+
 
     <footer>
 		<div class="containerFooter">

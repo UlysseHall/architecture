@@ -2,7 +2,8 @@
 namespace App\Model;
 
 use \PDO;
-use \App\Core\Queries\Builder;
+use App\Core\Queries\Builder;
+use App\Model\Magazine;
 
 /**
 * 

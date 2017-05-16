@@ -1,3 +1,24 @@
+<h1>Intégrer</h1>
+<b>Voici quelques informations importantes pour intégrer des nouvelles pages</b>
+<ul>
+    <li>Les fichiers des pages ont été créés vous n'avez plus qu'à les modifiers</li>
+    <li>Pas besoin d'écrire ni le header ni le footer, ils sont déjà intégrés, pareil pour la balise head et body</li>
+    <li>Pour accéder à une page, ne la chargez pas directement, utilisé les liens <b>index.php?action=NomDeLaPage</b> où NomDeLaPage correspond aux actions juste en dessous</li>
+    <li>C'est pareil pour les liens, quand vous renseignez un href, utilisé toujours les lien index.php?action=...</li>
+    <li>On utilise un seul fichier css, le style.css dans public/css</li>
+    <li>Tous les liens vers des images où fichiers s'écrivent en partant du principe que l'on se trouve dans index.php (donc directement public/images et pas ../public/images)</li>
+    <li>Pour accéder aux variables php que l'on transmet aux pages il faut écricre : <b>$data["cont"]["NomDeLaVariable"]</b> les noms des variables sont renseignées juste en dessous</li>
+    <li>NE JAMAIS TRAVAILLER SUR LE MASTER DIRECTEMENT</li>
+</ul>
+
+<h1>Variables transmises aux pages</h1>
+<h3>home.php</h3>
+<ul>
+<li><b>Nom</b> : journals, <b>Info</b> : c'est un tableau contenant 4 objects, les 4 dernières revues. Ces objects ont 2 paramètres : region et img (img contient juste le nom du fichier, pas le chemin complet)<br><b>Exemple d'utilisation : </b>foreach( $data["cont"]["journals"] as $journal ) {
+    echo($journal->getRegion());
+}</li>
+</ul>
+
 <h1>Routes</h1>
 <ul>
 	<li><b>[ACTION] -> [CONTROLLER] -> <i>(infos)</i></b></li><br>
