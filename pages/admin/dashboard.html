@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="ajouter.html">
                         <i class="pe-7s-note"></i>
                         <p>Ajouter</p>
                     </a>
@@ -151,7 +151,21 @@
 						<div class="card ">
 								<div class="header">
 										<h4 class="title">Magazines l'architecture de votre région</h4>
-										<p class="category">2017</p>
+										<script>var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+}
+
+if(mm<10) {
+    mm='0'+mm
+}
+
+today = mm+'/'+dd+'/'+yyyy;
+document.write(today);</script><p class="category"></p>
 								</div>
 								<div class="content">
 										<div class="table-full-width">
@@ -211,7 +225,7 @@
 																						<input type="checkbox" value="" data-toggle="checkbox">
 																				</label>
 																		</td>
-																		<td><a href="#">Revue N°282 - 2016 Rhône-Alpes</a></td>
+																		<td><a href="#">Revue N°282 - 2016 - Rhône-Alpes</a></td>
 																		<td class="td-actions text-right">
 																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
 																						<i class="fa fa-edit"></i>
@@ -290,8 +304,8 @@
         	demo.initChartist();
 
         	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Bienvenue su votre tableau de bord."
+            	icon: 'pe-7s-coffee',
+            	message: "C'est un grand honneur de vous avoir dans notre équipe. Bienvenue à bord !"
 
             },{
                 type: 'info',

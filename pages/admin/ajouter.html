@@ -53,7 +53,7 @@
 									</a>
 							</li>
 							<li>
-									<a href="user.html">
+									<a href="ajouter.html">
 											<i class="pe-7s-note"></i>
 											<p>Ajouter</p>
 									</a>
@@ -150,6 +150,21 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Ajouter votre magazine</h4>
+																<script>var today = new Date();
+						var dd = today.getDate();
+						var mm = today.getMonth()+1; //January is 0!
+						var yyyy = today.getFullYear();
+
+						if(dd<10) {
+						    dd='0'+dd
+						}
+
+						if(mm<10) {
+						    mm='0'+mm
+						}
+
+						today = mm+'/'+dd+'/'+yyyy;
+						document.write(today);</script>
                             </div>
                             <div class="content">
                                 <form>
