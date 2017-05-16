@@ -19,6 +19,11 @@
     <li><b>Nom</b> : news, <b>Infos</b> : c'est un tableau contenant 4 objects, les 4 dernières news. Ces objects ont 3 paramètres : title, architect, img</li>
 </ul>
 
+<h3>listNews.php</h3>
+<ul>
+    <li><b>Nom</b> : news, <b>Infos</b> : c'est un tableau contenant pleins d'objects, toutes les news. Ces objects ont 4 paramètres : date, architect, title, img</li>
+</ul>
+
 <h1>Routes</h1>
 <ul>
 	<li><b>[ACTION] -> [CONTROLLER] -> <i>(infos)</i></b></li><br>

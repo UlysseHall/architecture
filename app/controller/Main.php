@@ -23,7 +23,11 @@ class Main
     
     public function listNewsAction()
     {
-        return(["page" => "listNews.php"]);
+        $builderNews = new Qbuilder("news");
+        
+        $allNews = $builderNews->select("date", "architect", "title", "img")->order("date", "desc")->getClass("App\Model\News");
+        
+        return(["page" => "listNews.php", "cont" => ["news" => $allNews]]);
     }
     
     public function contactAction()
