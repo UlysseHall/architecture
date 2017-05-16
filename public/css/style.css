@@ -93,6 +93,7 @@ box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 
 .navPhone{
 	display: none;
+	position: absolute;
 }
 
 input[type="checkbox"]{
@@ -100,6 +101,70 @@ input[type="checkbox"]{
 	left: -50px;
 	top: 0;
 }
+
+
+/* -----------------Home page---------------- */
+
+.acceuil{
+	width: 100%;
+	height: 70vh;
+	background-color: grey;
+	background-image: url(../images/img-content/immeuble_home_page.jpg);
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.acceuil h1{
+	width: 30%;
+	background-color: white;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -------------------FOOTER----------------- */
 
@@ -297,7 +362,7 @@ footer{
   height: 100vh;
   position: absolute;
   top: 0;
-  right: -50%;
+  left: -200%;
   transition: 0.2s;
 }
 
@@ -338,7 +403,7 @@ footer{
 
 input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
     position: absolute;
-    right: 0%;
+    left: 50%;
 }
 
 @media screen and (max-width:600px)  {
