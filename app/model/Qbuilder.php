@@ -75,6 +75,14 @@ class Qbuilder extends Builder
 			return $this;
 		}
 	}
+
+	public function where($value, $col = 'id', $operator = '=')
+	{
+		$this->where = sprintf('%s%s:%s', $col, $operator, $col);
+		$this->tags[sprintf(":%s", $col)] = $value;
+
+		return $this;
+	}
 }
 
 

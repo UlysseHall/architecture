@@ -3,7 +3,7 @@ namespace App\Core;
 
 class Route 
 {
-    private $listRoutes = ["home", "tender", "listNews", "contact", "listJournals", "journalView", "order", "subscribe"];
+    private $listRoutes = ["home", "tender", "listNews", "contact", "listJournals", "journalView", "order", "subscribe", "admin_home", "admin_delete", "admin_single", "admin_update"];
     
     public static function errorPage()
 	{
@@ -36,6 +36,13 @@ class Route
                 case "order":
                 case "subscribe":
                     $controller = "Order";
+                    break;
+
+                case "admin_home":
+                case "admin_delete":
+                case "admin_single":
+                case "admin_update":
+                    $controller = "Admin";
                     break;
             }
             

@@ -56,7 +56,7 @@ foreach ($magazine as $mag) :
 <ul>
 	<li>id : <?= $mag->getId() ?></li>
 	<li>num : <?= $mag->getNumber() ?></li>
-	<li>img (bug) : <?= $mag->getImg() ?></li>
+	<li>img : <?= $mag->getImg() ?></li>
 	<li>pdf : <?= $mag->getPdf() ?></li>
 	<li>region : <?= $mag->getRegion() ?></li>
 	<li>year : <?= $mag->getYear() ?></li>
