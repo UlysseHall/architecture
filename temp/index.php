@@ -33,21 +33,21 @@ echo "<pre>";
 
 
 
-$magazine = new Magazine();
+// $magazine = new Magazine();
 
-$magazine->setNumber(7);
-$magazine->setImg('bravo.gif');
-$magazine->setPdf('http://www.taylorswift.com/');
-$magazine->setRegion(92);
-$magazine->setYear(1994);
+// $magazine->setNumber(7);
+// $magazine->setImg('bravo.gif');
+// $magazine->setPdf('http://www.taylorswift.com/');
+// $magazine->setRegion(92);
+// $magazine->setYear(1994);
 
 
-$test = $magazine->getAll();
+// $test = $magazine->getAll();
 
 $builder = new Qbuilder('magazine');
-$builder->insert($test)->get();
+// $builder->insert($test)->get(); 
 
-$magazine = $builder->select('id', 'number', 'img', 'pdf', 'region', 'year', 'second_region')->getClass('App\Model\Magazine');
+$magazine = $builder->select()->getClass('App\Model\Magazine');
 
 
 foreach ($magazine as $mag) :

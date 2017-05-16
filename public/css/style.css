@@ -20,3 +20,401 @@
 .clearfix:after {
    clear:both;
 }
+
+body{
+	font-family: 'Hind', sans-serif;
+	font-weight: 400;
+}
+
+/* ------------------HEADER-------------------- */
+
+header{
+	width: 95%;
+	margin-left: 4%;
+	margin-top: 4vh;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+
+header ul{
+	list-style: none;
+}
+
+header ul li{
+	position: relative;
+	float: left;
+	width: 13%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+header ul li a{
+	text-decoration: none;
+	color: #333333;
+	text-transform: uppercase;
+	font-size: 1em;
+	padding: 10px;
+	transition: 0.2s;
+}
+
+.logo{
+	width: 100%;
+	position: absolute;
+	top: -10px;
+	left: 0;
+}
+
+header ul li:nth-child(6){
+	margin-top: 0px;
+	transition: 0.3s;
+	font-weight: 500;
+	padding: 10px 15px 10px 15px;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+.logoLang{
+	position: absolute;
+	top: 3px;
+	left: 28%;
+	width: 10%;
+}
+
+header ul li a:hover{
+	color: #32bacc;
+}
+
+header ul li:nth-child(6):hover{
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
+
+.navPhone{
+	display: none;
+	position: absolute;
+}
+
+input[type="checkbox"]{
+	position: absolute;
+	left: -50px;
+	top: 0;
+}
+
+
+/* -----------------Home page---------------- */
+
+.acceuil{
+	width: 100%;
+	height: 70vh;
+	background-color: grey;
+	background-image: url(../images/img-content/immeuble_home_page.jpg);
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.acceuil h1{
+	width: 30%;
+	background-color: white;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------FOOTER----------------- */
+
+footer{
+	margin-top: 15vh;
+	padding-top: 7vh;
+	padding-bottom: 7vh;
+	background-color: #f4f4f4;
+	clear: both;
+	overflow: hidden;
+}
+
+.containerFooter{
+	width: 70%;
+	margin-left: 15%;
+}
+
+.containerFooter h2{
+	border-bottom: 1px solid #32bacc;
+	font-size: 1.7em;
+	font-weight: 400;
+	width: 80%;
+}
+
+.containerFooter .containerLeft{
+	width: 40%;
+	float: left;
+}
+
+.containerFooter .containerRight{
+	width: 30%;
+	margin-right: 0%;
+	float: right;
+}
+
+.containerRight .social{
+	margin-top: 11vh;
+}
+
+.containerRight h3{
+	margin-top: 4vh;
+	font-size: 1.1em;
+}
+
+.containerRight p{
+	line-height: 1.3em;
+	font-size: 0.8em;
+}
+
+.containerRight p span{
+	line-height: 1.3em;
+	font-size: 1em;
+	color: #363636;
+}
+
+.containerRight ul{
+	list-style: none;
+}
+
+.containerRight ul li:nth-child(1){
+	margin: 0;
+}
+
+.containerRight ul li{
+	display: inline-block;
+	width: 7%;
+	margin: 3vh 0vh 2vh 3%;
+}
+
+.containerRight ul li img{
+	width: 100%;
+}
+
+.support{
+	font-weight: 500;
+	font-size: 1.1em !important;
+}
+
+.support a{
+	text-decoration: none;
+	color: #3c3c3c;
+}
+
+.containerLeft form{
+	margin-top: 3vh;
+	color: #a09f9f;
+}
+
+.containerLeft label{
+	width: 48%;
+	float: left;
+	margin-top: 1vh;
+}
+
+.containerLeft label[for="prenom"]{
+	margin-left: 4%;
+	margin-bottom: 2vh;
+}
+
+.containerLeft label[for="telephone"]{
+	clear: both;
+	width: 100%;
+	margin-bottom: 2vh;
+}
+
+.containerLeft input{
+	width: 100%;
+	border: none;
+	padding: 4px;
+}
+
+.containerLeft textarea{
+	border: none;
+	width: 100%;
+}
+
+.containerLeft select{
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	width: 100%;
+	padding: 5px;
+	border: none;
+}
+
+.containerLeft select{
+	color: #8e8e8e;
+}
+
+.decorationStar{
+	color: #32bacc;
+}
+
+.containerLeft input[type="submit"]{
+	background-color: white;
+	padding: 10px;
+}
+
+.containerLeft input[value="Submit"]{
+	color: #8e8e8e;
+}
+
+
+@media screen and (max-width:1200px)  {
+	header{
+		display: none;
+	}
+
+	.navPhone{
+    display: block;
+  }
+  
+  .navPhone .mainNav li{
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+ .navPhone .mainNav li:nth-child(1){
+  margin-left: 20px;
+}
+
+.navPhone .mainNav li:nth-child(2){
+  margin-left: 10px;
+}
+
+.navPhone .mainNav li{
+  position: relative;
+  float: right;
+  top: 0px;
+  right: 10px;
+  height: 30px;
+  width: 40px;
+  padding: 4px;
+}
+
+.navPhone ul li span{
+  width: 80%;
+  background-color: black;
+  border-radius: 5px;
+  height: 4px;
+  position: absolute;
+  z-index: 99;
+}
+
+.navPhone ul:nth-child(1)  li span:nth-child(2){
+  top: 14px;
+}
+.navPhone ul li span:nth-child(3){
+  top: 24px;
+}
+
+.contentMenuPhone{
+  z-index: 98;
+  width: 70%;
+  background-color: white;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -200%;
+  transition: 0.2s;
+}
+
+.navPhone ul{
+	list-style: none;
+}
+
+.navPhone ul li a{
+   color: black;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.contentMenuPhone ul li a{
+   color: black;
+   cursor: pointer;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.3em;
+}
+
+.contentMenuPhone ul li{
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: 7vh;
+}
+
+.contentMenuPhone ul li:nth-child(1){
+  margin-top: 20vh;
+}
+
+.choice {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
+    position: absolute;
+    left: 50%;
+}
+
+@media screen and (max-width:600px)  {
+	.containerFooter .containerLeft,
+	.containerFooter .containerRight{
+		display: block;
+		float: none;
+		width: 100%;
+	}
+
+	.containerFooter .containerRight{
+		margin-top: 5vh;
+	}
+}

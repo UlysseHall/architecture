@@ -53,4 +53,40 @@ class Qbuilder extends Builder
     	}
 		die($stmt->errorInfo()[2]);
 	}
+
+	/**
+	 * Select * if !isset args
+	 * @return instance  		$this 
+	 */
+	public function select()
+	{
+		if (!empty(func_get_args())) {
+			$this->req_type = "SELECT";
+			if (!empty($this->first_args)) {
+				$this->first_args = sprintf('%s, ', $this->first_args);
+			}
+			$this->first_args = sprintf('%s%s', $this->first_args, $this->setArgs(func_get_args()));
+
+			return $this;
+		} else {
+			$this->req_type = "SELECT *";
+
+			return $this;
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -453,7 +453,7 @@ class Builder
 	 */
 	protected function setInsertTags($tags_array)
 	{
-		foreach ($tags_array as $tags => $value) {
+		foreach ($tags_array as $tags_req => $value) {
 			$tags_req = sprintf('%s%s, ', $tags_req, $tags);
 		}
 		$tags_req = substr($tags_req, 0, -2);
