@@ -54,6 +54,7 @@ class Builder
 	{
 		$stmt = $this->exec();
 		if ($stmt->errorCode() === '00000') {
+			$this->resetQuery();
 
         	return $stmt->fetchAll(PDO::FETCH_OBJ); 		
     	}
@@ -71,8 +72,8 @@ class Builder
 		}
 		$stmt = $this->exec();
 		if ($this->fetchable) {
-			$this->resetQuery();
 			if ($stmt->errorCode() == '00000') {
+				$this->resetQuery();
 
 		       	return $stmt->fetch(PDO::FETCH_OBJ); 		
 		   	}
@@ -168,8 +169,8 @@ class Builder
 			if (!empty($this->first_args)) {
 				$this->first_args = sprintf('%s, ', $this->first_args);
 			}
-			$this->first_args = sprintf('', $this->first_args, $this->setArgs($datas));
-	
+			$this->first_args = sprintf('%s %s', $this->first_args, $this->setArgs($datas));
+
 			return $this;
 		} else {
 			die('Tell me wut 2 update bruh... I aint even kiddin');
@@ -419,7 +420,9 @@ class Builder
 			}
 		} elseif ($this->req_type === "UPDATE") {
 			foreach ($args as $key => $value) {
-				$first_args = sprintf('%s `%s`.`%s`=:%s,', $first_args, $this->table, $key, $key);
+				$first_args = sprintf('%s `%s`.`%s`=:', $first_args, $this->table, $key);
+				$key = str_replace('_', '', $key);
+				$first_args = sprintf('%s%s,', $first_args, $key);
 			}
 		} elseif ($this->req_type === "INSERT INTO") {
 			foreach ($args as $column => $value) {
@@ -436,6 +439,7 @@ class Builder
 	protected function setTags($tags_value)
 	{
 		foreach ($tags_value as $tag => $value) {
+			$tag = str_replace('_', '', $tag);
 			$tags[sprintf(':%s', $tag)] = $value;
 		}
 
@@ -449,7 +453,7 @@ class Builder
 	 */
 	protected function setInsertTags($tags_array)
 	{
-		foreach ($tags_array as $tags => $value) {
+		foreach ($tags_array as $tags_req => $value) {
 			$tags_req = sprintf('%s%s, ', $tags_req, $tags);
 		}
 		$tags_req = substr($tags_req, 0, -2);

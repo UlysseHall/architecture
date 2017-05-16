@@ -15,6 +15,7 @@ class Route
     public function getController($route = false) 
     {
         if(!$route) {
+            
             return "Main.php";
         }
         elseif(in_array($route, $this->listRoutes)) {
