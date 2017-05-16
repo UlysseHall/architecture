@@ -64,14 +64,9 @@ header ul li a{
 	left: 0;
 }
 
-header ul li:nth-child(6){
-	margin-top: 0px;
-	transition: 0.3s;
+header ul li:nth-child(6) a{
 	font-weight: 500;
-	padding: 10px 15px 10px 15px;
-	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
--moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	color: #32bacc;
 }
 
 .logoLang{
@@ -392,6 +387,199 @@ button{
 
 
 
+
+
+/* -
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Page appel d'offre 
+-
+-
+-
+-
+-
+-
+-
+-
+*/
+
+.banner{
+	height: 60vh;
+	width: 100%;
+	margin-top: 8vh;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.banner.backgroundTender{
+	background-image: url(../images/img-content/daniel-lozano-valdes.png);
+}
+
+.banner.backgroundList{
+	background-image: url(../images/img-content/Component.jpg);
+}
+
+.banner h1{
+	margin-top: 18vh;
+	font-size: 3em;
+	font-weight: 400;
+	color: white;
+	text-align: center;
+	line-height: 1.7em;
+	font-weight: 500;
+}
+
+.aboutTender{
+	margin-top: 10vh;
+	width: 80%;
+	margin-left: 10%;
+	padding: 20px;
+	border: 1px solid black;
+}
+
+.aboutTender p{
+	width: 90%;
+	padding-left: 5%;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.containerMentionTender{
+	width: 100%;
+	text-align: center;
+}
+
+.containerMentionTender .buttonTender{
+	border: none;
+	text-decoration: none;
+	background-color: #36C1D4;
+	color: white;
+	padding: 20px 40px 20px 40px;
+	font-size: 1.7em;
+	position: relative;
+}
+
+.containerMentionTender .buttonTender a{
+	color: white;
+	text-decoration: none;
+	padding-left: 17%;
+}
+
+.containerMentionTender .buttonTender img{
+	width: 13%;
+	position: absolute;
+	top: 17px;
+	left: 25px;
+}
+
+.mentionTender{
+	font-size: 1em;
+	text-align: center;
+	margin-top: 7vh;
+}
+
+/* -
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Page Actualité
+-
+-
+-
+-
+-
+-
+-
+-
+*/
+
+.banner, .backgroundActu{
+	background-image: url(../images/img-content/head-actu.jpg);
+}
+
+.containerListActu{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10vh;
+}
+
+.containerListActu h4{
+	font-size: 1em;
+}
+
+.containerListActu h2{
+	padding-top: 0vh;
+}
+
+.containerListActu h3{
+	margin-top: 1.5vh;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.containerListActu button{
+	text-transform: uppercase;
+	padding: 15px 20px 15px 20px;
+	font-weight: 400;
+	font-size: 1.1em;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+.containerListActuImg{
+	position: relative;
+	margin-top: 5vh;
+	width: 90%;
+	margin-left: 8%;
+}
+
+.containerListActuImg .mainImg{
+	width: 380px;
+	height: 250px;
+	margin-left: 25%;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+.containerListActuImg button{
+	position: absolute;
+	bottom: 0;
+	left: 18%;
+	transition: 0.3s
+}
+
+.containerListActuImg button:hover{
+	color: #32bacc;
+}
+
+.containerListActuImg .secondaryImg{
+	position: absolute;
+	bottom: -20px;
+	right: 25%;
+	width: 200px;
+	height: 130px;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+
 /* -------------------FOOTER----------------- */
 
 footer{
@@ -533,6 +721,9 @@ footer{
 }
 
 
+
+
+
 @media screen and (max-width:1200px)  {
 	header{
 		display: none;
@@ -646,18 +837,20 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 }
 
 .containerMagasine section{
-		width: 100%;
-		margin-top: 4vh;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-	.containerMagasine section article{
-		width: 50%;
-		text-align: center;
-	}
-	.containerActu section article{
+	width: 100%;
+	margin-top: 4vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.containerMagasine section article{
+	width: 50%;
+	text-align: center;
+}
+
+.containerActu section article{
 	width: 70%;
 	margin-left: 15%;
 	margin-top: 8vh;
@@ -720,6 +913,56 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
     position: static;
 }
 
+.banner h1{
+		margin-top: 20vh;
+		font-size: 2.7em;
+		line-height: 1.2em;
+}
+
+.containerListActu button{
+	text-transform: uppercase;
+	padding: 15px 20px 15px 20px;
+	font-weight: 400;
+	font-size: 1.1em;
+}
+
+.containerListActuImg{
+	position: relative;
+	margin-top: 5vh;
+	width: 90%;
+	margin-left: 8%;
+	overflow: hidden;
+	padding-bottom: 120px;
+}
+
+.containerListActuImg .mainImg{
+	width: 45%;
+	float: left;
+	margin-left: 0%;
+}
+
+.containerListActuImg button{
+	position: absolute;
+	bottom: 20px;
+	left: 0%;
+}
+
+.containerListActuImg .secondaryImg{
+	position: static;
+	width: 45%;
+	height: auto;
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:600px)  {
 	.containerFooter .containerLeft,
 	.containerFooter .containerRight{
@@ -766,5 +1009,27 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
     	position: absolute;
     	padding-bottom: 25px;
     	bottom: -10%;
+	}
+	.aboutTender{
+		width: 99%;
+		margin-left: 0%;
+		padding: 20px 0px 20px 0px;
+	}
+	.banner h1{
+		margin-top: 18vh;
+		font-size: 2.7em;
+		line-height: 1.2em;
+	}
+	.containerListActuImg .mainImg{
+	width: 100%;
+	float: none;
+	}
+
+	.containerListActuImg .secondaryImg{
+		display: none;
+	}
+
+	button{
+		width: 100%;
 	}
 }
