@@ -916,20 +916,20 @@ footer{
 
 
 @media screen and (max-width:1200px)  {
-	header{
-		display: none;
-	}
+header{
+	display: none !important;
+}
 
-	.navPhone{
-    	display: block;
-    	position: fixed;
-    	z-index: 2;
-  	}
+.navPhone{
+    display: block;
+    position: fixed;
+    z-index: 2;
+ }
   
-  .navPhone .mainNav li{
-    display: inline-block;
-    margin-top: 0px;
-  }
+.navPhone .mainNav li{
+  display: inline-block;
+  margin-top: 0px;
+}
 
  .navPhone .mainNav li:nth-child(1){
   margin-left: 20px;
@@ -971,7 +971,7 @@ footer{
   height: 100vh;
   position: fixed;
   top: -50px;
-  left: -400px;
+  right: -400px;
   transition: 0.2s;
 }
 
