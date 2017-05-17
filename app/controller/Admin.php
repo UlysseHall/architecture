@@ -21,7 +21,7 @@ class Admin
 	public function admin_singleAction()
 	{
 		if (isset($_GET['id'])) {
-			if ($_POST['delete']) {
+			if (isset($_POST['delete']) && $_POST['delete']) {
 
 				return $this->delete();
 			} else {
@@ -35,15 +35,19 @@ class Admin
 
 	public function admin_formAction()
 	{
-		if (isset($_GET['id'])) {
-			if ($_GET['update']) {
+		if (isset($_GET['update']) && $_GET['update']) {
+			if (isset($_GET['id'])) {
 
 				return $this->update($_GET['id']);
-			} elseif ($_GET['add']) {
-	
-				return $this->add();
+			} else {
+
+				return header('Location: index.php?action=admin_form&add=1'); 
 			}
-		} 
+		} elseif (isset($_GET['add']) && $_GET['add']) {
+	
+			return $this->add();
+		}
+
 
 		return header('Location: index.php?action=admin_home');
 	}
@@ -68,9 +72,12 @@ class Admin
 			$builder->insert($magazine->getAll())->get();
 
 			return header('Location: index.php?action=admin_single&id=last');
+		} else {
+			
+			return ['page' => 'admin/form.php'];
 		}
 
-		return header('Location: index.php?action=admin_home');
+		// return header('Location: index.php?action=admin_home');
 	}
 
 	/**
@@ -109,7 +116,11 @@ class Admin
 		$builder = new Qbuilder('magazine');
 		if (empty($_POST)) {
 			$magazine = $builder->select()->where($_GET['id'])->getClass('App\Model\Magazine');
-			$magazine = $magazine[0];
+			if (!empty($magazine)) {
+				$magazine = $magazine[0];
+			} else {
+				die('Error');
+			}
 
 			return ['page' => 'admin/form.php', 'cont' => ['magazine' => $magazine]];
 		} else {
