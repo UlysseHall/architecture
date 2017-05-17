@@ -36,7 +36,7 @@
 		</section>
 	</div>
 	<div class="containerWho">
-		<img src="../public/images/img-content/travail_equipe.jpg" alt="">
+		<img src="public/images/img-content/travail_equipe.jpg" alt="">
 		<h2>Qui sommes-nous ?<div class="underline"></div></h2>
 			<p>
 			Les sondages réalisés attestent de sa durée de vie et par son aspect référentiel, de sa fréquente consultation. <br><br>
@@ -52,7 +52,7 @@
 			<p>
 Véritable vitrine de la création architecturale d'une région ou d'un pays, elle est réalisée avec le concours des architectes représentatifs de la construction, du bâtiment, de l'urbanisme, de l'environnement et de l'aménagement du territoire. </p>
 		</div>
-		<img src="../public/images/img-content/un_gratte_ciel.jpg" alt="">
+		<img src="public/images/img-content/un_gratte_ciel.jpg" alt="">
 	</div>
 
 	<div class="containerDescTwo">
@@ -60,5 +60,5 @@ Véritable vitrine de la création architecturale d'une région ou d'un pays, el
 			<h2>UNE PRESENCE REGIONALE, NATIONALE ET INTERNALITIONAL<div class="underline"></div></h2>
 			<p>La revue est une vitrine pour chaque architecte, quelle que soit sa taille et sa situation géographique. De même, l'annonceur peut définir l'étendue de sa campagne : la limiter à une seule région, l'étendre à plusieurs régions ou à un pays.</p>
 		</div>
-		<img src="../public/images/img-content/un_gratte_ciel.jpg" alt="">
+		<img src="public/images/img-content/un_gratte_ciel.jpg" alt="">
 	</div>
