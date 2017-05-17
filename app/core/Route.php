@@ -15,7 +15,6 @@ class Route
     public function getController($route = false) 
     {
         if(!$route) {
-            
             return "Main.php";
         }
         elseif(in_array($route, $this->listRoutes)) {
@@ -24,7 +23,7 @@ class Route
                 case "home":
                 case "tender":
                 case "listNews":
-                case "contact":
+                case "newsView":
                     $controller = "Main";
                     break;
                     
