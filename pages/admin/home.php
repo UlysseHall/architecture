@@ -135,102 +135,24 @@ document.write(today);
 										<div class="table-full-width">
 												<table class="table">
 														<tbody>
+														<?php foreach ($data["cont"]["list"] as $key => $magazine) : ?>
 																<tr>
 																		<td>
 																				<label class="checkbox">
 																						<input type="checkbox" value="" data-toggle="checkbox" checked="">
 																				</label>
 																		</td>
-																		<td> <a href="#">Revue N°285 - 2017 - Martinique</a></td>
+																		<td> <a href="index.php?action=admin_single&id=<?= $magazine->getId() ?>">Revue N°<?= $magazine->getNumber() ?> - <?= $magazine->getYear() ?> - <?= $magazine->getRegion() ?></a></td>
 																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
+																				<a href="index.php?action=admin_form&update=1&id=<?= $magazine->getId() ?>" type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
 																						<i class="fa fa-edit"></i>
-																				</button>
-																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
+																				</a>
+																				<a href="index.php?action=admin_single&id=<?= $magazine->getId() ?>" type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
 																						<i class="fa fa-times"></i>
-																				</button>
+																				</a>
 																		</td>
 																</tr>
-																<tr>
-																		<td>
-																				<label class="checkbox">
-																						<input type="checkbox" value="" data-toggle="checkbox">
-																				</label>
-																		</td>
-																		<td><a href="#">Revue N°284 - 2016 - Ile-de-France</a></td>
-																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
-																						<i class="fa fa-edit"></i>
-																				</button>
-																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
-																						<i class="fa fa-times"></i>
-																				</button>
-																		</td>
-																</tr>
-																<tr>
-																		<td>
-																				<label class="checkbox">
-																						<input type="checkbox" value="" data-toggle="checkbox">
-																				</label>
-																		</td>
-																			<td><a href="#">Revue N°283 - 2016 - Bretagne - Normandie</a></td>
-																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
-																						<i class="fa fa-edit"></i>
-																				</button>
-																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
-																						<i class="fa fa-times"></i>
-																				</button>
-																		</td>
-																</tr>
-																<tr>
-																		<td>
-																				<label class="checkbox">
-																						<input type="checkbox" value="" data-toggle="checkbox">
-																				</label>
-																		</td>
-																		<td><a href="#">Revue N°282 - 2016 - Rhône-Alpes</a></td>
-																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
-																						<i class="fa fa-edit"></i>
-																				</button>
-																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
-																						<i class="fa fa-times"></i>
-																				</button>
-																		</td>
-																</tr>
-																<tr>
-																		<td>
-																				<label class="checkbox">
-																						<input type="checkbox" value="" data-toggle="checkbox">
-																				</label>
-																		</td>
-																		<td><a href="#">Revue N°281 - 2016 - Guadeloupe</a></td>
-																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
-																						<i class="fa fa-edit"></i>
-																				</button>
-																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
-																						<i class="fa fa-times"></i>
-																				</button>
-																		</td>
-																</tr>
-																<tr>
-																		<td>
-																				<label class="checkbox">
-																						<input type="checkbox" value="" data-toggle="checkbox">
-																				</label>
-																		</td>
-																		<td><a href="#">Revue N°280 - 2016 - Alsace</a></td>
-																		<td class="td-actions text-right">
-																				<button type="button" rel="tooltip" title="Modifier" class="btn btn-info btn-simple btn-xs">
-																						<i class="fa fa-edit"></i>
-																				</button>
-																				<button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
-																						<i class="fa fa-times"></i>
-																				</button>
-																		</td>
-																</tr>
+															<?php endforeach; ?>
 														</tbody>
 												</table>
 										</div>

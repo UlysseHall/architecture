@@ -527,6 +527,7 @@ button{
 
 .containerListActu h2{
 	padding-top: 0vh;
+	font-weight: 500;
 }
 
 .containerListActu h3{
@@ -792,7 +793,8 @@ footer{
 
 .containerFooter h2{
 	border-bottom: 1px solid #32bacc;
-	font-size: 1.7em;
+	font-size: 2.1em;
+	padding-bottom: 8px;
 	font-weight: 400;
 	width: 80%;
 }
@@ -1158,6 +1160,14 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 	margin-left: 15%;
 	margin-top: 5vh;
 }
+
+.containerListActu h4{
+	margin: 0px;
+	font-style: italic;
+}
+
+
+
 
 
 
