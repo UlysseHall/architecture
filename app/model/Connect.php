@@ -23,6 +23,7 @@ class Connect
 			try {
 				$pdo = new PDO($this->pdo_connect, $this->user, $this->pass);
 				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $pdo->exec("SET NAMES UTF8");
 				$this->pdo = $pdo;
 			} catch(PDOException $exception) {
 			    die($exception->getMessage());
