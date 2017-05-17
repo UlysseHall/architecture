@@ -14,7 +14,7 @@
 		<?php
 		foreach($data["cont"]["journals"] as $magasine){ ?>
 
-			<article><a href=""><img src='public/images/img-content/<?php echo $magasine->getImg(); ?>' alt=''><p class='alignTitle'><?php echo $magasine->getRegion(); ?></p></a></article>
+			<article><a href="index.php?action=journalView&id=<?php echo $magasine->getId();?>"><img src='public/images/img-content/<?php echo $magasine->getImg(); ?>' alt=''><p class='alignTitle'><?php echo $magasine->getRegion(); ?></p></a></article>
 		<?php
 		}
 		?>
@@ -26,10 +26,13 @@
 	<div class="containerActu">
 		<h2>ACTUALITES<div class="underline"></div></h2>
 		<section>
-			<article><img src="public/images/img-content/wow_un_immeuble.jpg" alt="	"><div class="containerInfoActu"><h3>ABH Architect<div class="underline"></div></h3><p>Projet Astrale - Construction d’un ensemble de bureaux au Plessis Robinson (92)</p></div></article>
-			<article><img src="public/images/img-content/wow_un_immeuble.jpg" alt="	"><div class="containerInfoActu"><h3>ABH Architect<div class="underline"></div></h3><p>Projet Astrale - Construction d’un ensemble de bureaux au Plessis Robinson (92)</p></div></article>
-			<article><img src="public/images/img-content/wow_un_immeuble.jpg" alt="	"><div class="containerInfoActu"><h3>ABH Architect<div class="underline"></div></h3><p>Projet Astrale - Construction d’un ensemble de bureaux au Plessis Robinson (92)</p></div></article>
-			<article><img src="public/images/img-content/wow_un_immeuble.jpg" alt="	"><div class="containerInfoActu"><h3>ABH Architect<div class="underline"></div></h3><p>Projet Astrale - Construction d’un ensemble de bureaux au Plessis Robinson (92)</p></div></article>
+		<?php
+		foreach($data["cont"]["news"] as $news){ ?>
+
+			<article><img src='public/images/img-content/<?php echo $news->getImg()[0]; ?>'' alt=''><div class="containerInfoActu"><h3><?php echo $news->getArchitect(); ?><div class="underline"></div></h3><p><?php echo $news->getTitle(); ?></p></div></article>
+		<?php
+		}
+		?>
 		</section>
 	</div>
 	<div class="containerWho">
@@ -38,9 +41,9 @@
 			<p>
 			Les sondages réalisés attestent de sa durée de vie et par son aspect référentiel, de sa fréquente consultation. <br><br>
 
-Une part prépondérante est laissée à "l'image" - le soin apporté aux reproductions photographiques est la garantie d'une attention particulière des lecteurs. <br><br>
+			Une part prépondérante est laissée à "l'image" - le soin apporté aux reproductions photographiques est la garantie d'une attention particulière des lecteurs. <br><br>
 
-La revue "L'Architecture de votre région" est le témoignage des hommes qui construisent aujourd'hui. Elle constitue ainsi la vitrine de leur création.
+			La revue "L'Architecture de votre région" est le témoignage des hommes qui construisent aujourd'hui. Elle constitue ainsi la vitrine de leur création.
 		</p>
 	</div>
 	<div class="containerDescOne">
