@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Model\Magazine;
 use App\Model\Qbuilder;
+use App\Core\Route;
 
 class Admin
 {
@@ -119,7 +120,8 @@ class Admin
 			if (!empty($magazine)) {
 				$magazine = $magazine[0];
 			} else {
-				die('Error');
+
+				return Route::errorPage();
 			}
 
 			return ['page' => 'admin/form.php', 'cont' => ['magazine' => $magazine]];
@@ -136,7 +138,7 @@ class Admin
 				return header('Location: index.php?action=admin_single&id='.$_GET['id']);
 			}
 
-			die('ERROOR');
+			die('Update couldn\'t work...');
 		}
 	}
 
