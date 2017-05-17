@@ -28,7 +28,6 @@
 		<section>
 		<?php
 		foreach($data["cont"]["news"] as $news){ ?>
-
 			<article><img src='public/images/img-content/<?php echo $news->getImg()[0]; ?>'' alt=''><div class="containerInfoActu"><h3><?php echo $news->getArchitect(); ?><div class="underline"></div></h3><p><?php echo $news->getTitle(); ?></p></div></article>
 		<?php
 		}
