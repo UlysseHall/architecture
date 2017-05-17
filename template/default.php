@@ -4,6 +4,7 @@
     <meta charset="utf-8">
 	<title>Larchitecture</title>
 	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="public/css/screen.css">
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,500,600" rel="stylesheet">
 </head>
 <body>
