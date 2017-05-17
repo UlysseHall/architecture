@@ -4,6 +4,7 @@
     <meta charset="utf-8">
 	<title>Larchitecture</title>
 	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="public/css/screen.css">
 
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />

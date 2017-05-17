@@ -1,0 +1,394 @@
+@charset "UTF-8";
+/*-------------abonnement-----------*/
+/*----------------------------------------------------------*/
+div#magazine-de-reference div.magazine-de-reference-width {
+  width: 100%;
+  background-image: url("../images/img-content/Component.jpg");
+  margin-bottom: 100px; }
+  div#magazine-de-reference div.magazine-de-reference-width div {
+    width: 80%;
+    margin: auto; }
+    div#magazine-de-reference div.magazine-de-reference-width div h1 {
+      text-align: center;
+      padding: 100px 0;
+      color: #fff;
+      font-family: 'Hind', sans-serif;
+      font-weight: 400; }
+
+div#section-formules div.section-formules-width {
+  width: 100%;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: center; }
+  div#section-formules div.section-formules-width article {
+    width: 30%;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #000; }
+    div#section-formules div.section-formules-width article div.formule h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-family: 'Hind', sans-serif;
+      font-weight: 700; }
+    div#section-formules div.section-formules-width article div {
+      padding: 10px; }
+    div#section-formules div.section-formules-width article div.description {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 15px;
+      text-align: center; }
+      div#section-formules div.section-formules-width article div.description p {
+        width: 60%;
+        margin: auto;
+        font-family: 'Hind', sans-serif;
+        font-weight: 400; }
+    div#section-formules div.section-formules-width article div.prix {
+      width: 300px;
+      margin: auto; }
+      div#section-formules div.section-formules-width article div.prix p {
+        text-align: center;
+        color: #36C1D4;
+        font-size: 18px;
+        font-family: 'Hind', sans-serif;
+        font-weight: 400; }
+    div#section-formules div.section-formules-width article div.sans-engagement {
+      width: 150px;
+      margin: auto; }
+      div#section-formules div.section-formules-width article div.sans-engagement p {
+        text-align: center;
+        font-family: 'Hind', sans-serif;
+        font-weight: 400; }
+    div#section-formules div.section-formules-width article div.abonnement-formule {
+      width: 100%;
+      margin: auto;
+      text-align: center; }
+      div#section-formules div.section-formules-width article div.abonnement-formule button {
+        padding: 12.5px;
+        background: #36C1D4;
+        color: #fff;
+        border: none;
+        width: 120px; }
+
+div#frais-de-port div.frais-de-port-width {
+  width: 100%;
+  margin-bottom: 50px; }
+  div#frais-de-port div.frais-de-port-width div.frais-de-port {
+    width: 50%;
+    margin: auto; }
+    div#frais-de-port div.frais-de-port-width div.frais-de-port p {
+      font-size: 20px;
+      text-align: center;
+      font-family: 'Hind', sans-serif;
+      font-weight: 400; }
+
+div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width {
+  width: 100%;
+  background-image: url("../images/img-content/backgroundListJournal.jpg");
+  padding: 100px 0; }
+  div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div {
+    width: 100%;
+    padding: 20px 0; }
+    div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div h1 {
+      margin-left: 10%;
+      width: 45%;
+      color: #fff;
+      font-family: 'Hind', sans-serif;
+      font-weight: 400; }
+  div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div.abonnement-bouton {
+    width: 100%;
+    position: relative; }
+    div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div.abonnement-bouton button {
+      position: absolute;
+      top: 0px;
+      left: 10%;
+      padding: 15px 10px 15px 50px; }
+    div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div.abonnement-bouton img {
+      position: absolute;
+      top: 3px;
+      left: 10.5%; }
+
+/*---------------BREAKPOINTS--------------*/
+@media only screen and (max-width: 680px) {
+  div#section-formules div.section-formules-width {
+    display: block; }
+    div#section-formules div.section-formules-width article {
+      width: 90%;
+      margin: 10px auto; } }
+/*--------------CLEARFIX--------------*/
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+/*---------COMMANDE CONFIRMEE-----------*/
+/*----------------------------------------------*/
+div#commande-confirmee div.commande-confirmee-background-image-width {
+  width: 100%;
+  background: #ddd; }
+  div#commande-confirmee div.commande-confirmee-background-image-width h3 {
+    text-align: center;
+    width: auto;
+    padding: 150px 0;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: #fff; }
+
+div#merci-commande div.merci-commande-width {
+  width: 100%;
+  margin-top: 50px; }
+  div#merci-commande div.merci-commande-width div {
+    width: 90%;
+    margin: auto; }
+    div#merci-commande div.merci-commande-width div div {
+      padding: 20px 0; }
+    div#merci-commande div.merci-commande-width div div.monsieur-ravelli {
+      font-family: 'Hind', sans-serif;
+      font-weight: 700; }
+      div#merci-commande div.merci-commande-width div div.monsieur-ravelli p {
+        font-size: 20px; }
+    div#merci-commande div.merci-commande-width div div.confirmer-commande {
+      font-family: 'Hind', sans-serif;
+      font-weight: 400; }
+    div#merci-commande div.merci-commande-width div div.desktop-image figure {
+      width: 30%;
+      margin: auto; }
+      div#merci-commande div.merci-commande-width div div.desktop-image figure img {
+        width: 100%; }
+    div#merci-commande div.merci-commande-width div div.confirmer-commande-suite p {
+      padding: 25px 0;
+      font-family: 'Hind', sans-serif;
+      font-weight: 400; }
+
+/*-----------inscription--------*/
+/*----------------------------------------------------------*/
+div#full-size-main {
+  margin-top: 50px;
+  margin-bottom: 100px; }
+  div#full-size-main div#formule-abonnement div.formule-abonnement-width {
+    width: 30%;
+    float: left; }
+    div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 50px;
+      background: #F5F5F5;
+      border-top: 20px solid #36C1D4;
+      padding-top: 30px; }
+      div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div {
+        width: 100%; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div p {
+          text-align: center;
+          padding: 10px 0;
+          font-family: 'Hind', sans-serif;
+          font-weight: 400; }
+      div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.formule-integrale-titre {
+        width: 100%; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.formule-integrale-titre h3 {
+          text-align: center;
+          padding: 10px 0;
+          font-size: 30px;
+          font-family: 'Hind', sans-serif;
+          font-weight: 400; }
+      div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.description-formule {
+        width: 80%;
+        margin: auto; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.description-formule p {
+          text-align: center; }
+      div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.image-livre figure {
+        margin: auto;
+        width: 20%; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.image-livre figure img {
+          width: 100%; }
+      div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.prix-duree {
+        width: 100%; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.prix-duree p {
+          text-align: center;
+          font-family: 'Hind', sans-serif;
+          font-weight: 400;
+          color: #36C1D4; }
+      div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.paiement-tous-les-mois {
+        width: 90%;
+        margin: auto; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.paiement-tous-les-mois p {
+          text-align: left;
+          font-family: 'Hind', sans-serif;
+          font-weight: 400; }
+      div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.sans-engagement {
+        width: 90%;
+        margin: auto; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.formule-integrale div.sans-engagement p {
+          text-align: left;
+          font-family: 'Hind', sans-serif;
+          font-weight: 400;
+          color: #828282; }
+    div#full-size-main div#formule-abonnement div.formule-abonnement-width div.espace-securise {
+      width: 80%;
+      margin: auto;
+      background: #F5F5F5;
+      border-top: 20px solid #4F4F4F;
+      margin-bottom: 50px; }
+      div#full-size-main div#formule-abonnement div.formule-abonnement-width div.espace-securise div.position-relative-espace-securise {
+        padding: 20px; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.espace-securise div.position-relative-espace-securise img {
+          float: left;
+          width: 30px; }
+        div#full-size-main div#formule-abonnement div.formule-abonnement-width div.espace-securise div.position-relative-espace-securise div {
+          float: left;
+          padding-left: 20px;
+          width: 55%; }
+          div#full-size-main div#formule-abonnement div.formule-abonnement-width div.espace-securise div.position-relative-espace-securise div p.espace-secursise-font-light {
+            display: block;
+            font-family: 'Hind', sans-serif;
+            font-weight: 400; }
+          div#full-size-main div#formule-abonnement div.formule-abonnement-width div.espace-securise div.position-relative-espace-securise div p.espace-secursise-font-bold {
+            display: block;
+            font-family: 'Hind', sans-serif;
+            font-weight: 700; }
+  div#full-size-main div#formulaire-inscription div.formulaire-inscription-width {
+    width: 70%;
+    float: left; }
+    div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form {
+      width: 80%;
+      margin: auto; }
+      div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.creer-compte {
+        width: 100%;
+        margin-bottom: 30px;
+        background: #F5F5F5;
+        border-top: 20px solid #4F4F4F;
+        padding-top: 20px; }
+        div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.creer-compte div {
+          width: 90%;
+          margin: auto;
+          margin-bottom: 20px; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.creer-compte div h4 {
+            font-family: 'Hind', sans-serif;
+            font-weight: 400;
+            font-size: 22px; }
+        div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.creer-compte div.creer-compte-formulaire {
+          width: 100%;
+          font-family: 'Hind', sans-serif;
+          font-weight: 400;
+          font-size: 14px; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.creer-compte div.creer-compte-formulaire div.creer-compte-formulaire-mail div:first-child {
+            width: 230px;
+            float: left; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.creer-compte div.creer-compte-formulaire div.creer-compte-formulaire-mail div:last-child {
+            width: 50%;
+            float: left; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.creer-compte div.creer-compte-formulaire div.creer-compte-formulaire-confirmer-mail div:first-child {
+            width: 230px;
+            float: left; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.creer-compte div.creer-compte-formulaire div.creer-compte-formulaire-confirmer-mail div:last-child {
+            width: 50%;
+            float: left; }
+      div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.votre-adresse {
+        width: 100%;
+        margin-bottom: 30px;
+        background: #F5F5F5;
+        border-top: 20px solid #4F4F4F;
+        padding-top: 20px; }
+        div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.votre-adresse div {
+          width: 90%;
+          margin: auto; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.votre-adresse div h4 {
+            font-family: 'Hind', sans-serif;
+            font-weight: 400;
+            font-size: 22px; }
+        div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.votre-adresse div.votre-adresse-formulaire {
+          width: 100%;
+          font-family: 'Hind', sans-serif;
+          font-weight: 400;
+          font-size: 14px; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.votre-adresse div.votre-adresse-formulaire div {
+            margin-bottom: 20px; }
+            div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.votre-adresse div.votre-adresse-formulaire div div:first-child {
+              width: 230px;
+              float: left; }
+            div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.votre-adresse div.votre-adresse-formulaire div div:last-child {
+              width: 50%;
+              float: left; }
+      div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement {
+        width: 100%;
+        background: #F5F5F5;
+        border-top: 20px solid #4F4F4F;
+        padding-top: 20px; }
+        div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement div {
+          width: 90%;
+          margin: auto; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement div h4 {
+            width: 30%;
+            display: inline;
+            font-family: 'Hind', sans-serif;
+            font-weight: 400;
+            font-size: 22px; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement div div.paiement-logos {
+            display: inline;
+            width: 70%;
+            margin-left: 35px; }
+            div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement div div.paiement-logos figure {
+              width: 1%;
+              display: inline;
+              padding: 0 1%; }
+              div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement div div.paiement-logos figure img {
+                width: 6%; }
+      div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement-formulaire {
+        font-family: 'Hind', sans-serif;
+        font-weight: 400;
+        font-size: 14px; }
+        div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement-formulaire div {
+          margin-bottom: 20px; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement-formulaire div div:first-child {
+            width: 230px;
+            float: left; }
+          div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement-formulaire div div:last-child {
+            width: 50%;
+            float: left; }
+      div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.conditions-generales {
+        width: 100%;
+        margin: 20px 0; }
+        div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.conditions-generales label {
+          font-family: 'Hind', sans-serif;
+          font-weight: 400;
+          font-size: 14px; }
+      div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.je-mabonne-bouton {
+        text-align: center; }
+        div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.je-mabonne-bouton input {
+          background: #00AA5B;
+          padding: 20px;
+          border: none;
+          color: #fff;
+          margin-bottom: 50px;
+          font-family: 'Hind', sans-serif;
+          font-weight: 400;
+          font-size: 16px; }
+
+/*-------------------BREAKPOINTS----------------*/
+@media only screen and (max-width: 720px) {
+  div#full-size-main div#formule-abonnement {
+    margin-top: 30px; }
+    div#full-size-main div#formule-abonnement div.formule-abonnement-width {
+      float: none;
+      display: block;
+      margin: auto;
+      width: 80%; }
+  div#full-size-main div#formulaire-inscription div.formulaire-inscription-width {
+    float: none;
+    display: block;
+    margin: auto;
+    width: 100%; }
+    div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement div div.paiement-logos {
+      margin-left: 20px; }
+      div#full-size-main div#formulaire-inscription div.formulaire-inscription-width form div.paiement div div.paiement-logos figure img {
+        width: 10%; } }
+/*-------------reset-------------*/
+* {
+  margin: 0;
+  padding: 0; }
+
+*::before,
+*::after {
+  box-sizing: border-box; }
