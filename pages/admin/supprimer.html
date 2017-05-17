@@ -31,9 +31,53 @@
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>
 <body>
+	<div class="wrapper">
+		<div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
 
-<div class="wrapper">
-    <div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a href="dashboard.html" class="simple-text">
+						Tableau de bord
+					</a>
+				</div>
+
+				<ul class="nav">
+					<li class="">
+						<a href="dashboard.html">
+							<i class="pe-7s-home"></i>
+							<p>Tableau de bord</p>
+						</a>
+					</li>
+					<li>
+						<a href="ajouter.html" >
+							<i class="pe-7s-note"></i>
+							<p>Ajouter</p>
+						</a>
+					</li>
+					<li>
+						<a href="modifier.html">
+							<i class="pe-7s-tools"></i>
+							<p>Modifier</p>
+						</a>
+					</li>
+					<li>
+						<li class="active">
+						<a href="supprimer.html">
+							<i class="pe-7s-trash"></i>
+							<p>Supprimer</p>
+						</a>
+					</li>
+
+					<li class="active-pro">
+						<a href="upgrade.html">
+							<i class="pe-7s-right-arrow"></i>
+							<p>Aller sur le site</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
 
 		<div class="sidebar-wrapper">
 					<div class="logo">
@@ -66,7 +110,96 @@
 											<i class="pe-7s-trash"></i>
 											<p>Supprimer</p>
 									</a>
-							</li>
+								</li>
+								<li>
+									<li class="separator hidden-lg hidden-md"></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+
+
+					<div class="content">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-8">
+									<div class="card">
+										<div class="header">
+											<h4 class="title">Supprimer votre magazine</h4>
+											<script>var today = new Date();
+											var dd = today.getDate();
+											var mm = today.getMonth()+1; //January is 0!
+											var yyyy = today.getFullYear();
+
+											if(dd<10) {
+												dd='0'+dd
+											}
+
+											if(mm<10) {
+												mm='0'+mm
+											}
+
+											today = mm+'/'+dd+'/'+yyyy;
+											document.write(today);</script>
+										</div>
+										<div class="content">
+												<form method="post" action="index.php?action=admin_single&id=<?= $_GET['id'] ?>">
+													<input type="hidden" name="delete" value="1">
+													<input type="submit" name="" value="Supprimer votre magazine" class="btn btn-info btn-fill pull-right">
+												<div class="clearfix"></div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="card card-user">
+										<div class="image">
+											<img src="assets/img/nick-hillier-215633.jpg" alt="..."/>
+										</div>
+										<div class="content">
+											<div class="author">
+												<a href="#">
+													<img class="avatar border-gray" src="assets/img/couv_282.jpg" alt="..."/>
+
+													<h4 class="title">Nom de votre magazine<br />
+														<small>######</small>
+													</h4>
+												</a>
+											</div>
+										</div>
+										<hr>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+		</body>
+
+		<!--   Core JS Files   -->
+		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+		<!--  Checkbox, Radio & Switch Plugins -->
+		<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+
+		<!--  Charts Plugin -->
+		<script src="assets/js/chartist.min.js"></script>
+
+		<!--  Notifications Plugin    -->
+		<script src="assets/js/bootstrap-notify.js"></script>
+
+		<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+		<script src="assets/js/light-bootstrap-dashboard.js"></script>
+
+		<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+		<script src="assets/js/demo.js"></script>
 
 			<li class="active-pro">
 									<a href="upgrade.html">

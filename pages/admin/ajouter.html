@@ -31,9 +31,52 @@
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>
 <body>
+	<div class="wrapper">
+		<div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
 
-<div class="wrapper">
-    <div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a href="dashboard.html" class="simple-text">
+						Tableau de bord
+					</a>
+				</div>
+
+				<ul class="nav">
+					<li class="">
+						<a href="dashboard.html">
+							<i class="pe-7s-home"></i>
+							<p>Tableau de bord</p>
+						</a>
+					</li>
+					<li>
+						<li class="active">
+						<a href="ajouter.html">
+							<i class="pe-7s-note"></i>
+							<p>Ajouter</p>
+						</a>
+					</li>
+					<li>
+						<a href="modifier.html">
+							<i class="pe-7s-tools"></i>
+							<p>Modifier</p>
+						</a>
+					</li>
+					<li>
+						<a href="supprimer.html">
+							<i class="pe-7s-trash"></i>
+							<p>Supprimer</p>
+						</a>
+					</li>
+
+					<li class="active-pro">
+						<a href="upgrade.html">
+							<i class="pe-7s-right-arrow"></i>
+							<p>Aller sur le site</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
 		<div class="sidebar-wrapper">
 					<div class="logo">
@@ -65,8 +108,139 @@
 									<a href="supprimer.html">
 											<i class="pe-7s-trash"></i>
 											<p>Supprimer</p>
-									</a>
-							</li>
+								</li>
+								<li class="separator hidden-lg hidden-md"></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+
+				<div class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="card">
+									<div class="header">
+										<h4 class="title">Ajouter votre magazine</h4>
+										<script>var today = new Date();
+										var dd = today.getDate();
+										var mm = today.getMonth()+1; //January is 0!
+										var yyyy = today.getFullYear();
+
+										if(dd<10) {
+											dd='0'+dd
+										}
+
+										if(mm<10) {
+											mm='0'+mm
+										}
+
+										today = mm+'/'+dd+'/'+yyyy;
+										document.write(today);</script>
+									</div>
+									<div class="content">
+											<div class="row">
+												<div class="col-md-5">
+													<div class="form-group">
+														<label>Nom de votre magazine (région)</label>
+														<input type="text" class="form-control input-js" id="admin-name" placeholder="">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Numéro</label>
+														<input type="number" class="form-control input-js" id="admin-number" placeholder="286">
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="form-group">
+														<label for="exampleInputEmail1">Année</label>
+														<input type="number" class="form-control input-js" id="admin-year" placeholder="Année de votre magazine">
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label>Couverture</label>
+														<input type="text" class="form-control" placeholder="Insérer votre couverture">
+														<input type="file" placeholder="Couverture" >
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label>PDF</label>
+														<input type="text" class="form-control" placeholder="Insérer votre PDF">
+														<input type="file" placeholder="test" >
+													</div>
+												</div>
+											</div>
+
+											<button type="submit" class="btn btn-info btn-fill pull-right" onclick="demo.showNotification('top','left')" >Ajouter votre magazine</button>
+
+											<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="card card-user">
+									<div class="image">
+										<img src="assets/img/nick-hillier-215633.jpg" alt="..."/>
+									</div>
+									<div class="content">
+										<div class="author">
+											<a href="#">
+												<img class="avatar border-gray" src="assets/img/couv_282.jpg" alt="..."/>
+
+												<h4 class="title admin-name">Nom de votre magazine<br />
+												<h4 class="title admin-number">Numéro<br />
+			                  <h4 class="title admin-year">Année<br />
+												</h4>
+
+												<script>
+													var inputs = document.querySelectorAll(".input-js");
+													var h4Name = document.querySelector("h4.admin-name");
+													var h4Number = document.querySelector("h4.admin-number");
+													var h4Year = document.querySelector("h4.admin-year");
+
+													for(var i = 0; i < inputs.length; i++) {
+														inputs[i].addEventListener("change", function(e) {
+															var inputId = this.id;
+															var valueIn = this.value;
+
+																switch(inputId) {
+																	case "admin-name":
+																		h4Name.innerHTML = valueIn;
+																		break;
+																	case "admin-number":
+																		h4Number.innerHTML = valueIn;
+																		break;
+																	case "admin-year":
+																			h4Year.innerHTML = valueIn;
+																			break;
+																}
+
+														})
+													}
+												</script>
+
+											</a>
+										</div>
+									</div>
+									<hr>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
 
 			<li class="active-pro">
 									<a href="upgrade.html">
