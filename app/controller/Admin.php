@@ -88,13 +88,13 @@ class Admin
 	{
 		$builder = new Qbuilder('magazine');
 		if ($_GET['id'] === 'last') {
-			$last_mag = $builder->getLast()->getClass('App\Model\Magazine');
+			$mag = $builder->getLast()->getClass('App\Model\Magazine');
 		} else {
-			$last_mag = $builder->select()->where($_GET['id'])->getClass('App\Model\Magazine');
+			$mag = $builder->select()->where($_GET['id'])->getClass('App\Model\Magazine');
 		}
-		$last_mag = $last_mag[0];
+		$mag = $mag[0];
 
-		return ['page' => 'admin/single.php', 'cont' => ['magazine' => $last_mag]];
+		return ['page' => 'admin/single.php', 'cont' => ['magazine' => $mag]];
 	}
 
 	/**
