@@ -7,7 +7,7 @@
     <div class="merci-commande-width">
         <div>
             <div class="monsieur-ravelli">
-                <p>Bonjour M. Ravelli,</p>
+                <p>Bonjour M. <?php if(isset($_POST["nom"]) && !empty($_POST["nom"])) { echo($_POST["nom"]); } else { echo("Ravelli"); } ?>,</p>
             </div>
             <div class="confirmer-commande">
                 <p>Nous avons le plaisir de vous confirmer votre commande N°2017C1450099630I3.</p>

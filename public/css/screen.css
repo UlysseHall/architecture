@@ -4,7 +4,8 @@
 div#magazine-de-reference div.magazine-de-reference-width {
   width: 100%;
   background-image: url("../images/img-content/Component.jpg");
-  margin-bottom: 100px; }
+  margin-bottom: 60px;
+margin-top: 8vh;}
   div#magazine-de-reference div.magazine-de-reference-width div {
     width: 80%;
     margin: auto; }
@@ -36,9 +37,9 @@ div#section-formules div.section-formules-width {
       width: 90%;
       margin: auto;
       margin-bottom: 15px;
-      text-align: center; }
+      text-align: justify; }
       div#section-formules div.section-formules-width article div.description p {
-        width: 60%;
+        width: 90%;
         margin: auto;
         font-family: 'Hind', sans-serif;
         font-weight: 400; }
@@ -67,7 +68,8 @@ div#section-formules div.section-formules-width {
         background: #36C1D4;
         color: #fff;
         border: none;
-        width: 120px; }
+        width: 120px;
+margin-top: 10px;}
 
 div#frais-de-port div.frais-de-port-width {
   width: 100%;
@@ -84,7 +86,9 @@ div#frais-de-port div.frais-de-port-width {
 div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width {
   width: 100%;
   background-image: url("../images/img-content/backgroundListJournal.jpg");
-  padding: 100px 0; }
+  padding: 100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;}
   div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div {
     width: 100%;
     padding: 20px 0; }
@@ -127,7 +131,8 @@ div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width {
 /*----------------------------------------------*/
 div#commande-confirmee div.commande-confirmee-background-image-width {
   width: 100%;
-  background: #ddd; }
+  background: #ddd;
+    margin-top: 8vh;}
   div#commande-confirmee div.commande-confirmee-background-image-width h3 {
     text-align: center;
     width: auto;
@@ -364,7 +369,8 @@ div#full-size-main {
           margin-bottom: 50px;
           font-family: 'Hind', sans-serif;
           font-weight: 400;
-          font-size: 16px; }
+          font-size: 16px;
+            cursor: pointer;}
 
 /*-------------------BREAKPOINTS----------------*/
 @media only screen and (max-width: 720px) {

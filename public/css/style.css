@@ -786,6 +786,10 @@ footer{
 	overflow: hidden;
 }
 
+.footer-stick {
+    margin-top: 0 !important;
+}
+
 .containerFooter{
 	width: 70%;
 	margin-left: 15%;
