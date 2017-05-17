@@ -65,11 +65,6 @@ class News
 		$this->img = $img;
 	}
     
-    public function getId()
-    {
-        return $this->id;
-    }
-    
     public function getDate()
 	{
 		return $this->date;

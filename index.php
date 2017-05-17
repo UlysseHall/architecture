@@ -11,14 +11,14 @@ $routeManager = new Route();
 
 if(isset($_GET["action"]) && !is_null($_GET["action"])) {
     $action = $_GET["action"];
-    $controllerName = $routeManager->getController($action);
+    $controller = $routeManager->getController($action);
 }
 else {
     $action = "home";
-    $controllerName = "Main";
+    $controller = "Main";
 }
 
-$controller = "App\\Controller\\".$controllerName;
+$controller = "App\\Controller\\".$controller;
 $controller = new $controller();
 $action = $action . "Action";
 $data = $controller->$action();
