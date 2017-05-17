@@ -64,14 +64,9 @@ header ul li a{
 	left: 0;
 }
 
-header ul li:nth-child(6){
-	margin-top: 0px;
-	transition: 0.3s;
+header ul li:nth-child(6) a{
 	font-weight: 500;
-	padding: 10px 15px 10px 15px;
-	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
--moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	color: #32bacc;
 }
 
 .logoLang{
@@ -106,45 +101,653 @@ input[type="checkbox"]{
 /* -----------------Home page---------------- */
 
 .acceuil{
+	margin-top: 50px;
 	width: 100%;
 	height: 70vh;
-	background-color: grey;
 	background-image: url(../images/img-content/immeuble_home_page.jpg);
 	background-size: 50% 100%;
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: 75%;
+	position: relative;
+	overflow: hidden;
+}
+
+.acceuil .container{
+	background-color: white;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	width: 30%;
+	margin-left: 12.5%;
+	margin-top: 15vh;
+}
+
+.acceuil .container article{
+	width: 90%;
+	margin-left: 5%;
 }
 
 .acceuil h1{
-	width: 30%;
+	font-size: 1.6em;
+	font-family: 'Hind', sans-serif;
+	font-weight: 500;
+	padding-top: 2vh;
+	display: inline-block;
+}
+
+.underline{
+	width: 40%;
+	height: 2px;
+	background-color: #32bacc;
+}
+
+.acceuil .container p{
+	padding-top: 3vh;
+	padding-bottom: 15vh;
+	font-size: 1.2em;
+}
+
+h2{
+	font-size: 1.6em;
+	font-family: 'Hind', sans-serif;
+	font-weight: 500;
+	padding-top: 2vh;
+	display: inline-block;
+}
+
+/* ---------------------section magasine home page---------------------*/
+
+.containerMagasine{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.containerMagasine h2{
+	display: flex;
+	align-self: flex-start;
+	flex-direction: column;
+	margin-bottom: 6vh;
+}
+
+.containerMagasine section{
+	width: 100%;
+	margin-top: 4vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+}
+
+.containerMagasine section article{
+	display: inline-block;
+}
+
+.containerMagasine section a img{
+	width: 200px;
+	height: 260px;
+	background-color: red;
+}
+
+.containerMagasine section article a{
+	text-decoration: none;
+	color: black;	
+}
+
+.alignTitle{
+	text-align: center;
+}
+
+button{
+	cursor: pointer;
+	clear: both;
+	border: none;
+	text-transform: uppercase;
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+	padding:10px 15px 10px 15px;
 	background-color: white;
+	margin-top: 10vh;
 	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
 	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
 	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
 }
 
+/* --------------------Actualité home page-------------- */
+
+.containerActu{
+	width: 90%;
+	margin-left: 5%;
+}
+
+.containerActu h2{
+	margin-top: 7vh;
+	margin-bottom: 6vh;
+}
+
+.containerActu section{
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 40px;
+}
+
+.containerActu section article{
+	width: 40%;
+	margin-left: 5%;
+	margin-top: 10vh;
+	float: left;
+	position: relative;
+}
+
+.containerActu section article:nth-child(n+3){
+	padding: 0px 10px 40px 0px;
+}
+
+.containerActu article img{
+	width: 100%;
+}
+
+.container section article div h2{
+	margin:2px;
+}
+
+.containerInfoActu{
+	background-color: white;
+	position: absolute;
+	padding: 10px;
+	bottom: -5%;
+	width: 80%;
+	left: 10%;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+.containerInfoActu .underline{
+	width: 10%;
+}
+
+.containerInfoActu p{
+	height: 55px;
+	margin-top: 10px;
+}
+
+/* -----------------Qui sommes nous ?--------------- */
+
+.containerWho{
+	clear: both;
+	overflow: hidden;
+	margin-top: 20vh;
+	background-color: #f8f8f8;
+}
+
+.containerWho img{
+	width: 40%;
+	float: left;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	margin-left: 7%;
+}
+
+.containerWho h2{
+	margin-left: 7%;
+	margin-top: 7vh;
+	margin-bottom: 5vh;
+}
+
+.containerWho p{
+	font-weight: 400;
+	font-size: 1.1em;
+	width: 30%;
+	float: left;
+	margin-left: 7%;
+}
 
 
+/* -----------Decriptif home page 1---------------- */
+
+.containerDescOne{
+	margin-top: 20vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.containerDescOne .containerTxtDesc{
+	float: left;
+	width: 40%;
+	background-color: #f8f8f8;
+	position: absolute;
+	top: 15%;
+	left: 8.7%;
+	padding: 10px 10px 15vh 10px;
+}
+
+.containerDescOne img{
+	float: right;
+	width: 40%;
+	margin-right: 10%;
+}
+
+.containerDescOne .containerTxtDesc h2{
+	margin-left: 5%;
+}
+
+.containerDescOne .containerTxtDesc p{
+	margin-top: 6vh;
+	width: 90%;
+	margin-left: 5%;
+}
 
 
+/* -----------Decriptif home page 2---------------- */
 
+.containerDescTwo{
+	margin-top: 20vh;
+	overflow: hidden;
+	position: relative;
+}
 
+.containerDescTwo .containerTxtDesc{
+	float: right;
+	width: 40%;
+	background-color: #f8f8f8;
+	position: absolute;
+	top: 10%;
+	right: 8.7%;
+	padding: 10px 10px 10vh 10px;
+}
 
+.containerDescTwo img{
+	float: left;
+	width: 40%;
+	margin-left: 10%;
+}
 
+.containerDescTwo .containerTxtDesc h2{
+	margin-left: 5%;
+}
 
+.containerDescTwo .underline{
+	width: 10%;
+}
 
+.containerDescTwo .containerTxtDesc p{
+	margin-top: 6vh;
+	width: 90%;
+	margin-left: 5%;
+}
 
+/* -
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Page appel d'offre 
+-
+-
+-
+-
+-
+-
+-
+-
+*/
 
+.banner{
+	height: 60vh;
+	width: 100%;
+	margin-top: 8vh;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
 
+.banner.backgroundTender{
+	background-image: url(../images/img-content/daniel-lozano-valdes.png);
+}
 
+.banner.backgroundList{
+	background-image: url(../images/img-content/Component.jpg);
+}
 
+.banner.backgroundListJournals{
+	background-image: url(../images/img-content/backgroundListJournal.jpg);
+}
 
+.banner.backgroundListJournals h1{
+	margin-top: 15vh;
+}
 
+.banner h1{
+	margin-top: 18vh;
+	font-size: 3em;
+	font-weight: 400;
+	color: white;
+	text-align: center;
+	line-height: 1.6em;
+	font-weight: 500;
+}
 
+.aboutTender{
+	margin-top: 10vh;
+	width: 80%;
+	margin-left: 10%;
+	padding: 20px;
+	border: 1px solid black;
+}
 
+.aboutTender p{
+	width: 90%;
+	padding-left: 5%;
+	font-size: 1.3em;
+	text-align: center;
+}
 
+.containerMentionTender{
+	width: 100%;
+	text-align: center;
+}
 
+.containerMentionTender .buttonTender{
+	border: none;
+	text-decoration: none;
+	background-color: #36C1D4;
+	color: white;
+	padding: 20px 40px 20px 40px;
+	font-size: 1.7em;
+	position: relative;
+}
 
+.containerMentionTender .buttonTender a{
+	color: white;
+	text-decoration: none;
+	padding-left: 17%;
+}
+
+.containerMentionTender .buttonTender img{
+	width: 13%;
+	position: absolute;
+	top: 17px;
+	left: 25px;
+}
+
+.mentionTender{
+	font-size: 1em;
+	text-align: center;
+	margin-top: 7vh;
+}
+
+/* -
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Page Actualité
+-
+-
+-
+-
+-
+-
+-
+-
+*/
+
+.banner, .backgroundActu{
+	background-image: url(../images/img-content/head-actu.jpg);
+}
+
+.containerListActu{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10vh;
+}
+
+.containerListActu h4{
+	font-size: 1em;
+}
+
+.containerListActu h2{
+	padding-top: 0vh;
+}
+
+.containerListActu h3{
+	margin-top: 1.5vh;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.containerListActu button{
+	text-transform: uppercase;
+	padding: 15px 20px 15px 20px;
+	font-weight: 400;
+	font-size: 1.1em;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+.containerListActuImg{
+	position: relative;
+	margin-top: 5vh;
+	width: 90%;
+	margin-left: 8%;
+}
+
+.containerListActuImg .mainImg{
+	width: 380px;
+	height: 250px;
+	margin-left: 25%;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+.containerListActuImg button{
+	position: absolute;
+	bottom: 0;
+	left: 18%;
+	transition: 0.3s
+}
+
+.containerListActuImg button:hover{
+	color: #32bacc;
+}
+
+.containerListActuImg .secondaryImg{
+	position: absolute;
+	bottom: -20px;
+	right: 25%;
+	width: 200px;
+	height: 130px;
+	-webkit-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+	box-shadow: -4px 3px 5px 0px rgba(0,0,0,0.06);
+}
+
+/* -
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Page listJournals
+-
+-
+-
+-
+-
+-
+-
+-
+*/
+
+.containerListJournal{
+	width: 80%;
+	margin-left: 8%;
+}
+
+.containerListJournal h4{
+	font-size: 1.7em;
+	margin-top: 10vh;
+	margin-bottom: 6vh;
+	font-weight: 400;
+}
+
+.containerListJournal p{
+	line-height: 1.8em;
+}
+
+.containerListJournal section{
+	margin-top: 15vh;
+	overflow: hidden;
+	clear: both;
+}
+
+.containerListJournal section article{
+	width: 22%;
+	text-align: center;
+	float: left;
+	margin-left: 3%;
+}
+
+.containerListJournal section article img{
+	width: 100%;
+	height: 300px;
+	background-color: red;
+}
+
+.containerListJournal section article h5{
+	font-size: 1.2em;
+	font-weight: 400;
+	margin-top: 3vh;
+}
+
+.containerImg{
+	position: relative;
+}
+
+.containerListJournal section article .hover{
+	width: 100%;
+	height: 300px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transition: 0.4s;
+	left: 0;
+}
+
+.containerListJournal section article .hover:hover{
+	background-color: rgba(0,0,0,1);
+	opacity: 1;
+}
+
+.containerListJournal .search-container {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 7vh;
+  float: right;
+}
+
+.containerListJournal input#search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+}
+.containerListJournal input#search-bar:focus {
+  border: 1px solid #008ABF;
+  transition: 0.35s ease;
+  color: #008ABF;
+}
+.containerListJournal input#search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.containerListJournal input#search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.containerListJournal input#search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+.containerListJournal .search-icon {
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  top: -62px;
+  right: -45px;
+}
+
+.hover h4{
+	margin-top: 4vh;
+	margin-bottom: 4vh;
+	color: white;
+	width: 80%;
+	margin-left: 10%;
+	font-size: 1.3em;
+	font-weight: 400;
+}
+
+.hover p{
+	text-transform: uppercase;
+	color: white;
+	font-size: 5vh;
+	font-size: 1.5em;
+}
+
+.hover button{
+	margin-top: 7vh;
+	background-color: #36C1D4;
+	color: white;
+	font-weight: 400;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+	font-size: 1.1em;
+}
+
+.containerPrice{
+	float: left;
+	margin-top: 5vh;
+	position: relative;
+}
+
+.containerPrice{
+	font-size: 1.5em;
+	padding-left: 5%;
+}
+
+.containerPrice img{
+	position: absolute;
+	top: -3px;
+	left: 0;
+}
 
 
 
@@ -307,18 +910,23 @@ footer{
 }
 
 
+
+
+
 @media screen and (max-width:1200px)  {
 	header{
 		display: none;
 	}
 
 	.navPhone{
-    display: block;
-  }
+    	display: block;
+    	position: fixed;
+    	z-index: 2;
+  	}
   
   .navPhone .mainNav li{
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
  .navPhone .mainNav li:nth-child(1){
@@ -330,9 +938,8 @@ footer{
 }
 
 .navPhone .mainNav li{
-  position: relative;
-  float: right;
-  top: 0px;
+  position: fixed;
+  top: 10px;
   right: 10px;
   height: 30px;
   width: 40px;
@@ -357,12 +964,12 @@ footer{
 
 .contentMenuPhone{
   z-index: 98;
-  width: 70%;
+  width: 400px;
   background-color: white;
   height: 100vh;
-  position: absolute;
-  top: 0;
-  left: -200%;
+  position: fixed;
+  top: -50px;
+  left: -400px;
   transition: 0.2s;
 }
 
@@ -399,12 +1006,157 @@ footer{
 .choice {
   cursor: pointer;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
     position: absolute;
-    left: 50%;
+    left: 0px;
 }
+
+.acceuil{
+	background-size: 70% 100%;
+}
+
+.acceuil .container{
+	width: 40%;
+}
+
+.containerMagasine section{
+	width: 100%;
+	margin-top: 4vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.containerMagasine section article{
+	width: 50%;
+	text-align: center;
+}
+
+.containerActu section article{
+	width: 70%;
+	margin-left: 15%;
+	margin-top: 8vh;
+	float: none;
+}
+
+.containerWho{
+	width: 90%;
+	margin-left: 5%;
+}
+
+.containerWho p{
+	width: 80%;
+	float: none;
+	margin-left: 7%;
+	padding-bottom: 10vh;
+}
+
+.containerWho img{
+	display: none;
+}
+
+.containerWho h2{
+	width: 90%;
+	margin-top: 7vh;
+	margin-bottom: 5vh;
+}
+
+.containerWho .underline{
+	width: 10%;
+}
+
+.containerDescTwo {
+    overflow: visible;
+}
+
+.containerDescOne{
+	overflow: visible;
+}
+
+.containerDescOne img {
+    display: none;
+}
+
+.containerDescTwo img {
+	display: none;
+}
+
+.containerDescOne .containerTxtDesc {
+    float: none;
+    width: 90%;
+    background-color: #f8f8f8;
+    position: static;
+}
+
+.containerDescTwo .containerTxtDesc {
+    float: none;
+    width: 90%;
+    background-color: #f8f8f8;
+    position: static;
+}
+
+.banner h1{
+		margin-top: 20vh;
+		font-size: 2.7em;
+		line-height: 1.2em;
+}
+
+.containerListActu button{
+	text-transform: uppercase;
+	padding: 15px 20px 15px 20px;
+	font-weight: 400;
+	font-size: 1.1em;
+}
+
+.containerListActuImg{
+	position: relative;
+	margin-top: 5vh;
+	width: 90%;
+	margin-left: 8%;
+	overflow: hidden;
+	padding-bottom: 120px;
+}
+
+.containerListActuImg .mainImg{
+	width: 45%;
+	float: left;
+	margin-left: 0%;
+}
+
+.containerListActuImg button{
+	position: absolute;
+	bottom: 20px;
+	left: 0%;
+}
+
+.containerListActuImg .secondaryImg{
+	position: static;
+	width: 45%;
+	height: auto;
+	float: right;
+}
+
+.containerPrice{
+	font-size: 1.5em;
+	padding-left: 70px;
+}
+
+.containerListJournal section article{
+	width: 40%;
+	margin-left: 5%;
+}
+
+
+
+
+
 
 @media screen and (max-width:600px)  {
 	.containerFooter .containerLeft,
@@ -417,4 +1169,92 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 	.containerFooter .containerRight{
 		margin-top: 5vh;
 	}
+	.containerMagasine section{
+		width: 100%;
+		margin-top: 4vh;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.containerMagasine section article{
+		width: 100%;
+		text-align: center;
+	}
+	.acceuil{
+		background-size: 100% 100%;
+	}
+
+	.acceuil .container{
+		width: 80%;
+		margin-left: 0%;
+		margin-top: 30vh;
+	}
+
+	.acceuil .container p{
+		padding-bottom: 5vh;
+	}
+	.containerActu section article {
+    	width: 95%;
+    	margin-left: 2.5%;
+    	margin-top: 10vh;
+	}
+	.containerInfoActu {
+    	background-color: white;
+    	position: absolute;
+    	padding-bottom: 25px;
+    	bottom: -10%;
+	}
+	.aboutTender{
+		width: 99%;
+		margin-left: 0%;
+		padding: 20px 0px 20px 0px;
+	}
+	.banner h1{
+		margin-top: 18vh;
+		font-size: 2.7em;
+		line-height: 1.2em;
+	}
+	.containerListActuImg .mainImg{
+	width: 100%;
+	float: none;
+	}
+
+	.containerListActuImg .secondaryImg{
+		display: none;
+	}
+
+	button{
+		width: 100%;
+	}
+
+	.containerListJournal .search-container {
+  		width: 100%;
+  		margin-top: 7vh;
+  		float: none;
+	}
+	.containerPrice{
+		float: none;
+		margin-top: 5vh;
+		position: relative;
+	}
+
+	.containerPrice{
+		font-size: 1.5em;
+		padding-left: 100px;
+	}
+	.containerListJournal section article{
+		width: 80%;
+		text-align: center;
+		float: none;
+		margin-left: 10%;
+	}
+	.hover button{
+		width: 70%;
+	}
+	.containerListJournal section article .hover{
+		opacity: 1;
+		background-color: rgba(0,0,0,1);
+	}
+
 }

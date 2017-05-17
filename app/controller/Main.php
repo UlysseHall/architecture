@@ -18,7 +18,6 @@ class Main
             $encoded = $news->getImg();
             $news->setImg(json_decode($encoded));
         }
-        
         return(["page" => "home.php", "cont" => ["journals" => $lastJournals, "news" => $lastNews]]);
     }
     

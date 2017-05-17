@@ -3,6 +3,7 @@ use App\Core\Route;
 use App\Controller\Journal;
 use App\Controller\Main;
 use App\Controller\Order;
+use App\Controller\Admin;
 
 require_once "vendor/autoload.php";
 
