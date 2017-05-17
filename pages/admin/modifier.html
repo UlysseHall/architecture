@@ -43,19 +43,20 @@
 				</div>
 
 				<ul class="nav">
-					<li class="active">
+					<li class="">
 						<a href="dashboard.html">
 							<i class="pe-7s-home"></i>
 							<p>Tableau de bord</p>
 						</a>
 					</li>
 					<li>
-						<a href="ajouter.html" >
+						<a href="ajouter.html">
 							<i class="pe-7s-note"></i>
 							<p>Ajouter</p>
 						</a>
 					</li>
 					<li>
+							<li class="active">
 						<a href="modifier.html">
 							<i class="pe-7s-tools"></i>
 							<p>Modifier</p>
@@ -127,151 +128,161 @@
 										<p>Déconnexion</p>
 									</a>
 								</li>
-								<li>
-									<li class="separator hidden-lg hidden-md"></li>
-								</ul>
-							</div>
-						</div>
-					</nav>
-
-
-					<div class="content">
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-md-8">
-									<div class="card">
-										<div class="header">
-											<h4 class="title">Modifier votre magazine</h4>
-											<script>var today = new Date();
-											var dd = today.getDate();
-											var mm = today.getMonth()+1; //January is 0!
-											var yyyy = today.getFullYear();
-
-											if(dd<10) {
-												dd='0'+dd
-											}
-
-											if(mm<10) {
-												mm='0'+mm
-											}
-
-											today = mm+'/'+dd+'/'+yyyy;
-											document.write(today);</script>
-										</div>
-										<div class="content">
-												<div class="row">
-													<div class="col-md-5">
-														<div class="form-group">
-															<label>Nom de votre magazine</label>
-															<input type="text" class="form-control" placeholder="">
-														</div>
-													</div>
-													<div class="col-md-3">
-														<div class="form-group">
-															<label>Numéro</label>
-															<input type="number" class="form-control" placeholder="286">
-														</div>
-													</div>
-													<div class="col-md-4">
-														<div class="form-group">
-															<label for="exampleInputEmail1">Année</label>
-															<input type="number" class="form-control" placeholder="Année de votre magazine">
-														</div>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-6">
-														<div class="form-group">
-															<label>Région</label>
-															<input type="text" class="form-control" placeholder="Votre région FR" >
-														</div>
-													</div>
-
-												</div>
-
-												<div class="row">
-													<div class="col-md-12">
-														<div class="form-group">
-															<label>Couverture</label>
-															<input type="text" class="form-control" placeholder="Insérer votre couverture">
-															<input type="file" placeholder="Couverture" >
-														</div>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12">
-														<div class="form-group">
-															<label>PDF</label>
-															<input type="text" class="form-control" placeholder="Insérer votre PDF">
-															<input type="file" placeholder="test" >
-														</div>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12">
-														<div class="form-group">
-															<label>Votre article</label>
-															<textarea rows="5" class="form-control" placeholder="" value="Mike">Depuis 1990, la revue "L'Architecture de votre région" propose un panorama détaillé de l'architecture d'une région, d'un territoire ou d'un pays.</textarea>
-														</div>
-													</div>
-												</div>
-
-												<button type="submit" class="btn btn-info btn-fill pull-right">Ajouter votre magazine</button>
-												<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="card card-user">
-										<div class="image">
-											<img src="assets/img/nick-hillier-215633.jpg" alt="..."/>
-										</div>
-										<div class="content">
-											<div class="author">
-												<a href="#">
-													<img class="avatar border-gray" src="assets/img/couv_282.jpg" alt="..."/>
-
-													<h4 class="title">Nom de votre magazine<br />
-														<small>######</small>
-													</h4>
-												</a>
-											</div>
-										</div>
-										<hr>
-
-									</div>
-								</div>
-
-							</div>
+								<li class="separator hidden-lg hidden-md"></li>
+							</ul>
 						</div>
 					</div>
+				</nav>
 
+
+				<div class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="card">
+									<div class="header">
+										<h4 class="title">Modifier votre magazine</h4>
+										<script>var today = new Date();
+										var dd = today.getDate();
+										var mm = today.getMonth()+1; //January is 0!
+										var yyyy = today.getFullYear();
+
+										if(dd<10) {
+											dd='0'+dd
+										}
+
+										if(mm<10) {
+											mm='0'+mm
+										}
+
+										today = mm+'/'+dd+'/'+yyyy;
+										document.write(today);</script>
+									</div>
+									<div class="content">
+											<div class="row">
+												<div class="col-md-5">
+													<div class="form-group">
+														<label>Nom de votre magazine (région)</label>
+														<input type="text" class="form-control input-js" id="admin-name" placeholder="">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label>Numéro</label>
+														<input type="number" class="form-control input-js" id="admin-number" placeholder="286">
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="form-group">
+														<label for="exampleInputEmail1">Année</label>
+														<input type="number" class="form-control input-js" id="admin-year" placeholder="Année de votre magazine">
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label>Couverture</label>
+														<input type="text" class="form-control" placeholder="Insérer votre couverture">
+														<input type="file" placeholder="Couverture" >
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label>PDF</label>
+														<input type="text" class="form-control" placeholder="Insérer votre PDF">
+														<input type="file" placeholder="test" >
+													</div>
+												</div>
+											</div>
+
+											<button type="submit" class="btn btn-info btn-fill pull-right" onclick="demo.showNotification('top','left')" >Modifier votre magazine</button>
+
+											<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="card card-user">
+									<div class="image">
+										<img src="assets/img/nick-hillier-215633.jpg" alt="..."/>
+									</div>
+									<div class="content">
+										<div class="author">
+											<a href="#">
+												<img class="avatar border-gray" src="assets/img/couv_282.jpg" alt="..."/>
+
+												<h4 class="title admin-name">Nom de votre magazine<br />
+												<h4 class="title admin-number">Numéro<br />
+			                  <h4 class="title admin-year">Année<br />
+												</h4>
+
+												<script>
+													var inputs = document.querySelectorAll(".input-js");
+													var h4Name = document.querySelector("h4.admin-name");
+													var h4Number = document.querySelector("h4.admin-number");
+													var h4Year = document.querySelector("h4.admin-year");
+
+													for(var i = 0; i < inputs.length; i++) {
+														inputs[i].addEventListener("change", function(e) {
+															var inputId = this.id;
+															var valueIn = this.value;
+
+																switch(inputId) {
+																	case "admin-name":
+																		h4Name.innerHTML = valueIn;
+																		break;
+																	case "admin-number":
+																		h4Number.innerHTML = valueIn;
+																		break;
+																	case "admin-year":
+																			h4Year.innerHTML = valueIn;
+																			break;
+																}
+
+														})
+													}
+												</script>
+
+											</a>
+										</div>
+									</div>
+									<hr>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
 				</div>
+
 			</div>
+		</div>
 
 
-		</body>
+	</body>
 
-		<!--   Core JS Files   -->
-		<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-		<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<!--   Core JS Files   -->
+	<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
-		<!--  Checkbox, Radio & Switch Plugins -->
-		<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
-		<!--  Charts Plugin -->
-		<script src="assets/js/chartist.min.js"></script>
+	<!--  Charts Plugin -->
+	<script src="assets/js/chartist.min.js"></script>
 
-		<!--  Notifications Plugin    -->
-		<script src="assets/js/bootstrap-notify.js"></script>
+	<!--  Notifications Plugin    -->
+	<script src="assets/js/bootstrap-notify.js"></script>
 
-		<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-		<script src="assets/js/light-bootstrap-dashboard.js"></script>
+	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 
-		<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-		<script src="assets/js/demo.js"></script>
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="assets/js/demo.js"></script>
 
-		</html>
+	</html>
