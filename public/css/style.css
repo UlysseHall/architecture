@@ -625,10 +625,10 @@ button{
 }
 
 .containerListJournal section article{
-	width: 22%;
+	width: 20%;
 	text-align: center;
 	float: left;
-	margin-left: 3%;
+	margin-left: 5%;
 }
 
 .containerListJournal section article img{
@@ -1151,8 +1151,9 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 }
 
 .containerListJournal section article{
-	width: 40%;
-	margin-left: 5%;
+	width: 30%;
+	margin-left: 15%;
+	margin-top: 5vh;
 }
 
 
@@ -1246,7 +1247,7 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 		padding-left: 100px;
 	}
 	.containerListJournal section article{
-		width: 80%;
+		width: 70%;
 		text-align: center;
 		float: none;
 		margin-left: 10%;
