@@ -4,7 +4,7 @@
 </h1>
 </div>
 <div class="containerListJournal">
-	<h2>L’architecture de votre région 2017 <div class="underline"></div></h2>
+	<h4>L’architecture de votre région 2017</h4>
 	<p>Profitez des meilleures revues d’architecture grâce à notre offre 	d’abonnement magazine à petit prix. Un catalogue de magazines 	d’architecture de référence pour les professionnels et pour le grand 	public.  Vous êtes architecte, urbaniste, designer, ingénieur ou 	étudiant en architecture ?Amateur de beaux édifices et 	d’innovations, en quête d’inspirations, de conseils d’aménagement, 	de construction, de rénovation...
 	</p>
 	<p>
@@ -19,16 +19,13 @@
     <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
   	</form>
 	<section>
-
-	<?php
-		foreach($data["cont"]["journals"] as $magasine){ ?>
 		<article>
 			<div class="containerImg">
-			<img src="public/images/img-content/<?php echo $magasine->getImg(); ?>" alt=''>
-			<h5><?php echo $magasine->getRegion(); ?></h5>
+			<img src="" alt="">
+			<h5>Martinique</h5>
 			<div class="hover">
 				<h4>
-					Commandez la revue <?php echo $magasine->getNumber(); ?>
+					Commandez la revue N°285 - 2017
 				</h4>
 				<p>Magasine</p>
 				<button>
@@ -37,8 +34,5 @@
 			</div>
 			</div>
 		</article>
-		<?php
-		}
-		?>
 	</section>
 </div>

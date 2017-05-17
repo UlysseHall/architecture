@@ -184,7 +184,6 @@ h2{
 
 .containerMagasine section article{
 	display: inline-block;
-	margin-top: 5vh;
 }
 
 .containerMagasine section a img{
@@ -226,8 +225,8 @@ button{
 }
 
 .containerActu h2{
-	margin-top: 5vh;
-	margin-bottom: 0vh;
+	margin-top: 7vh;
+	margin-bottom: 6vh;
 }
 
 .containerActu section{
@@ -250,7 +249,6 @@ button{
 
 .containerActu article img{
 	width: 100%;
-	height: 320px;
 }
 
 .container section article div h2{
@@ -607,7 +605,7 @@ button{
 	margin-left: 8%;
 }
 
-.containerListJournal h2{
+.containerListJournal h4{
 	font-size: 1.7em;
 	margin-top: 10vh;
 	margin-bottom: 6vh;
@@ -625,10 +623,10 @@ button{
 }
 
 .containerListJournal section article{
-	width: 20%;
+	width: 22%;
 	text-align: center;
 	float: left;
-	margin-left: 5%;
+	margin-left: 3%;
 }
 
 .containerListJournal section article img{
@@ -916,20 +914,20 @@ footer{
 
 
 @media screen and (max-width:1200px)  {
-header{
-	display: none !important;
-}
+	header{
+		display: none;
+	}
 
-.navPhone{
-    display: block;
-    position: fixed;
-    z-index: 2;
- }
+	.navPhone{
+    	display: block;
+    	position: fixed;
+    	z-index: 2;
+  	}
   
-.navPhone .mainNav li{
-  display: inline-block;
-  margin-top: 0px;
-}
+  .navPhone .mainNav li{
+    display: inline-block;
+    margin-top: 0px;
+  }
 
  .navPhone .mainNav li:nth-child(1){
   margin-left: 20px;
@@ -971,7 +969,7 @@ header{
   height: 100vh;
   position: fixed;
   top: -50px;
-  right: -400px;
+  left: -400px;
   transition: 0.2s;
 }
 
@@ -1151,9 +1149,8 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 }
 
 .containerListJournal section article{
-	width: 30%;
-	margin-left: 15%;
-	margin-top: 5vh;
+	width: 40%;
+	margin-left: 5%;
 }
 
 
@@ -1247,7 +1244,7 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 		padding-left: 100px;
 	}
 	.containerListJournal section article{
-		width: 70%;
+		width: 80%;
 		text-align: center;
 		float: none;
 		margin-left: 10%;
