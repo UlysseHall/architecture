@@ -30,7 +30,7 @@ class Main
     {
         $builderNews = new Qbuilder("news");
         
-        $allNews = $builderNews->select("id", "date", "architect", "title", "img")->order("date", "desc")->getClass("App\Model\News");
+        $allNews = $builderNews->select("id", "date", "architect", "title", "img", "city")->order("date", "desc")->getClass("App\Model\News");
         
         foreach($allNews as $news) {
             $encoded = $news->getImg();
