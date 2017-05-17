@@ -23,3 +23,9 @@ journalView =< Check controller
 		architecture.formule ???
 
 validation => lien image
+
+newsView => 
+	$news = array_values($news);
+    $news = array_shift($news);
+
+	pas un json dans la db;
