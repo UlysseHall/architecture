@@ -138,7 +138,6 @@ input[type="checkbox"]{
 .underline{
 	width: 40%;
 	height: 2px;
-	margin-top: 2vh;
 	background-color: #32bacc;
 }
 
@@ -425,6 +424,10 @@ button{
 
 .banner.backgroundListJournals{
 	background-image: url(../images/img-content/backgroundListJournal.jpg);
+}
+
+.banner.backgroundNewsView{
+	background-image: url(../images/img-content/immeuble.jpg);
 }
 
 .banner.backgroundListJournals h1{
@@ -755,7 +758,26 @@ button{
 	left: 0;
 }
 
-
+/* -
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Page newsView
+-
+-
+-
+-
+-
+-
+-
+-
+*/
 
 
 
