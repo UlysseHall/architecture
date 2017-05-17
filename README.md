@@ -14,14 +14,19 @@
 <h1>Variables transmises aux pages</h1>
 <h3>home.php</h3>
 <ul>
-    <li><b>Nom</b> : journals, <b>Info</b> : c'est un tableau contenant 4 objects, les 4 dernières revues. Ces objects ont 2 paramètres : region et img (img contient juste le nom du fichier, pas le chemin complet)<br><b>Exemple d'utilisation : </b>foreach( $data["cont"]["journals"] as $journal ) {
+    <li><b>Nom</b> : journals, <b>Info</b> : c'est un tableau contenant 4 objects, les 4 dernières revues. Ces objects ont 3 paramètres : id, region et img (img contient juste le nom du fichier, pas le chemin complet)<br><b>Exemple d'utilisation : </b>foreach( $data["cont"]["journals"] as $journal ) {
     echo($journal->getRegion()); }</li>
-    <li><b>Nom</b> : news, <b>Infos</b> : c'est un tableau contenant 4 objects, les 4 dernières news. Ces objects ont 3 paramètres : title, architect, img</li>
+    <li><b>Nom</b> : news, <b>Infos</b> : c'est un tableau contenant 4 objects, les 4 dernières news. Ces objects ont 4 paramètres : id, title, architect, img (img est un tableau à 1 dimension contenant les noms des fichiers image)</li>
 </ul>
 
 <h3>listNews.php</h3>
 <ul>
-    <li><b>Nom</b> : news, <b>Infos</b> : c'est un tableau contenant pleins d'objects, toutes les news. Ces objects ont 4 paramètres : date, architect, title, img</li>
+    <li><b>Nom</b> : news, <b>Infos</b> : c'est un tableau contenant pleins d'objects, toutes les news. Ces objects ont 5 paramètres : id, date, architect, title, img (img est un tableau à 1 dimension contenant les noms des fichiers image)</li>
+</ul>
+
+<h3>newsView.php</h3>
+<ul>
+    <li><b>Nom</b> : news, <b>Infos</b> : c'est un seul et unique object, l'object de la news désirée. Cet object a 11 paramètres : id, date, architect, departement, city, type, title, description, infos, partners, img (img est un tableau à 1 dimension contenant les noms des fichiers image)</li>
 </ul>
 
 <h1>Routes</h1>
@@ -30,7 +35,7 @@
 	<li><b>Home</b> -> Main -> <i>(page d'accueil)</i></li>
 	<li><b>Tender</b> -> Main -> <i>(appel d'offre)</i></li>
 	<li><b>ListNews</b> -> Main -> <i>(liste des actualités)</i></li>
-	<li><b>Contact</b> -> Main -> <i>(page contact)</i></li>
+	<li><b>newsView</b> -> Main -> <i>(page d'une actualité)</i></li>
 	<li><b>ListJournals</b> -> Journal -> <i>(liste des magazines)</i></li>
 	<li><b>JournalView</b> -> Journal -> <i>(page d'une revue de magazine)</i></li>
 	<li><b>Order</b> -> Order -> <i>(page de commande)</i></li>

@@ -3,7 +3,7 @@ namespace App\Core;
 
 class Route 
 {
-    private $listRoutes = ["home", "tender", "listNews", "contact", "listJournals", "journalView", "order", "subscribe"];
+    private $listRoutes = ["home", "tender", "listNews", "listJournals", "journalView", "order", "subscribe", "newsView"];
     
     public static function errorPage()
 	{
@@ -15,7 +15,6 @@ class Route
     public function getController($route = false) 
     {
         if(!$route) {
-            
             return "Main.php";
         }
         elseif(in_array($route, $this->listRoutes)) {
@@ -24,7 +23,7 @@ class Route
                 case "home":
                 case "tender":
                 case "listNews":
-                case "contact":
+                case "newsView":
                     $controller = "Main";
                     break;
                     
