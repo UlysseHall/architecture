@@ -13,7 +13,7 @@ class Admin
 	public function admin_homeAction()
 	{
 		$builder = new Qbuilder('magazine');
-		$list = $builder->select('id', 'number')->order('id', 'DESC')->getClass('\App\Model\Magazine');
+		$list = $builder->select()->order('id', 'DESC')->getClass('\App\Model\Magazine');
 
 		return ['page' => 'admin/home.php', 'cont' => ['list' => $list]];
 	}
