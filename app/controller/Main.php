@@ -58,6 +58,8 @@ class Main
         }
         
         $news = array_shift(array_values($news));
+        $encoded = $news->getImg();
+        $news->setImg(json_decode($encoded));
         
         $encoded = $news->getImg();
         $news->setImg(json_decode($encoded));
