@@ -10,7 +10,7 @@
 </div>
 <div class="containerMentionTender">
 	<button class="buttonTender">
-		<img src="../public/images/img-layout/right-arrow.png" alt=""><a href="">Consultez</a>
+		<img src="public/images/img-layout/right-arrow.png" alt=""><a href="">Consultez</a>
 	</button>
 </div>
 	<p class="mentionTender">DoubleTrade conserve plus de 12 584 582 annonces dans sa base historique.</p>

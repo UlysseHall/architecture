@@ -24,7 +24,7 @@
 		foreach($data["cont"]["journals"] as $magasine){ ?>
 		<article>
 			<div class="containerImg">
-			<img src="public/images/img-content/<?php echo $magasine->getImg(); ?>' alt=''>" alt="">
+			<img src="public/images/img-content/<?php echo $magasine->getImg(); ?>" alt=''>
 			<h5><?php echo $magasine->getRegion(); ?></h5>
 			<div class="hover">
 				<h4>

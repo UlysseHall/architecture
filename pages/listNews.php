@@ -9,11 +9,11 @@
 	<h3>Projet Astrale - Construction d’un ensemble de bureaux <br>
 Plessis Robinson (92)</h3>
 <div class="containerListActuImg">
-	<img class="mainImg" src="../public/images/img-content/	un_autre_immeuble.jpg" alt="">
+	<img class="mainImg" src="public/images/img-content/ARSENAULT.jpg" alt="">
 	<button>
 		DECOUVRIR
 	</button>
 	
-	<img class="secondaryImg" src="../public/images/img-content/un_autre_immeuble_de_type_immeuble.jpg" alt="">
+	<img class="secondaryImg" src="public/images/img-content/ARSENAULTtwo.jpg" alt="">
 </div>
 </div>
