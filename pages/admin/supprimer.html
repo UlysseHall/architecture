@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/open-magazine.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Ajouter votre magazine - L'architecture de votre région</title>
+	<title>Supprimer votre magazine - L'architecture de votre région</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -50,7 +50,7 @@
 									</a>
 							</li>
 							<li>
-									<a href="ajouter.html">
+									<a href="ajouter.html" >
 											<i class="pe-7s-note"></i>
 											<p>Ajouter</p>
 									</a>
@@ -89,14 +89,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Ajouter votre magazine</a>
+                    <a class="navbar-brand" href="#">Supprimer votre magazine</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
-								<p class="hidden-lg hidden-md">Dashboard</p>
+								<p class="hidden-lg hidden-md">Tableau de bord</p>
                             </a>
                         </li>
 												<li class="dropdown">
@@ -133,6 +133,7 @@
 																	<p>Déconnexion</p>
 															</a>
 													</li>
+                        <li>
 						<li class="separator hidden-lg hidden-md"></li>
                     </ul>
                 </div>
@@ -146,7 +147,7 @@
                     <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Ajouter votre magazine</h4>
+                                <h4 class="title">Supprimer votre magazine</h4>
 																<script>var today = new Date();
 						var dd = today.getDate();
 						var mm = today.getMonth()+1; //January is 0!
@@ -169,7 +170,7 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Nom de votre magazine</label>
-                                                <input type="text" class="form-control" placeholder="...">
+                                                <input type="text" class="form-control" placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -187,31 +188,6 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Région</label>
-                                                <input type="text" class="form-control" placeholder="Votre région FR" >
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Région 2</label>
-                                                <input type="text" class="form-control" placeholder="Votre région 2 FR">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>PDF</label>
-                                                <input type="text" class="form-control" placeholder="Insérer votre PDF">
-																								<input type="file" placeholder="test" >
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Votre article</label>
@@ -220,7 +196,8 @@
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Ajouter votre magazine</button>
+                                    <button type="submit" method="post" class="btn btn-info btn-fill pull-right">Supprimer votre magazine</button>
+
                                     <div class="clearfix"></div>
                                 </form>
                             </div>
