@@ -17,27 +17,7 @@ class Qbuilder extends Builder
 	 */
 	public function getClass($class)
 	{
-		if ($this->fetchAll) {
-
-			return $this->getAllClass($class);
-		}
-		$stmt = $this->exec();
-		if ($this->fetchable) {
-			if ($stmt->errorCode() == '00000') {
-				$this->resetQuery();
-
-		       	return $stmt->fetch(PDO::FETCH_CLASS, $class); 		
-		   	}
-			die($stmt->errorInfo()[2]);
-		}
-		$this->resetQuery();
-		if ($stmt->rowCount()) {
-
-			return "It wurkt bruuuuh !!!";
-		} else {
-
-			return "That code is a biiiitch";
-		}
+        return $this->getAllClass($class);
 	}
 
 	/**
@@ -74,6 +54,14 @@ class Qbuilder extends Builder
 
 			return $this;
 		}
+	}
+
+	public function where($value, $col = 'id', $operator = '=')
+	{
+		$this->where = sprintf('%s%s:%s', $col, $operator, $col);
+		$this->tags[sprintf(":%s", $col)] = $value;
+
+		return $this;
 	}
 }
 

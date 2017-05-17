@@ -82,7 +82,7 @@ class Builder
 		$this->resetQuery();
 		if ($stmt->rowCount()) {
 
-			return "It wurkt bruuuuh !!!";
+			return true;
 		} else {
 
 			return "That code is a biiiitch";
@@ -181,14 +181,14 @@ class Builder
 	 * @param  array 	$datas 	[$column => $value]
 	 * @return instance $this
 	 */
-	public function insert($datas)
+	public function insert($data)
 	{
-		if (!empty( $datas )) {
+		if (!empty( $data )) {
 			$this->req_type = "INSERT INTO";
 			$this->fetchable = false;
 			$this->fetchAll = false;
-			$this->tags = $this->setTags($datas);
-			$this->first_args = $this->setArgs($datas);
+			$this->tags = $this->setTags($data);
+			$this->first_args = $this->setArgs($data);
 		}
 
 		return $this;
@@ -403,7 +403,6 @@ class Builder
 			$sql = sprintf('%s OFFSET %s', $sql, $this->offset);
 		}
 
-		// die($sql);
 		return $sql;
 	}
 
@@ -416,7 +415,11 @@ class Builder
 		$first_args = '';
 		if ($this->req_type === "SELECT") {
 			foreach ($args as $key => $value) {
-				$first_args = sprintf('%s `%s`.`%s`,', $first_args, $this->table ,$value);
+				if ($value !== '*') {
+					$first_args = sprintf('%s `%s`.`%s`,', $first_args, $this->table ,$value);
+				} else {
+					$first_args = sprintf('%s `%s`.%s,', $first_args, $this->table ,$value);
+				}
 			}
 		} elseif ($this->req_type === "UPDATE") {
 			foreach ($args as $key => $value) {
@@ -453,9 +456,12 @@ class Builder
 	 */
 	protected function setInsertTags($tags_array)
 	{
-		foreach ($tags_array as $tags_req => $value) {
-			$tags_req = sprintf('%s%s, ', $tags_req, $tags);
+		$tags_req = '';
+
+		foreach ($tags_array as $col => $tag) {
+			$tags_req = sprintf('%s%s, ', $tags_req, $col);
 		}
+
 		$tags_req = substr($tags_req, 0, -2);
 
 		return $tags_req;
