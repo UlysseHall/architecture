@@ -7,6 +7,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,500,600" rel="stylesheet">
 </head>
 <body>
+    <?php
+        if($controllerName != "Admin") {
+    ?>
     <input type="checkbox" id="check1" name=""/>
 	<nav class="navPhone">
 		<ul class="mainNav">
@@ -39,9 +42,9 @@
 			<li><a href=""><img class="logoLang" src="public/images/img-layout/france.png" alt=""> fr <img src="public/images/img-layout/cross_bottom.png" alt=""></a></li>
 		</ul>
 	</header>
+	<?php } ?>
 
 <?php require("pages/" . $data["page"]); ?>
-
 
     <footer>
 		<div class="containerFooter">
