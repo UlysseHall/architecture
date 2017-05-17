@@ -7,7 +7,7 @@
 <?php
 foreach($data["cont"]["news"] as $news){ ?>
 	<div class="containerListActu">
-		<h4><?php echo $news->getDate(); ?></h4>
+		<h4>Date : 	<?php echo $news->getDate(); ?></h4>
 		<h2><?php echo $news->getArchitect(); ?><div class="underline"></div></h2>
 		<h3><?php echo $news->getTitle(); ?> <br>
 <?php echo $news->getCity(); ?></h3>
