@@ -29,6 +29,16 @@
     <li><b>Nom</b> : news, <b>Infos</b> : c'est un seul et unique object, l'object de la news désirée. Cet object a 11 paramètres : id, date, architect, departement, city, type, title, description, infos, partners, img (img est un tableau à 1 dimension contenant les noms des fichiers image)</li>
 </ul>
 
+<h3>listJournals</h3>
+<ul>
+    <li><b>Nom</b> : journals, <b>Infos</b> : c'est un tableau contenant pleins objects, toutes les revues de magazine. Ces objects ont 6 paramètres : id, number, img, pdf, region et year</li>
+</ul>
+
+<h3>journalView</h3>
+<ul>
+    <li><b>Nom</b> : journal, <b>Infos</b> : c'est un seul et unique object, l'object de la revue désirée. Cet object a 6 paramètres : id, number, img, pdf, region et year</li>
+</ul>
+
 <h1>Routes</h1>
 <ul>
 	<li><b>[ACTION] -> [CONTROLLER] -> <i>(infos)</i></b></li><br>

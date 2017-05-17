@@ -3,17 +3,23 @@
   Désormais en accès libre </h1>
 </div>
 
-<div class="containerListActu">
-	<h4>21/05/2009</h4>
-	<h2>ABH Architectes<div class="underline"></div></h2>
-	<h3>Projet Astrale - Construction d’un ensemble de bureaux <br>
-Plessis Robinson (92)</h3>
-<div class="containerListActuImg">
-	<img class="mainImg" src="../public/images/img-content/	un_autre_immeuble.jpg" alt="">
-	<button>
+
+<?php
+foreach($data["cont"]["news"] as $news){ ?>
+	<div class="containerListActu">
+		<h4>Date : 	<?php echo $news->getDate(); ?></h4>
+		<h2><?php echo $news->getArchitect(); ?><div class="underline"></div></h2>
+		<h3><?php echo $news->getTitle(); ?> <br>
+<?php echo $news->getCity(); ?></h3>
+	<div class="containerListActuImg">
+		<img class="mainImg" src="public/images/img-content/<?php echo $news->getImg()[0]; ?>" alt="">
+		<button>
 		DECOUVRIR
-	</button>
+		</button>
 	
-	<img class="secondaryImg" src="../public/images/img-content/un_autre_immeuble_de_type_immeuble.jpg" alt="">
-</div>
-</div>
+		<img class="secondaryImg" src="public/images/img-content/<?php echo $news->getImg()[1]; ?>" alt="">
+	</div>
+	</div>
+<?php
+}
+?>
