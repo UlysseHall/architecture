@@ -105,7 +105,7 @@ input[type="checkbox"]{
 	width: 100%;
 	height: 70vh;
 	background-image: url(../images/img-content/immeuble_home_page.jpg);
-	background-size: 50% 100%;
+	background-size: 55% 100%;
 	background-repeat: no-repeat;
 	background-position: 75%;
 	position: relative;
@@ -138,6 +138,7 @@ input[type="checkbox"]{
 .underline{
 	width: 40%;
 	height: 2px;
+	margin-top: 2vh;
 	background-color: #32bacc;
 }
 
@@ -200,6 +201,7 @@ h2{
 
 .alignTitle{
 	text-align: center;
+	padding-top: 15px;
 }
 
 button{
@@ -407,7 +409,7 @@ button{
 .banner{
 	height: 60vh;
 	width: 100%;
-	margin-top: 8vh;
+	margin-top: 5vh;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	overflow: hidden;
@@ -638,13 +640,14 @@ button{
 }
 
 .containerListJournal section article h5{
-	font-size: 1.2em;
+	font-size: 1.3em;
 	font-weight: 400;
-	margin-top: 3vh;
+	margin-top: 4vh;
 }
 
 .containerImg{
 	position: relative;
+	margin-top: 5vh;
 }
 
 .containerListJournal section article .hover{
@@ -703,7 +706,7 @@ button{
   width: 75px;
   height: 75px;
   top: -62px;
-  right: -45px;
+  right: 0px;
 }
 
 .hover h4{
