@@ -62,12 +62,11 @@
 	</nav>
 	<header>
 		<ul>
-			<li><a href=""><img class="logo" src="public/images/img-layout/logo_larchitecture_black.png" alt=""></a></li>
-			<li><a href="">magasines</a></li>
-			<li><a href="">appel d'offre</a></li>
-			<li><a href="">atualités</a></li>
-			<li><a href="">contact</a></li>
-			<li><a href="">abonnez-vous</a></li>
+			<li><a href="index.php"><img class="logo" src="public/images/img-layout/logo_larchitecture_black.png" alt=""></a></li>
+			<li><a href="index.php?action=listJournals">magazines</a></li>
+			<li><a href="index.php?action=tender">appel d'offre</a></li>
+			<li><a href="index.php?action=listNews">atualités</a></li>
+			<li><a href="index.php?action=order">abonnez-vous</a></li>
 			<li><a href=""><img class="logoLang" src="public/images/img-layout/france.png" alt=""> fr <img src="public/images/img-layout/cross_bottom.png" alt=""></a></li>
 		</ul>
 	</header>
@@ -75,7 +74,7 @@
 
 <?php require("pages/" . $data["page"]); ?>
 
-    <footer>
+    <footer <?php if($action == "orderAction") { ?> class="footer-stick" <?php } ?>>
 		<div class="containerFooter">
 			<div class="containerLeft">
 				<h2>Contact</h2>

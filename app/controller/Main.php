@@ -59,6 +59,9 @@ class Main
         
         $news = array_shift(array_values($news));
         
+        $encoded = $news->getImg();
+        $news->setImg(json_decode($encoded));
+        
         return(["page" => "newsView.php", "cont" => ["news" => $news]]);
     }
 }
