@@ -21,7 +21,7 @@ class Admin
 	public function admin_singleAction()
 	{
 		if (isset($_GET['id'])) {
-			if ($_POST['delete']) {
+			if (isset($_POST['delete']) && $_POST['delete']) {
 
 				return $this->delete();
 			} else {
