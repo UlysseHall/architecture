@@ -1,50 +1,6 @@
 <?php
     $magazine = $data["cont"]["magazine"];
 ?>
-<div class="wrapper">
-    <div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
-        <div class="sidebar-wrapper">
-            <div class="logo">
-                <a href="dashboard.html" class="simple-text">
-                    Tableau de bord
-                </a>
-            </div>
-            <ul class="nav">
-                <li class="active">
-                    <a href="dashboard.html">
-                        <i class="pe-7s-home"></i>
-                        <p>Tableau de bord</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="ajouter.html" >
-                        <i class="pe-7s-note"></i>
-                        <p>Ajouter</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="modifier.html">
-                        <i class="pe-7s-tools"></i>
-                        <p>Modifier</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="supprimer.html">
-                        <i class="pe-7s-trash"></i>
-                        <p>Supprimer</p>
-                    </a>
-                </li>
-                <li class="active-pro">
-                    <a href="upgrade.html">
-                        <i class="pe-7s-right-arrow"></i>
-                        <p>Aller sur le site</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
@@ -55,7 +11,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Supprimer votre magazine</a>
+                    <a class="navbar-brand" href="index.php?action=admin_single&id=<?= $magazine->getId() ?>">Supprimer votre magazine</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -70,7 +26,7 @@
                                 </p>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Bienvenue sur votre tableau de bord !</a></li>
+                                <li><a href="index.php?action=admin_home">Bienvenue sur votre tableau de bord !</a></li>
                             </ul>
                         </li>
                         <li>
@@ -84,12 +40,12 @@
                     <ul class="nav navbar-nav navbar-right">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="">
+                                <a href="index.php?action=admin_home">
                                     <p>Mon compte</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="index.php">
                                     <p>Déconnexion</p>
                                 </a>
                             </li>
@@ -143,16 +99,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Votre article</label>
-                                                        <textarea rows="5" class="form-control" placeholder="" value="Mike">Depuis 1990, la revue "L'Architecture de votre région" propose un panorama détaillé de l'architecture d'une région, d'un territoire ou d'un pays.</textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                             <form method="post" action="index.php?action=admin_single&id=<?= $_GET['id'] ?>">
                                                 <input type="hidden" name="delete" value="1">
                                                 <input type="submit" name="" value="Supprimer votre magazine" class="btn btn-info btn-fill pull-right">
@@ -166,16 +112,14 @@
                             <div class="col-md-4">
                                 <div class="card card-user">
                                     <div class="image">
-                                        <img src="assets/img/nick-hillier-215633.jpg" alt="..."/>
+                                        <img src="public/images/img-content/nick-hillier-215633.jpg" alt=""/>
                                     </div>
                                     <div class="content">
                                         <div class="author">
-                                            <a href="#">
-                                                <img class="avatar border-gray" src="assets/img/couv_282.jpg" alt="..."/>
+                                            <a href="">
+                                                <img class="avatar border-gray" src="public/images/img-content/<?= $magazine->getImg() ?>" alt=""/>
 
-                                                <h4 class="title">Nom de votre magazine<br />
-                                                    <small>######</small>
-                                                </h4>
+                                                <h4 class="title">Nom de votre magazine</h4>
                                             </a>
                                         </div>
                                     </div>

@@ -1,114 +1,60 @@
 <?php
 $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false;
 ?>
-<div class="wrapper">
-    <div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
 
-		<div class="sidebar-wrapper">
-					<div class="logo">
-							<a href="dashboard.html" class="simple-text">
-									Tableau de bord
-							</a>
-					</div>
-
-					<ul class="nav">
-							<li class="active">
-									<a href="dashboard.html">
-											<i class="pe-7s-home"></i>
-											<p>Tableau de bord</p>
-									</a>
-							</li>
-							<li>
-									<a href="ajouter.html">
-											<i class="pe-7s-note"></i>
-											<p>Ajouter</p>
-									</a>
-							</li>
-							<li>
-									<a href="modifier.html">
-											<i class="pe-7s-tools"></i>
-											<p>Modifier</p>
-									</a>
-							</li>
-							<li>
-									<a href="supprimer.html">
-											<i class="pe-7s-trash"></i>
-											<p>Supprimer</p>
-									</a>
-							</li>
-
-			<li class="active-pro">
-									<a href="upgrade.html">
-											<i class="pe-7s-right-arrow"></i>
-											<p>Aller sur le site</p>
-									</a>
-							</li>
-					</ul>
-		</div>
-	</div>
-
-
-    <div class="main-panel">
-		<nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Ajouter votre magazine</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-								<p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-												<li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<div class="main-panel">
+            <nav class="navbar navbar-default navbar-fixed">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Ajouter votre magazine</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-globe"></i>
                                     <b class="caret hidden-sm hidden-xs"></b>
                                     <span class="notification hidden-sm hidden-xs">1</span>
-									<p class="hidden-lg hidden-md">
-										1 Notification
-										<b class="caret"></b>
-									</p>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Bienvenue sur votre tableau de bord !</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-								<p class="hidden-lg hidden-md">Search</p>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-											<ul class="nav navbar-nav navbar-right">
-													<li>
-														 <a href="">
-																 <p>Mon compte</p>
-															</a>
-													</li>
-													<li>
-															<a href="#">
-																	<p>Déconnexion</p>
-															</a>
-													</li>
-						<li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                                    <p class="hidden-lg hidden-md">
+                                        1 Notification
+                                        <b class="caret"></b>
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Bienvenue sur votre tableau de bord !</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-search"></i>
+                                    <p class="hidden-lg hidden-md">Rechercher</p>
+                                </a>
+                            </li>
+                        </ul>
 
 
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="">
+                                        <p>Mon compte</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Déconnexion</p>
+                                    </a>
+                                </li>
+                                <li class="separator hidden-lg hidden-md"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -134,7 +80,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                             </div>
                             <div class="content">
                             <!-- 8 -->
-                                <form method="post" action="index.php?action=admin_form&add=1">
+                                <form method="post" action="index.php?action=admin_form&<?= isset($_GET['add']) ? 'add=1' : 'update=1&id='.$_GET['id'] ?>">
                                     <div class="content">
                                             <div class="row">
                                                 <div class="col-md-5">
@@ -174,7 +120,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="<?= isset($_GET['add']) ? 'add' : 'update' ?>" value="1">
                                                 <button type="submit" class="btn btn-info btn-fill pull-right">Ajouter votre magazine</button>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -187,15 +133,14 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                     <div class="col-md-4">
                         <div class="card card-user">
                             <div class="image">
-                                <img src="assets/img/nick-hillier-215633.jpg" alt="..."/>
+                                <img src="public/images/img-content/nick-hillier-215633.jpg" alt="..."/>
                             </div>
                             <div class="content">
                                 <div class="author">
                                      <a href="#">
-                                    <img class="avatar border-gray" src="assets/img/couv_282.jpg" alt="..."/>
+                                    <img class="avatar border-gray" src="public/images/img-content/couv_282.jpg" alt="..."/>
 
                                       <h4 class="title">Nom de votre magazine<br />
-                                         <small>######</small>
                                       </h4>
                                     </a>
                                 </div>
