@@ -416,7 +416,11 @@ class Builder
 		$first_args = '';
 		if ($this->req_type === "SELECT") {
 			foreach ($args as $key => $value) {
-				$first_args = sprintf('%s `%s`.`%s`,', $first_args, $this->table ,$value);
+				if ($value !== '*') {
+					$first_args = sprintf('%s `%s`.`%s`,', $first_args, $this->table ,$value);
+				} else {
+					$first_args = sprintf('%s `%s`.%s,', $first_args, $this->table ,$value);
+				}
 			}
 		} elseif ($this->req_type === "UPDATE") {
 			foreach ($args as $key => $value) {
