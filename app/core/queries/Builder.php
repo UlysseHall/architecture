@@ -82,7 +82,7 @@ class Builder
 		$this->resetQuery();
 		if ($stmt->rowCount()) {
 
-			return "It wurkt bruuuuh !!!";
+			return true;
 		} else {
 
 			return "That code is a biiiitch";
