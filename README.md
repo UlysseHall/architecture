@@ -50,6 +50,7 @@
 	<li><b>JournalView</b> -> Journal -> <i>(page d'une revue de magazine)</i></li>
 	<li><b>Order</b> -> Order -> <i>(page de commande)</i></li>
 	<li><b>Subscribe</b> -> Order -> <i>(page d'abonnement)</i></li>
+	<li><b>Validation</b> -> Order -> <i>(page de validation d'abonnement)</i></li>
 </ul>
 
 <h1>Plan du site</h1>

@@ -1,3 +1,6 @@
+<?php
+    $formule = $data["cont"]["formule"];
+?>
 <div id="full-size-main">
     <!--formulaire d'abonnement------------------------------->
     <div id="formule-abonnement">
@@ -8,10 +11,10 @@
                     <p>Votre formule d'abonnement :</p>
                 </div>
                 <div class="formule-integrale-titre">
-                    <h3>Formule Intégrale</h3>
+                    <h3>Formule <?php echo($formule->name); ?></h3>
                 </div>
                 <div class="description-formule">
-                    <p>Le journal + ses suppléments + l'Edition abonnés sur ordinateur, mobile et tablette</p>
+                    <p><?php echo($formule->description); ?></p>
                 </div>
                 <div class="image-livre">
                     <figure>
@@ -19,7 +22,7 @@
                     </figure>
                 </div>
                 <div class="prix-duree">
-                    <p>24,90€ - Durée libre</p>
+                    <p><?php echo($formule->price); ?>0€ - Durée libre</p>
                 </div>
                 <div class="paiement-tous-les-mois">
                     <p>Paiement tous les mois</p>
@@ -43,7 +46,7 @@
     <!--formulaire d'inscription---------------------------->
     <div id="formulaire-inscription">
         <div class="formulaire-inscription-width">
-            <form action="" method="">
+            <form action="index.php?action=validation" method="post">
                 <!--créer un compte-------------------------->
                 <div class="creer-compte">
                     <div>
@@ -88,7 +91,7 @@
                                 <label>Nom: *</label>
                             </div>
                             <div>
-                                <input type="text">
+                                <input type="text" name="nom">
                             </div>
                         </div>
                         <!--fin de structure----------------->

@@ -61,6 +61,9 @@ class Main
         $encoded = $news->getImg();
         $news->setImg(json_decode($encoded));
         
+        $encoded = $news->getImg();
+        $news->setImg(json_decode($encoded));
+        
         return(["page" => "newsView.php", "cont" => ["news" => $news]]);
     }
 }
