@@ -1,4 +1,4 @@
-<div class="wrapper">
+    <div class="wrapper">
         <div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
 
             <div class="sidebar-wrapper">
@@ -122,7 +122,7 @@
                                             document.write(today);</script>
                                         </div>
                                         <div class="content">
-                                            <form>
+
                                                 <div class="row">
                                                     <div class="col-md-5">
                                                         <div class="form-group">
