@@ -11,6 +11,7 @@ class Setup
 	CONST DB_PASS = 'root';
 	CONST DB_PORT = '8888';
 
+
 	/**
 	 * @var \PDO
 	 */
