@@ -4,13 +4,16 @@
     <meta charset="utf-8">
 	<title>Larchitecture</title>
 	<link rel="stylesheet" href="public/css/style.css">
-
+    <link rel="stylesheet" href="public/css/screen.css">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,500,600" rel="stylesheet">
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
+     <?php
+        if($controllerName == "Admin") {
+    ?>
 
     <!-- Bootstrap core CSS     -->
     <link href="pages/admin/assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -30,6 +33,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="pages/admin/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <?php } ?>
 </head>
 <body>
     <?php
@@ -58,12 +62,11 @@
 	</nav>
 	<header>
 		<ul>
-			<li><a href=""><img class="logo" src="public/images/img-layout/logo_larchitecture_black.png" alt=""></a></li>
-			<li><a href="">magasines</a></li>
-			<li><a href="">appel d'offre</a></li>
-			<li><a href="">atualités</a></li>
-			<li><a href="">contact</a></li>
-			<li><a href="">abonnez-vous</a></li>
+			<li><a href="index.php"><img class="logo" src="public/images/img-layout/logo_larchitecture_black.png" alt=""></a></li>
+ 			<li><a href="index.php?action=listJournals">magazines</a></li>
+ 			<li><a href="index.php?action=tender">appel d'offre</a></li>
+ 			<li><a href="index.php?action=listNews">atualités</a></li>
+ 			<li><a href="index.php?action=order">abonnez-vous</a></li>
 			<li><a href=""><img class="logoLang" src="public/images/img-layout/france.png" alt=""> fr <img src="public/images/img-layout/cross_bottom.png" alt=""></a></li>
 		</ul>
 	</header>
@@ -116,7 +119,7 @@
 
 <?php require("pages/" . $data["page"]); ?>
 
-    <footer>
+    <footer <?php if($action == "orderAction") { ?> class="footer-stick" <?php } ?>>
 		<div class="containerFooter">
 			<div class="containerLeft">
 				<h2>Contact</h2>
