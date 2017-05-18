@@ -12,5 +12,25 @@
 	<button class="buttonTender">
 		<img src="public/images/img-layout/right-arrow.png" alt=""><a href="">Consultez</a>
 	</button>
+	<div class="containerIframe">
+	<iframe class="iframeMaggle" src="http://www.doubletrade.com" width="80%"  height="0px" margin-left="10%" clear="both"></iframe>
+	</div>
 </div>
 	<p class="mentionTender">DoubleTrade conserve plus de 12 584 582 annonces dans sa base historique.</p>
+
+<script type="text/javascript">
+
+	var iframeMaggle = document.querySelector('.iframeMaggle');
+	var buttonMaggle = document.querySelector('.buttonTender');
+
+	buttonMaggle.addEventListener('click', function(e){
+		e.preventDefault();
+		if (iframeMaggle.style.height === "800px") {
+			iframeMaggle.style.height = "0px";
+		}
+
+		else{
+			iframeMaggle.style.height = "800px";
+		}
+	})
+</script>
