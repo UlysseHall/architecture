@@ -18,14 +18,14 @@ class Main
             $encoded = $news->getImg();
             $news->setImg(json_decode($encoded));
         }
-        return(["page" => "home.php", "cont" => ["journals" => $lastJournals, "news" => $lastNews]]);
+        return(["page" => "home.php", "cont" => ["journals" => $lastJournals, "news" => $lastNews], "title" => 'Acceuil']);
     }
     
     public function tenderAction()
     {
-        return(["page" => "tender.php"]);
+        return(["page" => "tender.php", "title" => "Appel d'offre"]);
     }
-    
+
     public function listNewsAction()
     {
         $builderNews = new Qbuilder("news");
@@ -37,7 +37,7 @@ class Main
             $news->setImg(json_decode($encoded));
         }
         
-        return(["page" => "listNews.php", "cont" => ["news" => $allNews]]);
+        return(["page" => "listNews.php", "cont" => ["news" => $allNews], "title" => 'Liste actualité']);
     }
     
     public function newsViewAction()
@@ -46,7 +46,8 @@ class Main
             $id = intval($_GET["id"]);
         }
         else {
-            Route::errorPage();
+            
+            return Route::errorPage();
         }
         
         $builderNews = new Qbuilder("news");
@@ -54,14 +55,16 @@ class Main
         $news = $builderNews->select()->where($id)->getClass("App\Model\News");
         
         if(count($news) == 0) {
-            Route::errorPage();
+            
+            return Route::errorPage();
         }
         
-        $news = array_shift(array_values($news));
+        $news = array_values($news);
+        $news = array_shift($news);
         $encoded = $news->getImg();
         $news->setImg(json_decode($encoded));
         
-        return(["page" => "newsView.php", "cont" => ["news" => $news]]);
+        return(["page" => "newsView.php", "cont" => ["news" => $news], "title" => 'Actualités']);
     }
     
     public function loginAction()

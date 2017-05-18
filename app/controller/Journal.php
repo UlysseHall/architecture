@@ -11,7 +11,8 @@ class Journal
         
         $listJournals = $builderMag->select()->order("number", "desc")->getClass("App\Model\Magazine");
         
-        return(["page" => "listJournals.php", "cont" => ["journals" => $listJournals]]);
+        return(["page" => "listJournals.php", "cont" => ["journals" => $listJournals], "title" => 'Liste magazines']);
+
     }
     
     public function journalViewAction()
@@ -22,17 +23,20 @@ class Journal
             $id = intval($_GET["id"]);
         }
         else {
-            Route::errorPage();
+
+            return Route::errorPage();
         }
         
         $journal = $builderMag->select()->where($id)->getClass("App\Model\Magazine");
         
         if(count($journal) == 0) {
-            Route::errorPage();
+
+            return Route::errorPage();
         }
         
-        $journal = array_shift(array_values($journal));
+        $journal = array_values($journal);
+        $journal = array_shift($journal);
         
-        return(["page" => "journalView.php", "cont" => ["journal" => $journal]]);
+        return(["page" => "journalView.php", "cont" => ["journal" => $journal], "title" => 'Vue du magazine '.$journal->getRegion()]);
     }
 }

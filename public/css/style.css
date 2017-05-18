@@ -1084,6 +1084,11 @@ footer{
 	margin-top: 7vh;
 }
 
+.containerIframe{
+	clear: both;
+	margin-top: 7vh;
+}
+
 
 @media screen and (max-width:1200px)  {
 header{
@@ -1270,7 +1275,8 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 
 .containerDescOne .containerTxtDesc {
     float: none;
-    width: 40%;
+    width: 90%;
+    margin-left: 5%;
     background-color: #f8f8f8;
     position: static;
 }
@@ -1278,6 +1284,7 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 .containerDescTwo .containerTxtDesc {
     float: none;
     width: 90%;
+    margin-left: 5%;
     background-color: #f8f8f8;
     position: static;
 }
@@ -1491,4 +1498,17 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 	.containerImg ul li:nth-child(4){
 		margin-left: 5%;
 	}
+	.containerLeft label{
+		width: 100%;
+		float: none;
+    	color: #333;
+    	margin-top: 50px;
+	}
+	.containerLeft form{
+		width: 100%;
+	}
+	.containerLeft label[for="prenom"],
+	.containerLeft label[for="services"] {
+    margin-left: 0%;
+}
 }
