@@ -19,9 +19,11 @@
 		}
 		?>
 		</section>
-		<button>
-			explorez
-		</button>
+		<a href="index.php?action=listJournals">
+		    <button>
+                explorez
+            </button>
+        </a>
 	</div>
 	<div class="containerActu">
 		<h2>ACTUALITES<div class="underline"></div></h2>
