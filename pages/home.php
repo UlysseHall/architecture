@@ -30,7 +30,7 @@
 		<section>
 		<?php
 		foreach($data["cont"]["news"] as $news){ ?>
-		<a href="index.php?action=newsView&id=<?php echo $news->getId();?>">
+		<a class="fdp" href="index.php?action=newsView&id=<?php echo $news->getId();?>">
 			<article><img src='public/images/img-content/<?php echo $news->getImg()[0]; ?>'' alt=''><div class="containerInfoActu"><h3><?php echo $news->getArchitect(); ?><div class="underline"></div></h3><p><?php echo $news->getTitle(); ?></p></div></article></a>
 		<?php
 		}
@@ -64,3 +64,19 @@ Véritable vitrine de la création architecturale d'une région ou d'un pays, el
 		</div>
 		<img src="public/images/img-content/un_gratte_ciel.jpg" alt="">
 	</div>
+
+<script type="text/javascript">
+	var iframe = document.querySelector('iframe');
+	var button = document.querySelector('.buttonTender');
+
+	button.addEventListener('click', function(){
+			if (iframe.style.height === "0px") {
+				iframe.style.height = "800px";
+			}
+
+			else{
+				iframe.style.height = "0px";
+			}		
+	})
+
+</script>
