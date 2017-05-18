@@ -13,6 +13,7 @@ $magasine = $data["cont"]["journal"];
             <div>
                 <a href="<?php echo $magasine->getPdf(); ?>"><button class="buttonJournalView"><p>Voir PDF</p></button></a>
                 <a href="index.php?action=order"><button class="buttonJournalView"><p>Acheter</p></button></a>
+
             </div>
         </figure>
     </div>
