@@ -403,30 +403,37 @@ div#revue-full-size div.revue-full-size-width {
   div#revue-full-size div.revue-full-size-width figure {
     width: 100%;
     height: 300px;
-    background: #ddd;
-    margin: auto;
+    margin-top: 5vh;
     position: relative; }
     div#revue-full-size div.revue-full-size-width figure img {
-      width: 100%; }
+      width: 13%;
+	  margin-left: 10%;
+	  margin-top: 7vh;
+       }
     div#revue-full-size div.revue-full-size-width figure figcaption {
-      width: 45px;
       position: absolute;
-      bottom: 60px;
-      right: 25%;
+      top: 25%;
+      left: 26%;
       text-align: right;
       font-family: 'Hind', sans-serif;
-      font-size: 20px; }
+      font-size: 2em; }
     div#revue-full-size div.revue-full-size-width figure div {
       position: absolute;
       top: 150px;
-      right: 20%;
+      left: 26%;
       width: 100px;
       font-family: 'Hind', sans-serif;
       font-size: 15px; }
 
+      div#revue-full-size div.revue-full-size-width figure div a{
+      text-decoration: none;
+      color: #333;
+       }
 div#liste-partenaires div.liste-partenaires-width {
   width: 80%;
-  margin: auto; }
+  margin-top: 10vh;
+  margin-left: 10%;
+   }
   div#liste-partenaires div.liste-partenaires-width div.liste-partenaires-titre {
     margin: 40px 0; }
     div#liste-partenaires div.liste-partenaires-width div.liste-partenaires-titre h3 {
@@ -455,6 +462,9 @@ div#liste-partenaires div.liste-partenaires-width {
           font-family: 'Hind', sans-serif;
           font-weight: 400;
           font-size: 12px; }
+.buttonJournalView{
+    	margin-top: 3vh;
+    }
 
 /*-----------------------breakpoint-----------------------*/
 @media only screen and (max-width: 720px) {
@@ -478,7 +488,19 @@ div#liste-partenaires div.liste-partenaires-width {
       flex-direction: column; }
       div#liste-partenaires div.liste-partenaires-width section.liste-partenaires div {
         width: 90%;
-        margin: 10px auto; } }
+        margin: 10px auto; }
+        div#liste-partenaires div.liste-partenaires-width div.liste-partenaires-titre h3{
+        	text-align: center;
+        	padding-top: 10vh;
+        	font-size: 2em;
+        }
+        div#revue-full-size div.revue-full-size-width figure img{
+        	width: 40%;
+        	margin-left: 29%;
+        }
+        .revue-prix{
+        	margin-top: 3vh;
+        }
 /*-------------reset-------------*/
 * {
   margin: 0;
