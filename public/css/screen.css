@@ -4,8 +4,7 @@
 div#magazine-de-reference div.magazine-de-reference-width {
   width: 100%;
   background-image: url("../images/img-content/Component.jpg");
-  margin-bottom: 60px;
-margin-top: 8vh;}
+  margin-bottom: 60px;}
   div#magazine-de-reference div.magazine-de-reference-width div {
     width: 80%;
     margin: auto; }
@@ -101,15 +100,16 @@ div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width {
   div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div.abonnement-bouton {
     width: 100%;
     position: relative; }
+div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div.abonnement-bouton a {
+    text-decoration: none;
+}
     div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div.abonnement-bouton button {
-      position: absolute;
-      top: 0px;
-      left: 10%;
-      padding: 15px 10px 15px 50px; }
+      margin-left: 10%;
+    display: flex;
+    align-items: center;}
     div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div.abonnement-bouton img {
-      position: absolute;
-      top: 3px;
-      left: 10.5%; }
+      width: 2em;
+        margin-right: 10px;}
 
 /*---------------BREAKPOINTS--------------*/
 @media only screen and (max-width: 680px) {
@@ -132,7 +132,10 @@ div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width {
 div#commande-confirmee div.commande-confirmee-background-image-width {
   width: 100%;
   background: #ddd;
-    margin-top: 8vh;}
+    background-image: url("../images/img-content/julian-santa.jpg");
+    background-size: cover;
+    background-position: center center;
+}
   div#commande-confirmee div.commande-confirmee-background-image-width h3 {
     text-align: center;
     width: auto;
@@ -149,7 +152,7 @@ div#merci-commande div.merci-commande-width {
     width: 90%;
     margin: auto; }
     div#merci-commande div.merci-commande-width div div {
-      padding: 20px 0; }
+      padding: 5px 0; }
     div#merci-commande div.merci-commande-width div div.monsieur-ravelli {
       font-family: 'Hind', sans-serif;
       font-weight: 700; }
@@ -164,9 +167,13 @@ div#merci-commande div.merci-commande-width {
       div#merci-commande div.merci-commande-width div div.desktop-image figure img {
         width: 100%; }
     div#merci-commande div.merci-commande-width div div.confirmer-commande-suite p {
-      padding: 25px 0;
+      padding: 10px 0 20px 0;
       font-family: 'Hind', sans-serif;
       font-weight: 400; }
+
+.confirmer-commande-suite-2 {
+    margin-bottom: 20px;
+}
 
 /*-----------inscription--------*/
 /*----------------------------------------------------------*/
@@ -396,30 +403,37 @@ div#revue-full-size div.revue-full-size-width {
   div#revue-full-size div.revue-full-size-width figure {
     width: 100%;
     height: 300px;
-    background: #ddd;
-    margin: auto;
+    margin-top: 5vh;
     position: relative; }
     div#revue-full-size div.revue-full-size-width figure img {
-      width: 100%; }
+      width: 13%;
+	  margin-left: 10%;
+	  margin-top: 7vh;
+       }
     div#revue-full-size div.revue-full-size-width figure figcaption {
-      width: 45px;
       position: absolute;
-      bottom: 60px;
-      right: 25%;
+      top: 25%;
+      left: 26%;
       text-align: right;
       font-family: 'Hind', sans-serif;
-      font-size: 20px; }
+      font-size: 2em; }
     div#revue-full-size div.revue-full-size-width figure div {
       position: absolute;
       top: 150px;
-      right: 20%;
+      left: 26%;
       width: 100px;
       font-family: 'Hind', sans-serif;
       font-size: 15px; }
 
+      div#revue-full-size div.revue-full-size-width figure div a{
+      text-decoration: none;
+      color: #333;
+       }
 div#liste-partenaires div.liste-partenaires-width {
   width: 80%;
-  margin: auto; }
+  margin-top: 10vh;
+  margin-left: 10%;
+   }
   div#liste-partenaires div.liste-partenaires-width div.liste-partenaires-titre {
     margin: 40px 0; }
     div#liste-partenaires div.liste-partenaires-width div.liste-partenaires-titre h3 {
@@ -448,6 +462,9 @@ div#liste-partenaires div.liste-partenaires-width {
           font-family: 'Hind', sans-serif;
           font-weight: 400;
           font-size: 12px; }
+.buttonJournalView{
+    	margin-top: 3vh;
+    }
 
 /*-----------------------breakpoint-----------------------*/
 @media only screen and (max-width: 720px) {
@@ -471,7 +488,19 @@ div#liste-partenaires div.liste-partenaires-width {
       flex-direction: column; }
       div#liste-partenaires div.liste-partenaires-width section.liste-partenaires div {
         width: 90%;
-        margin: 10px auto; } }
+        margin: 10px auto; }
+        div#liste-partenaires div.liste-partenaires-width div.liste-partenaires-titre h3{
+        	text-align: center;
+        	padding-top: 10vh;
+        	font-size: 2em;
+        }
+        div#revue-full-size div.revue-full-size-width figure img{
+        	width: 40%;
+        	margin-left: 29%;
+        }
+        .revue-prix{
+        	margin-top: 3vh;
+        }
 /*-------------reset-------------*/
 * {
   margin: 0;

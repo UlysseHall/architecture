@@ -52,11 +52,11 @@
 		</ul>
 		<div class="contentMenuPhone">
 		<ul>
-			<li><a href="">Menu</a></li>
-			<li><a href="">Actualité</a></li>
-			<li><a href="">etc</a></li>
-			<li><a href="">etc</a></li>
-			<li><a href="">etc</a></li>
+			<li><a href="index.php?action=listJournals">magazines</a></li>
+			<li><a href="index.php?action=tender">appel d'offre</a></li>
+			<li><a href="index.php?action=listNews">actualités</a></li>
+			<li><a href="#footer-link-nav">contact</a></li>
+			<li><a href="index.php?action=order">abonnez-vous</a></li>
 		</ul>
 		</div>
 	</nav>
@@ -66,6 +66,7 @@
  			<li><a href="index.php?action=listJournals">magazines</a></li>
  			<li><a href="index.php?action=tender">appel d'offre</a></li>
  			<li><a href="index.php?action=listNews">atualités</a></li>
+ 			<li><a href="#footer-link-nav">contact</a></li>
  			<li><a href="index.php?action=order">abonnez-vous</a></li>
 			<li><a href=""><img class="logoLang" src="public/images/img-layout/france.png" alt=""> fr <img src="public/images/img-layout/cross_bottom.png" alt=""></a></li>
 		</ul>
@@ -107,7 +108,7 @@
 	                    </a>
 	                </li>
 	                <li class="active-pro">
-	                    <a href="upgrade.html">
+	                    <a href="index.php">
 	                        <i class="pe-7s-right-arrow"></i>
 	                        <p>Aller sur le site</p>
 	                    </a>
@@ -118,11 +119,15 @@
 	<?php endif; ?>
 
 <?php require("pages/" . $data["page"]); ?>
+    
+    <?php
+        if($controllerName != "Admin") :
+    ?>
 
-    <footer <?php if($action == "orderAction") { ?> class="footer-stick" <?php } ?>>
+    <footer id="footer-link-nav" <?php if($action == "orderAction" || $action == "validationAction" || $action == "newsViewAction") { ?> class="footer-stick" <?php } ?>>
 		<div class="containerFooter">
 			<div class="containerLeft">
-				<h2>Contact</h2>
+				<h2>Une question ? Partagez ça avec nous.</h2>
 				<form action="">
 					<label for="nom">
 						Nom <span class="decorationStar">*</span><br>
@@ -136,41 +141,48 @@
 						Téléphone <span class="decorationStar">*</span><br>
 						<input type="text" name="telephone" value=""><br>
 					</label>
-					Commentaire <span class="decorationStar">*</span><br>
+					<label for="services">
+                        Services <span class="decorationStar">*</span><br>
+					    <select id="select">
+                            <option value="valeur1">Commercial</option> 
+                            <option value="valeur2">Rédactionnel / Publicité</option>
+                            <option value="valeur3">Administratif / Compatibilité</option>
+                            <option value="valeur3">Direction</option>
+                        </select><br>
+					</label>
+					Posez votre question ici <span class="decorationStar">*</span><br>
 					<textarea name="textarea" rows="10" cols="50">
 					</textarea><br>
-					<select id="select">
-						<option value="valeur1">Commercial</option> 
-						<option value="valeur2">Rédactionnel / Publicité</option>
-						<option value="valeur3">Administratif / Compatibilité</option>
-						<option value="valeur3">Direction</option>
-					</select><br>
-					<input type="submit" value="Submit">
+					<br>
+					<center>
+                        <div class="form-submit-footer">
+                            Envoyer
+                        </div>
+					</center>
 				</form> 
 			</div>
 			<div class="containerRight">
-				<h2>Informations</h2>
+				<h2>À propos</h2>
 				<h3>Siège social</h3>
 				<p>SOFRE&COM <br>
-					9/11 rue Jacquard <br>
-					93315 Le Pré Saint Gervais cedex - France <br>
-					Tél : +33 (1) 49 91 93 99 <br>
-					Fax : +33 (1) 49 91 94 20</p>
-					<h3>Crédit</h3>
-					<p><span>Conception et contenus :</span> SOFRE&COM</p>
-					<h2 class="social">Social</h2>
+                    9/11 rue Jacquard 
+                    93315 Le Pré Saint Gervais cedex - France<br>
+                    Tél : +33 (1) 49 91 93 99<br>
+                    Fax : +33 (1) 49 91 94 20<br>
+                </p>
+					<h2 class="social">Réseaux Sociaux</h2>
 					<ul>
 						<li><a href=""><img src="public/images/img-layout/facebook.png" alt=""></a></li>
-						<li><a href=""><img src="public/images/img-layout/facebook.png" alt=""></a></li>
-						<li><a href=""><img src="public/images/img-layout/facebook.png" alt=""></a></li>
-						<li><a href=""><img src="public/images/img-layout/facebook.png" alt=""></a></li>
+						<li><a href=""><img src="public/images/img-layout/linkedin.png" alt=""></a></li>
+						<li><a href=""><img src="public/images/img-layout/twitter.png" alt=""></a></li>
+						<li><a href=""><img src="public/images/img-layout/pinterest.png" alt=""></a></li>
 					</ul>
-					<p>
-						Or contact us by email <br>
-						<span class="support"><a href="">support@weebly.com</a></span>
-					</p>
+				</div>
+				<div class="footer-more-infos">
+				    © 2017 L’architecture de votre région - Confidentialité et cookies - Conditions générales - Accessibilité
 				</div>
 			</div>		
 		</footer>
+		<?php endif; ?>
 </body>
 </html>

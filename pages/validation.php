@@ -14,12 +14,12 @@
             </div>
             <div class="desktop-image">
                 <figure>
-                    <img src="images/mail.png">
+                    <img src="public/images/img-layout/mail.png">
                 </figure>
             </div>
             <div class="confirmer-commande-suite">
                 <p>Dans l'attente, n'hésitez pas à nous contacter pour toute demande complémentaire.</p>
-                <p>Bien cordialement.
+                <p class="confirmer-commande-suite-2">Bien cordialement.
                     <br>Votre Service Client L’Architecture de votre région.</p>
             </div>
         </div>

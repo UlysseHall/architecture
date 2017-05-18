@@ -7,16 +7,18 @@
 <?php
 foreach($data["cont"]["news"] as $news) : ?>
 	<div class="containerListActu">
-	<a href="">
+	<a href="index.php?action=newsView&id=<?php echo $news->getId(); ?>">
 		<h4>Date : 	<?php echo $news->getDate(); ?></h4>
 		<h2><?php echo $news->getArchitect(); ?><div class="underline"></div></h2>
 		<h3><?php echo $news->getTitle(); ?> <br>
 	<?php echo $news->getCity(); ?></h3>
 	<div class="containerListActuImg">
 		<img class="mainImg" src="public/images/img-content/<?php echo $news->getImg()[0]; ?>" alt="">
-		<button>
-		DECOUVRIR
-		</button>
+		<a href="index.php?action=newsView&id=<?php echo $news->getId(); ?>">
+            <button>
+            DECOUVRIR
+            </button>
+        </a>
 	
 		<img class="secondaryImg" src="public/images/img-content/<?php echo $news->getImg()[1]; ?>" alt="">
 	</div>

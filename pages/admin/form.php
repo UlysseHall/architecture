@@ -3,40 +3,49 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
 ?>
 
 <div class="main-panel">
-    <nav class="navbar navbar-default navbar-fixed">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine n°'.$magazine->getNumber() ?></a>
-           </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-globe"></i>
-                            <b class="caret hidden-sm hidden-xs"></b>
-                            <span class="notification hidden-sm hidden-xs">1</span>
-                            <p class="hidden-lg hidden-md">
-                                1 Notification
-                                <b class="caret"></b>
-                            </p>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Bienvenue sur votre tableau de bord !</a></li>
+
+            <nav class="navbar navbar-default navbar-fixed">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine n°'.$magazine->getNumber() ?></a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-globe"></i>
+                                    <b class="caret hidden-sm hidden-xs"></b>
+                                    <span class="notification hidden-sm hidden-xs">1</span>
+                                    <p class="hidden-lg hidden-md">
+                                        1 Notification
+                                        <b class="caret"></b>
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Bienvenue sur votre tableau de bord !</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-search"></i>
+                                    <p class="hidden-lg hidden-md">Rechercher</p>
+                                </a>
+                            </li>
                         </ul>
-                    </li>
+                  
                     <li>
                         <a href="">
                             <i class="fa fa-search"></i>
                             <p class="hidden-lg hidden-md">Rechercher</p>
                         </a>
                     </li>
-                </ul>
+               
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="">
@@ -69,6 +78,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
     						    dd='0'+dd
     						}
 
+
     						if(mm<10) {
     						    mm='0'+mm
     						}
@@ -80,6 +90,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                     <div class="content">
                         <form method="post" action="index.php?action=admin_form&<?= isset($_GET['add']) ? 'add=1' : 'update=1&id='.$_GET['id'] ?>">
                             <div class="content">
+
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="form-group">
@@ -115,6 +126,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                                             <label>PDF</label>
                                             <input type="text" class="form-control" name="pdf" <?= $magazine ? 'value="'.$magazine->getPdf().'"' : 'placeholder="Insérer votre PDF"' ?>>
                                             <input type="file" placeholder="test" >
+
                                         </div>
                                     </div>
                                 </div>
@@ -124,6 +136,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                             </div>
                         </div>
                     </div>
+
                 </form>
             </div>
             <div class="col-md-4">
@@ -139,6 +152,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                                 <h4 class="title admin-number">Numéro<br /></h4>
                                 <h4 class="title admin-year">Année<br /></h4>
                             </a>
+
                         </div>
                     </div>
                     <hr>
@@ -147,6 +161,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
         </div>
     </div>
 </div>
+
 
     <script>
         var inputs = document.querySelectorAll(".input-js");

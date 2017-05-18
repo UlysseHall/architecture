@@ -43,8 +43,7 @@
             <h1>Vous souhaitez offrir un abonnement à un ami ou un proche ?</h1>
         </div>
         <div class="abonnement-bouton">
-            <a href="index.php?action=subscribe"><button>S'abonner</button></a>
-            <img src="public/images/img-layout/supermarket-gift.png">
+            <a href="index.php?action=subscribe"><button><img src="public/images/img-layout/supermarket-gift.png">S'abonner</button></a>
         </div>
     </div>
 </div>

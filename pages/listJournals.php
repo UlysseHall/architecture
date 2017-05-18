@@ -1,6 +1,6 @@
 <div class="banner backgroundListJournals"><h1>L’architecture de vos régions. <br>
        Papier + numérique <br>
-           Sans engagement <br>
+           <span class="list-journal-sans-engagement">Sans engagement</span> <br>
 </h1>
 </div>
 <div class="containerListJournal">
@@ -28,12 +28,19 @@
 			<h5><?php echo $magasine->getRegion(); ?></h5>
 			<div class="hover">
 				<h4>
-					Commandez la revue <?php echo $magasine->getNumber(); ?>
+					Revue n°<?php echo $magasine->getNumber(); ?>
 				</h4>
-				<p>Magasine</p>
-				<button>
-					Commander
-				</button>
+				<a href="index.php?action=journalView&id=<?php echo($magasine->getId()); ?>">
+                    <button>
+                        Voir
+                    </button>
+                </a>
+                
+                <a href="index.php?action=order">
+                    <button>
+                        Commander
+                    </button>
+                </a>
 			</div>
 			</div>
 		</article>
