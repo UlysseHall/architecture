@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 18, 2017 at 04:19 PM
+-- Generation Time: May 18, 2017 at 05:28 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.0.13
 
@@ -19,6 +19,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `architecture`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', '7574a6389db31d4277f188e15628ebc106315d84');
 
 -- --------------------------------------------------------
 
@@ -111,6 +130,12 @@ INSERT INTO `news` (`id`, `date`, `architect`, `department`, `city`, `type`, `ti
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `formule`
 --
 ALTER TABLE `formule`
@@ -132,6 +157,11 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `formule`
 --

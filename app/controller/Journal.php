@@ -11,7 +11,7 @@ class Journal
         
         $listJournals = $builderMag->select()->order("number", "desc")->getClass("App\Model\Magazine");
         
-        return(["page" => "listJournals.php", "cont" => ["journals" => $listJournals]]);
+        return(["page" => "listJournals.php", "cont" => ["journals" => $listJournals], "title" => 'Liste magazines']);
     }
     
     public function journalViewAction()
@@ -33,6 +33,6 @@ class Journal
         
         $journal = array_shift(array_values($journal));
         
-        return(["page" => "journalView.php", "cont" => ["journal" => $journal]]);
+        return(["page" => "journalView.php", "cont" => ["journal" => $journal], "title" => 'Vue du magazine '.$journal->getRegion()]);
     }
 }

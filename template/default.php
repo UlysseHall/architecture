@@ -2,10 +2,16 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<title>Larchitecture</title>
+	<title><?php
+		if(isset($data["title"]) && $data["title"] != "") {
+			echo($data["title"]);
+		}
+		else {
+			echo("Larchitecture");
+		}
+		?></title>
 	<link rel="stylesheet" href="public/css/style.css">
 	<link rel="stylesheet" href="public/css/screen.css">
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,500,600" rel="stylesheet">
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />

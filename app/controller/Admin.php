@@ -16,7 +16,7 @@ class Admin
 		$builder = new Qbuilder('magazine');
 		$list = $builder->select()->order('id', 'DESC')->getClass('\App\Model\Magazine');
 
-		return ['page' => 'admin/home.php', 'cont' => ['list' => $list]];
+		return ['page' => 'admin/home.php', 'cont' => ['list' => $list], "title" => "Page d'acceuil"];
 	}
 
 	public function admin_singleAction()
@@ -95,7 +95,7 @@ class Admin
 		}
 		$mag = $mag[0];
 
-		return ['page' => 'admin/single.php', 'cont' => ['magazine' => $mag]];
+		return ['page' => 'admin/single.php', 'cont' => ['magazine' => $mag], "title" => 'Bienvenu Admin'];
 	}
 
 	/**
@@ -124,7 +124,7 @@ class Admin
 				return Route::errorPage();
 			}
 
-			return ['page' => 'admin/form.php', 'cont' => ['magazine' => $magazine]];
+			return ['page' => 'admin/form.php', 'cont' => ['magazine' => $magazine], "title" => 'Update magazine'];
 		} else {
 			$magazine = new Magazine();
 			$magazine->setNumber($_POST['number']);

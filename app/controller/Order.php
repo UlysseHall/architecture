@@ -10,7 +10,7 @@ class Order
         
         $formules = $builderFor->select()->get();
         
-        return(["page" => "order.php", "cont" => ["formules" => $formules]]);
+        return(["page" => "order.php", "cont" => ["formules" => $formules], "title" => 'Order']);
     }
     
     public function subscribeAction()
@@ -27,7 +27,7 @@ class Order
         $formuleArr = $builderFor->select()->where($id)->get();
         $formule = array_shift(array_values($formuleArr));
         
-        return(["page" => "subscribe.php", "cont" => ["formule" => $formule]]);
+        return(["page" => "subscribe.php", "cont" => ["formule" => $formule], "title" => 'Soucrire']);
     }
     
     public function validationAction()
