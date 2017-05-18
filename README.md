@@ -36,7 +36,7 @@
 
 <h3>journalView</h3>
 <ul>
-    <li><b>Nom</b> : journal, <b>Infos</b> : c'est un seul et unique object, l'object de la revue désirée. Cet object a 6 paramètres : id, number, img, pdf, region et year</li>
+    <li><b>Nom</b> : journal, <b>Infos</b> : c'est un seul et unique object, l'object de la revue désirée. Cet object a 7 paramètres : id, number, img, pdf, region, year et partners</li>
 </ul>
 
 <h1>Routes</h1>

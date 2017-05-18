@@ -108,7 +108,7 @@
 	                    </a>
 	                </li>
 	                <li class="active-pro">
-	                    <a href="upgrade.html">
+	                    <a href="index.php">
 	                        <i class="pe-7s-right-arrow"></i>
 	                        <p>Aller sur le site</p>
 	                    </a>
