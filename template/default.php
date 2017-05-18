@@ -109,7 +109,11 @@ if($controllerName != "Admin") :
 			<li><a href=""><img class="logoLang" src="public/images/img-layout/france.png" alt=""> fr <img src="public/images/img-layout/cross_bottom.png" alt=""></a></li>
 		</ul>
 	</header>
-<?php else :
+
+	<div class="responsive-logo-header">
+	    <img src="public/images/img-layout/logo_larchitecture_black.png">
+	</div>
+	<?php else :
 
 ?>
 <div class="wrapper">
@@ -217,7 +221,7 @@ if($controllerName != "Admin") :
 					</ul>
 				</div>
 				<div class="footer-more-infos">
-					© 2017 L’architecture de votre région - Confidentialité et cookies - Conditions générales - Accessibilité
+				    © 2017 L’architecture de votre région - Confidentialité et cookies - <a href="index.php?action=mentions">Conditions générales</a> - Accessibilité
 				</div>
 			</div>
 		</footer>

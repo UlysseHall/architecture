@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 use App\Core\Route;
 use App\Controller\Journal;
 use App\Controller\Main;

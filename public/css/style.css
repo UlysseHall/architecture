@@ -26,7 +26,36 @@ body{
 	font-weight: 400;
 }
 
+/* ------------------LOGIN-------------------- */
+
+.login-form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input {
+    margin-bottom: 25px;
+    width: 15%;
+}
+
 /* ------------------HEADER-------------------- */
+
+.responsive-logo-header {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.responsive-logo-header img {
+    width: 23%;
+}
+
+@media all and (min-width: 1200px) {
+    .responsive-logo-header {
+        display: none;
+    }
+}
 
 header{
 	width: 95%;

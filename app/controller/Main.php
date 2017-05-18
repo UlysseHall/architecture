@@ -66,4 +66,32 @@ class Main
         
         return(["page" => "newsView.php", "cont" => ["news" => $news], "title" => 'Actualités']);
     }
+    
+    public function loginAction()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $username = htmlspecialchars($_POST["username"]);
+            $password = sha1(htmlspecialchars($_POST["password"]));
+            
+            $builderAdmin = new Qbuilder("admin");
+            $admin = $builderAdmin->select()->get();
+            $admin = array_shift($admin);
+            
+            if($admin->username == $username && $admin->password == $password) {
+                $_SESSION["admin"] = true;
+                return header("Location: index.php?action=admin_home");
+            }
+            else {
+                return header("Location: index.php?action=login");
+            }
+        }
+        else {
+            return(["page" => "login.php"]);
+        }
+    }
+    
+    public function mentionsAction()
+    {
+        return(["page" => "mentions.php", "title" => "Mentions légales"]);
+    }
 }
