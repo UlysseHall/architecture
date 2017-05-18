@@ -11,7 +11,7 @@ $magasine = $data["cont"]["journal"];
                 <p class="revue-prix">Prix : 17.99€</p>
             </figcaption>
             <div>
-                <button class="buttonJournalView"><p>Voir PDF</p></button>
+                <a href="<?php echo $magasine->getPdf(); ?>"><button class="buttonJournalView"><p>Voir PDF</p></button></a>
                 <button class="buttonJournalView"><p>Acheter</p></button>
             </div>
         </figure>
