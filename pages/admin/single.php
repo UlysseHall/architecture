@@ -83,22 +83,23 @@
                                             <div class="col-md-5">
                                                 <div class="form-group">
                                                     <label>Nom de votre magazine</label>
-                                                    <input type="text" class="form-control" placeholder="">
+                                                    <div class="form-control"><?= $magazine->getRegion() ?></div>
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label>Numéro</label>
-                                                    <input type="number" class="form-control" placeholder="286">
+                                                    <div class="form-control"><?= $magazine->getNumber() ?></div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Année</label>
-                                                    <input type="number" class="form-control" placeholder="Année de votre magazine">
+                                                    <div type="number" class="form-control"><?= $magazine->getYear() ?></div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <a href="index.php?action=admin_form&update=1&id=<?= $magazine->getId() ?>" class="btn btn-info btn-fill pull-left">Modifier le magazine</a>
                                             <form method="post" action="index.php?action=admin_single&id=<?= $_GET['id'] ?>">
                                                 <input type="hidden" name="delete" value="1">
                                                 <input type="submit" name="" value="Supprimer votre magazine" class="btn btn-info btn-fill pull-right">
