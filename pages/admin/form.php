@@ -3,6 +3,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
 ?>
 
 <div class="main-panel">
+
             <nav class="navbar navbar-default navbar-fixed">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -37,153 +38,160 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                                 </a>
                             </li>
                         </ul>
+                  
+                    <li>
+                        <a href="">
+                            <i class="fa fa-search"></i>
+                            <p class="hidden-lg hidden-md">Rechercher</p>
+                        </a>
+                    </li>
+               
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="">
+                            <p>Mon compte</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>Déconnexion</p>
+                        </a>
+                    </li>
+                    <li class="separator hidden-lg hidden-md"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine' ?></h4>
+    					<script>var today = new Date();
+    						var dd = today.getDate();
+    						var mm = today.getMonth()+1; //January is 0!
+    						var yyyy = today.getFullYear();
+
+    						if(dd<10) {
+    						    dd='0'+dd
+    						}
 
 
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="">
-                                        <p>Mon compte</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <p>Déconnexion</p>
-                                    </a>
-                                </li>
-                                <li class="separator hidden-lg hidden-md"></li>
-                            </ul>
-                        </div>
+    						if(mm<10) {
+    						    mm='0'+mm
+    						}
+
+    						today = mm+'/'+dd+'/'+yyyy;
+    						document.write(today);
+                        </script>
                     </div>
-                </nav>
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine' ?></h4>
-																<script>var today = new Date();
-						var dd = today.getDate();
-						var mm = today.getMonth()+1; //January is 0!
-						var yyyy = today.getFullYear();
-
-						if(dd<10) {
-						    dd='0'+dd
-						}
-
-						if(mm<10) {
-						    mm='0'+mm
-						}
-
-						today = mm+'/'+dd+'/'+yyyy;
-						document.write(today);</script>
-                            </div>
+                    <div class="content">
+                        <form method="post" action="index.php?action=admin_form&<?= isset($_GET['add']) ? 'add=1' : 'update=1&id='.$_GET['id'] ?>">
                             <div class="content">
-                            <!-- 8 -->
-                                <form method="post" action="index.php?action=admin_form&<?= isset($_GET['add']) ? 'add=1' : 'update=1&id='.$_GET['id'] ?>">
-                                    <div class="content">
-                                            <div class="row">
-                                                <div class="col-md-5">
-                                                    <div class="form-group">
-                                                        <label>Région</label>
-                                                        <input id="0" type="text" class="form-control input-js" name="region" <?=  $magazine ? 'value="'.$magazine->getRegion().'"' : 'placeholder="Votre région FR"' ?>>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Numéro</label>
-                                                            <input id="1" type="number" class="form-control input-js" name="number" <?= $magazine ? 'value="'.$magazine->getNumber().'"' : 'placeholder="Numéro"' ?>>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="exampleInputEmail1">Année</label>
-                                                            <input id="2" type="number" class="form-control input-js" name="year" <?= $magazine ? 'value="'.$magazine->getYear().'"' : 'placeholder="Année de votre magazine"' ?>>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <label>Couverture</label>
-                                                            <input type="text" class="form-control" name="img" <?= $magazine ? 'value="'.$magazine->getImg().'"' : 'placeholder="Insérer votre couverture"' ?>>
-                                                            <input type="file" placeholder="Couverture">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <label>PDF</label>
-                                                            <input type="text" class="form-control" name="pdf" <?= $magazine ? 'value="'.$magazine->getPdf().'"' : 'placeholder="Insérer votre PDF"' ?>>
-                                                            <input type="file" placeholder="test" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <input type="hidden" name="<?= isset($_GET['add']) ? 'add' : 'update' ?>" value="1">
-                                                <button type="submit" class="btn btn-info btn-fill pull-right"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine' ?></button>
-                                                <div class="clearfix"></div>
-                                            </div>
+
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>Région</label>
+                                            <input id="0" type="text" class="form-control input-js" name="region" <?=  $magazine ? 'value="'.$magazine->getRegion().'"' : 'placeholder="Votre région FR"' ?>>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-user">
-                            <div class="image">
-                                <img src="public/images/img-content/nick-hillier-215633.jpg" alt="..."/>
-                            </div>
-                            <div class="content">
-                                <div class="author">
-                                     <a href="#">
-                                    <img class="avatar border-gray" src="public/images/img-content/couv_282.jpg" alt="..."/>
-
-                                    <h4 class="title admin-name">Nom de votre magazine<br /></h4>
-                                    <h4 class="title admin-number">Numéro<br /></h4>
-                                    <h4 class="title admin-year">Année<br /></h4>
-                                    </a>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Numéro</label>
+                                            <input id="1" type="number" class="form-control input-js" name="number" <?= $magazine ? 'value="'.$magazine->getNumber().'"' : 'placeholder="Numéro"' ?>>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Année</label>
+                                            <input id="2" type="number" class="form-control input-js" name="year" <?= $magazine ? 'value="'.$magazine->getYear().'"' : 'placeholder="Année de votre magazine"' ?>>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Couverture</label>
+                                            <input type="text" class="form-control" name="img" <?= $magazine ? 'value="'.$magazine->getImg().'"' : 'placeholder="Insérer votre couverture"' ?>>
+                                            <input type="file" placeholder="Couverture">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>PDF</label>
+                                            <input type="text" class="form-control" name="pdf" <?= $magazine ? 'value="'.$magazine->getPdf().'"' : 'placeholder="Insérer votre PDF"' ?>>
+                                            <input type="file" placeholder="test" >
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="<?= isset($_GET['add']) ? 'add' : 'update' ?>" value="1">
+                                <button type="submit" class="btn btn-info btn-fill pull-right"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine' ?></button>
+                                <div class="clearfix"></div>
                             </div>
-                            <hr>
                         </div>
                     </div>
-                </div>
+
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="image">
+                        <img src="public/images/img-content/nick-hillier-215633.jpg" alt="..."/>
+                    </div>
+                    <div class="content">
+                        <div class="author">
+                             <a href="#">
+                                <img class="avatar border-gray" src="public/images/img-content/couv_282.jpg" alt="..."/>
+                                <h4 class="title admin-name">Nom de votre magazine<br /></h4>
+                                <h4 class="title admin-number">Numéro<br /></h4>
+                                <h4 class="title admin-year">Année<br /></h4>
+                            </a>
+
+                        </div>
+                    </div>
+                    <hr>
+                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<script>
-    var inputs = document.querySelectorAll(".input-js");
-    var h4 = document.querySelectorAll('.author h4');
 
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('change', getFormContent);
-    }
+    <script>
+        var inputs = document.querySelectorAll(".input-js");
+        var h4 = document.querySelectorAll('.author h4');
 
-    function getFormContent() {
-        var row = this.id;
-        h4[row].innerHTML = this.value;
-    }
-</script>
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('change', getFormContent);
+        }
 
-    <!--   Core JS Files   -->
-    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        function getFormContent() {
+            var row = this.id;
+            h4[row].innerHTML = this.value;
+        }
+    </script>
 
-    <!--  Checkbox, Radio & Switch Plugins -->
-    <script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+        <!--   Core JS Files   -->
+        <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
-    <!--  Charts Plugin -->
-    <script src="assets/js/chartist.min.js"></script>
+        <!--  Checkbox, Radio & Switch Plugins -->
+        <script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
-    <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
+        <!--  Charts Plugin -->
+        <script src="assets/js/chartist.min.js"></script>
 
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-    <script src="assets/js/light-bootstrap-dashboard.js"></script>
+        <!--  Notifications Plugin    -->
+        <script src="assets/js/bootstrap-notify.js"></script>
 
-    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-    <script src="assets/js/demo.js"></script>
+        <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+        <script src="assets/js/light-bootstrap-dashboard.js"></script>
+
+        <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+        <script src="assets/js/demo.js"></script>
