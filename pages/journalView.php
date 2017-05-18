@@ -1,16 +1,19 @@
+<?php
+$magasine = $data["cont"]["journal"];
+?>
+
 <!--revue---------------------------------->
 <div id="revue-full-size">
     <div class="revue-full-size-width">
         <figure>
-            <img src="" alt="">
+            <img src="public/images/img-content/<?php echo $magasine->getImg(); ?>" alt="">
             <figcaption>
-                <p class="revue-prix">10€</p>
+                <p class="revue-prix">Prix : 17.99€</p>
             </figcaption>
             <div>
-                <a href=""><p>Voir PDF</p></a>
-                <a href=""><p>Acheter</p></a>
+                <button class="buttonJournalView"><p>Voir PDF</p></button>
+                <button class="buttonJournalView"><p>Acheter</p></button>
             </div>
-
         </figure>
     </div>
 </div>
