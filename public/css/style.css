@@ -6,8 +6,8 @@
 }
 
    *,
-   *:before
-   *;after {
+   *:before,
+   *:after {
       box-sizing: border-box;
    }
 
@@ -235,6 +235,14 @@ button{
 	clear: both;
 	overflow: hidden;
 	padding-bottom: 40px;
+}
+
+.containerActu section a{
+	color: #000;
+}
+
+.containerActu section a:visited{
+	color: #000;
 }
 
 .containerActu section article{
@@ -1128,6 +1136,14 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+.containerActu section a.fdp{
+	color: #000;
+}
+
+.containerActu section a.fdp:visited{
+	color: #000;
 }
 
 .containerMagasine section article{
