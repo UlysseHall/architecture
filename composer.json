@@ -1,5 +1,5 @@
 {
-    "name": "zyigh/zyigh_query",
+    "name": "zyigh/architecture",
     "authors": [
         {
             "name": "Zyigh",
@@ -7,9 +7,7 @@
         }
     ],
     "require": {},
-    "autoload" : {
-    	"psr-4" : {
-    		"App\\" : "app/"
-    	}
+    "autoload": {
+    	"psr-4" : {"App\\" : "app/"}
     }
 }
