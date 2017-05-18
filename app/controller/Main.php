@@ -18,7 +18,7 @@ class Main
             $encoded = $news->getImg();
             $news->setImg(json_decode($encoded));
         }
-        return(["page" => "home.php", "cont" => ["journals" => $lastJournals, "news" => $lastNews], "title" => 'Acceuil']);
+        return(["page" => "home.php", "cont" => ["journals" => $lastJournals, "news" => $lastNews], "title" => 'Accueil']);
     }
     
     public function tenderAction()
