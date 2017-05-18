@@ -7,6 +7,13 @@ use App\Core\Route;
 
 class Admin
 {
+    public function __construct()
+    {
+        if(!isset($_SESSION["admin"]) && $_SESSION["admin"] != true) {
+            header("Location: index.php?action=login");
+        }
+    }
+    
 	/**
 	 * get all the magazine in an array
 	 * @return array   			[page to reach][fetch]
@@ -133,7 +140,7 @@ class Admin
 			$magazine->setRegion($_POST['region']);
 			$magazine->setYear($_POST['year']);
 			
-			if($builder->update($magazine->getAll())->get()) {
+			if($builder->update($magazine->getAll())->where($_GET["id"])->get()) {
 
 				return header('Location: index.php?action=admin_single&id='.$_GET['id']);
 			}

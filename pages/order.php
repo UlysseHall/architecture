@@ -33,7 +33,7 @@
 <div id="frais-de-port">
     <div class="frais-de-port-width clearfix">
         <div class="frais-de-port">
-            <p>+ 5€ de frais de port</p>
+            <p>+ 5€ de frais de port (version papier)</p>
         </div>
     </div>
 </div>

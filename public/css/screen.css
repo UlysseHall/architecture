@@ -29,7 +29,8 @@ div#section-formules div.section-formules-width {
       text-align: center;
       margin-bottom: 10px;
       font-family: 'Hind', sans-serif;
-      font-weight: 700; }
+      font-weight: 700; 
+    font-size: 1.5em;}
     div#section-formules div.section-formules-width article div {
       padding: 10px; }
     div#section-formules div.section-formules-width article div.description {
@@ -48,16 +49,16 @@ div#section-formules div.section-formules-width {
       div#section-formules div.section-formules-width article div.prix p {
         text-align: center;
         color: #36C1D4;
-        font-size: 18px;
+        font-size: 1.6em;
         font-family: 'Hind', sans-serif;
-        font-weight: 400; }
+        font-weight: 900; }
     div#section-formules div.section-formules-width article div.sans-engagement {
-      width: 150px;
       margin: auto; }
       div#section-formules div.section-formules-width article div.sans-engagement p {
         text-align: center;
         font-family: 'Hind', sans-serif;
-        font-weight: 400; }
+        font-weight: 400;
+        font-size: 1.2em;}
     div#section-formules div.section-formules-width article div.abonnement-formule {
       width: 100%;
       margin: auto;
