@@ -18,14 +18,14 @@ class Main
             $encoded = $news->getImg();
             $news->setImg(json_decode($encoded));
         }
-        return(["page" => "home.php", "cont" => ["journals" => $lastJournals, "news" => $lastNews]]);
+        return(["page" => "home.php", "cont" => ["journals" => $lastJournals, "news" => $lastNews], "title" => 'Acceuil']);
     }
     
     public function tenderAction()
     {
-        return(["page" => "tender.php"]);
+        return(["page" => "tender.php", "title" => "Appel d'offre"]);
     }
-    
+
     public function listNewsAction()
     {
         $builderNews = new Qbuilder("news");
@@ -37,7 +37,7 @@ class Main
             $news->setImg(json_decode($encoded));
         }
         
-        return(["page" => "listNews.php", "cont" => ["news" => $allNews]]);
+        return(["page" => "listNews.php", "cont" => ["news" => $allNews], "title" => 'Liste actualité']);
     }
     
     public function newsViewAction()
@@ -64,6 +64,6 @@ class Main
         $encoded = $news->getImg();
         $news->setImg(json_decode($encoded));
         
-        return(["page" => "newsView.php", "cont" => ["news" => $news]]);
+        return(["page" => "newsView.php", "cont" => ["news" => $news], "title" => 'Actualités']);
     }
 }

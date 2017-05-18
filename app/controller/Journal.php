@@ -10,8 +10,9 @@ class Journal
         $builderMag = new Qbuilder("magazine");
         
         $listJournals = $builderMag->select()->order("number", "desc")->getClass("App\Model\Magazine");
+        
+        return(["page" => "listJournals.php", "cont" => ["journals" => $listJournals], "title" => 'Liste magazines']);
 
-        return(["page" => "listJournals.php", "cont" => ["journals" => $listJournals]]);
     }
     
     public function journalViewAction()
@@ -36,6 +37,6 @@ class Journal
         $journal = array_values($journal);
         $journal = array_shift($journal);
         
-        return(["page" => "journalView.php", "cont" => ["journal" => $journal]]);
+        return(["page" => "journalView.php", "cont" => ["journal" => $journal], "title" => 'Vue du magazine '.$journal->getRegion()]);
     }
 }
