@@ -10,6 +10,7 @@ class Magazine
 	private $region;
 	private $year;
 	private $second_region = 0;
+    private $partners;
 
 	/**
 	 * Get all infos about magazine in array to update/insert
@@ -55,6 +56,11 @@ class Magazine
 		$this->year = (int) $year;
 	}
 
+    public function setPartners($partners)
+    {
+        $this->partners = $partners;
+    }
+
 	public function setSecond_region($second_region)
 	{
 		$this->second_region = $second_region;
@@ -91,6 +97,11 @@ class Magazine
 	{
 		return $this->year;
 	}
+
+    public function getPartners()
+    {
+        return $this->partners;
+    }
 
 	public function getSecond_region()
 	{
