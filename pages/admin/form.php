@@ -126,25 +126,25 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                     </div>
                 </form>
             </div>
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="image">
+                        <img src="public/images/img-content/nick-hillier-215633.jpg" alt="..."/>
+                    </div>
+                    <div class="content">
+                        <div class="author">
+                             <a href="#">
+                                <img class="avatar border-gray" src="public/images/img-content/couv_282.jpg" alt="..."/>
+                                <h4 class="title admin-name">Nom de votre magazine<br /></h4>
+                                <h4 class="title admin-number">Numéro<br /></h4>
+                                <h4 class="title admin-year">Année<br /></h4>
+                            </a>
+                        </div>
+                    </div>
+                    <hr>
+                 </div>
+            </div>
         </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card card-user">
-            <div class="image">
-                <img src="public/images/img-content/nick-hillier-215633.jpg" alt="..."/>
-            </div>
-            <div class="content">
-                <div class="author">
-                     <a href="#">
-                        <img class="avatar border-gray" src="public/images/img-content/couv_282.jpg" alt="..."/>
-                        <h4 class="title admin-name">Nom de votre magazine<br /></h4>
-                        <h4 class="title admin-number">Numéro<br /></h4>
-                        <h4 class="title admin-year">Année<br /></h4>
-                    </a>
-                </div>
-            </div>
-            <hr>
-         </div>
     </div>
 </div>
 
