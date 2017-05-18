@@ -12,7 +12,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Ajouter votre magazine</a>
+                        <a class="navbar-brand" href="#"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine n°'.$magazine->getNumber() ?></a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-left">
@@ -61,7 +61,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                     <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Ajouter votre magazine</h4>
+                                <h4 class="title"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine' ?></h4>
 																<script>var today = new Date();
 						var dd = today.getDate();
 						var mm = today.getMonth()+1; //January is 0!
@@ -86,19 +86,19 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                                                 <div class="col-md-5">
                                                     <div class="form-group">
                                                         <label>Région</label>
-                                                        <input type="text" class="form-control" name="region" <?=  $magazine ? 'value="'.$magazine->getRegion().'"' : 'placeholder="Votre région FR"' ?>>
+                                                        <input id="0" type="text" class="form-control input-js" name="region" <?=  $magazine ? 'value="'.$magazine->getRegion().'"' : 'placeholder="Votre région FR"' ?>>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label>Numéro</label>
-                                                            <input type="number" class="form-control" name="number" <?= $magazine ? 'value="'.$magazine->getNumber().'"' : 'placeholder="Numéro"' ?>>
+                                                            <input id="1" type="number" class="form-control input-js" name="number" <?= $magazine ? 'value="'.$magazine->getNumber().'"' : 'placeholder="Numéro"' ?>>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail1">Année</label>
-                                                            <input type="number" class="form-control" name="year" <?= $magazine ? 'value="'.$magazine->getYear().'"' : 'placeholder="Année de votre magazine"' ?>>
+                                                            <input id="2" type="number" class="form-control input-js" name="year" <?= $magazine ? 'value="'.$magazine->getYear().'"' : 'placeholder="Année de votre magazine"' ?>>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -121,7 +121,7 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                                                     </div>
                                                 </div>
                                                 <input type="hidden" name="<?= isset($_GET['add']) ? 'add' : 'update' ?>" value="1">
-                                                <button type="submit" class="btn btn-info btn-fill pull-right">Ajouter votre magazine</button>
+                                                <button type="submit" class="btn btn-info btn-fill pull-right"><?= isset($_GET['add']) ? 'Ajouter votre magazine' : 'Mettre à jour le magazine' ?></button>
                                                 <div class="clearfix"></div>
                                             </div>
                                         </div>
@@ -140,8 +140,9 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
                                      <a href="#">
                                     <img class="avatar border-gray" src="public/images/img-content/couv_282.jpg" alt="..."/>
 
-                                      <h4 class="title">Nom de votre magazine<br />
-                                      </h4>
+                                    <h4 class="title admin-name">Nom de votre magazine<br /></h4>
+                                    <h4 class="title admin-number">Numéro<br /></h4>
+                                    <h4 class="title admin-year">Année<br /></h4>
                                     </a>
                                 </div>
                             </div>
@@ -153,6 +154,20 @@ $magazine = isset($data["cont"]["magazine"]) ? $data["cont"]["magazine"] : false
         </div>
     </div>
 </div>
+
+<script>
+    var inputs = document.querySelectorAll(".input-js");
+    var h4 = document.querySelectorAll('.author h4');
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('change', getFormContent);
+    }
+
+    function getFormContent() {
+        var row = this.id;
+        h4[row].innerHTML = this.value;
+    }
+</script>
 
     <!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>

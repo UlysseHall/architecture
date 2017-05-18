@@ -246,8 +246,8 @@ button{
 }
 
 .containerActu section article{
-	width: 40%;
-	margin-left: 5%;
+	width: 42%;
+	margin-left: 6%;
 	margin-top: 10vh;
 	float: left;
 	position: relative;
@@ -329,7 +329,7 @@ button{
 
 .containerDescOne .containerTxtDesc{
 	float: left;
-	width: 40%;
+	width: 41.3%;
 	background-color: #f8f8f8;
 	position: absolute;
 	top: 15%;
@@ -364,7 +364,7 @@ button{
 
 .containerDescTwo .containerTxtDesc{
 	float: right;
-	width: 40%;
+	width: 41.2%;
 	background-color: #f8f8f8;
 	position: absolute;
 	top: 10%;
@@ -1016,6 +1016,11 @@ footer{
 	color: #8e8e8e;
 }
 
+.containerIframe{
+	clear: both;
+	margin-top: 7vh;
+}
+
 
 @media screen and (max-width:1200px)  {
 header{
@@ -1202,7 +1207,7 @@ input[type="checkbox"]:checked + .navPhone .contentMenuPhone{
 
 .containerDescOne .containerTxtDesc {
     float: none;
-    width: 90%;
+    width: 40%;
     background-color: #f8f8f8;
     position: static;
 }

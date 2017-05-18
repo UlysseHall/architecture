@@ -1,1 +1,3 @@
-/app/core/Setup.php
+vendor
+.idea
+app/core/Setup.php
