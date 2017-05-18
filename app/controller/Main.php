@@ -46,7 +46,8 @@ class Main
             $id = intval($_GET["id"]);
         }
         else {
-            Route::errorPage();
+            
+            return Route::errorPage();
         }
         
         $builderNews = new Qbuilder("news");
@@ -54,10 +55,12 @@ class Main
         $news = $builderNews->select()->where($id)->getClass("App\Model\News");
         
         if(count($news) == 0) {
-            Route::errorPage();
+            
+            return Route::errorPage();
         }
         
-        $news = array_shift(array_values($news));
+        $news = array_values($news);
+        $news = array_shift($news);
         $encoded = $news->getImg();
         $news->setImg(json_decode($encoded));
         

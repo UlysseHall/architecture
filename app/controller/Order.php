@@ -25,7 +25,8 @@ class Order
         }
         
         $formuleArr = $builderFor->select()->where($id)->get();
-        $formule = array_shift(array_values($formuleArr));
+        $formule = array_values($formuleArr);
+        $formule = array_shift($formule);
         
         return(["page" => "subscribe.php", "cont" => ["formule" => $formule]]);
     }
