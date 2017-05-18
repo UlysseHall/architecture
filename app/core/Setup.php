@@ -8,7 +8,7 @@ class Setup
 	CONST DB_NAME = 'architecture';
 	CONST DB_HOST = 'localhost';
 	CONST DB_USER = 'root';
-	CONST DB_PASS = 'kamini';
+	CONST DB_PASS = 'root';
 	CONST DB_PORT = '3306';
 
 	/**
