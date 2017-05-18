@@ -9,7 +9,7 @@ class Admin
 {
     public function __construct()
     {
-        if(!isset($_SESSION["admin"]) && $_SESSION["admin"] != true) {
+        if(!isset($_SESSION["admin"]) || $_SESSION["admin"] != true) {
             header("Location: index.php?action=login");
         }
     }
