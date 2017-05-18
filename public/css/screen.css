@@ -507,6 +507,17 @@ div#liste-partenaires div.liste-partenaires-width {
         .revue-prix{
         	margin-top: 3vh;
         }
+        div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div.abonnement-bouton button {
+    margin-left: 0%;
+    display: block;
+    width: 60%;
+    margin-left: 20%;
+}
+div#abonnement-pour-ami-proche div.abonnement-pour-ami-proche-width div h1 {
+    margin-left: 15%;
+    width: 70%;
+    text-align: center;
+}
 /*-------------reset-------------*/
 * {
   margin: 0;
